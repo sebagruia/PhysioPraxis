@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/PhysioPraxis/static/css/main.40f1a262.chunk.css",
-    "main.js": "/PhysioPraxis/static/js/main.0a9c77c2.chunk.js",
-    "main.js.map": "/PhysioPraxis/static/js/main.0a9c77c2.chunk.js.map",
+    "main.css": "/PhysioPraxis/static/css/main.e7fa4f59.chunk.css",
+    "main.js": "/PhysioPraxis/static/js/main.5649c197.chunk.js",
+    "main.js.map": "/PhysioPraxis/static/js/main.5649c197.chunk.js.map",
     "runtime-main.js": "/PhysioPraxis/static/js/runtime-main.3f77e469.js",
     "runtime-main.js.map": "/PhysioPraxis/static/js/runtime-main.3f77e469.js.map",
-    "static/js/2.74d22b6e.chunk.js": "/PhysioPraxis/static/js/2.74d22b6e.chunk.js",
-    "static/js/2.74d22b6e.chunk.js.map": "/PhysioPraxis/static/js/2.74d22b6e.chunk.js.map",
+    "static/js/2.d32784aa.chunk.js": "/PhysioPraxis/static/js/2.d32784aa.chunk.js",
+    "static/js/2.d32784aa.chunk.js.map": "/PhysioPraxis/static/js/2.d32784aa.chunk.js.map",
     "index.html": "/PhysioPraxis/index.html",
-    "precache-manifest.b50b99fd947d220c531e5f636710530e.js": "/PhysioPraxis/precache-manifest.b50b99fd947d220c531e5f636710530e.js",
+    "precache-manifest.ae909fee73204c137835625a9c325713.js": "/PhysioPraxis/precache-manifest.ae909fee73204c137835625a9c325713.js",
     "service-worker.js": "/PhysioPraxis/service-worker.js",
-    "static/css/main.40f1a262.chunk.css.map": "/PhysioPraxis/static/css/main.40f1a262.chunk.css.map",
-    "static/js/2.74d22b6e.chunk.js.LICENSE.txt": "/PhysioPraxis/static/js/2.74d22b6e.chunk.js.LICENSE.txt",
+    "static/css/main.e7fa4f59.chunk.css.map": "/PhysioPraxis/static/css/main.e7fa4f59.chunk.css.map",
+    "static/js/2.d32784aa.chunk.js.LICENSE.txt": "/PhysioPraxis/static/js/2.d32784aa.chunk.js.LICENSE.txt",
     "static/media/PhysiopraxisLogoOuterGlow.png": "/PhysioPraxis/static/media/PhysiopraxisLogoOuterGlow.52ed50ad.png",
     "static/media/PhysiopraxisLogoShadow.png": "/PhysioPraxis/static/media/PhysiopraxisLogoShadow.6728a7ac.png",
     "static/media/doctor1.png": "/PhysioPraxis/static/media/doctor1.2e64a1f3.png",
@@ -19,8 +19,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.3f77e469.js",
-    "static/js/2.74d22b6e.chunk.js",
-    "static/css/main.40f1a262.chunk.css",
-    "static/js/main.0a9c77c2.chunk.js"
+    "static/js/2.d32784aa.chunk.js",
+    "static/css/main.e7fa4f59.chunk.css",
+    "static/js/main.5649c197.chunk.js"
   ]
 }
