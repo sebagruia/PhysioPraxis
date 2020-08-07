@@ -10,11 +10,12 @@ import Facebook from "../../assets/iconmonstr-facebook.png";
 import Instagram from "../../assets/iconmonstr-instagram.png";
 import Twitter from "../../assets/iconmonstr-twitter.png";
 import ArrowLanguage from "../../assets/iconmonstr-arrow.png";
+import InfoTable from "../InfoTable/infoTable";
 
 const Navigation = () => {
 
   const[active, setActivate] = useState(false);
-  const [sliderOn, setSliderOn] = useState(false)
+  const [InfoTableOn, setInfoTableOn] = useState(false)
 
 
   const handleHamburgerMenu = ()=>{
@@ -22,8 +23,8 @@ const Navigation = () => {
   }
   
 
-  const handleInfoSlider = ()=>{
-    setSliderOn(!sliderOn);
+  const handleInfoTable = ()=>{
+    setInfoTableOn(!InfoTableOn);
   }
 
 
@@ -40,8 +41,8 @@ const Navigation = () => {
         </div>
 
        
-
-        <div onClick={handleInfoSlider} className="praxisInfo" style={sliderOn ? {transform:'translateX(260px)'} : {transform:'translateX(0px)'}}>
+        <InfoTable handleInfoTable={handleInfoTable} InfoTableOn={InfoTableOn}/>
+        <div  className="praxisInfo" >
           <div className='schedule'>
             <div className="clock-container">
               <img src={Clock} alt="clock" />

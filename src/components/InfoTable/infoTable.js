@@ -1,0 +1,64 @@
+import React from "react";
+import "./infoTable.css";
+import Clock from "../../assets/iconmonstr-time-2.png";
+import Phone from "../../assets/iconmonstr-smartphone.png";
+import LocationIcon from "../../assets/iconmonstr-location.png";
+import HandLeft from "../../assets/iconmonstr-direction-left.png";
+import Facebook from "../../assets/iconmonstr-facebook.png";
+import Instagram from "../../assets/iconmonstr-instagram.png";
+import Twitter from "../../assets/iconmonstr-twitter.png";
+
+const InfoTable = ({handleInfoTable, InfoTableOn})=>{
+    return(
+        
+        <div onClick={handleInfoTable} className="infoTable" style={InfoTableOn ?{transform:"translateX(0px)"} : {transform:"translateX(-250px)"}}>
+          <div className='infoTable-schedule'>
+            <div className="infoTable-info">
+              <h6 className="infoTable-firstText">
+                Monday - Friday <span className="hours">08:00 - 19:00</span>
+              </h6>
+              <h6 className="infoTable-subText">Saturday <span className="hours">08:00 -14:00</span>, Sunday Closed</h6>
+            </div>
+            <div className="infoTable-clock-container">
+              <img src={Clock} alt="clock" />
+            </div>
+          </div>
+
+          <div className='infoTable-phone'>
+            <div className="infoTable-info">
+              <h6 className="infoTable-firstText">0172 2869619</h6>
+              <h6 className="infoTable-subText">physiopraxis.marian@gmail.com</h6>
+            </div>
+            <div className="infoTable-phone-container">
+              <img src={Phone} alt="phone" />
+            </div>
+          </div>
+
+          <div className='infoTable-location'>
+            <div className="infoTable-info">
+              <h6 className="infoTable-firstText">Nibelungenstrasse 42</h6>
+              <h6 className="infoTable-subText">Crumstadt, Hessen, Germany</h6>
+            </div>
+            <div className="infoTable-location-container">
+              <img src={LocationIcon} alt="location" />
+            </div>
+          </div>
+
+          <div className='infoTable-hand' >
+            <div className="infoTable-info">
+              <h6 className="infoTable-firstText">Follow Us</h6>
+              <div className="infoTable-social-container">
+                <a href="https://www.facebook.com/physiopraxis.marian/"><img src={Facebook} alt="facebook-icon" role="button" /></a>
+                <a href="https://www.facebook.com/physiopraxis.marian/"><img src={Instagram} alt="facebook-icon" role="button" /></a>
+                <a href="https://www.facebook.com/physiopraxis.marian/"><img src={Twitter} alt="facebook-icon" role="button" /></a>
+              </div>
+            </div>
+            <div className="infoTable-hand-container">
+              <img src={HandLeft} alt="hand" />
+            </div>
+          </div>
+        </div>
+    );
+}
+
+export default InfoTable;

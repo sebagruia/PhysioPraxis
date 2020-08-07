@@ -109,7 +109,7 @@
 
 /* Media Query */
 
-@media screen and (min-width:992px){
+@media screen and (min-width:1200px){
     .hamburger{
         display:none;
     }
