@@ -20,7 +20,6 @@
   width: 100%;
   margin-top: -25px;
   margin-bottom: 50px;
-  /* height: 250px; */
   z-index: 1;
 }
 .box {
@@ -164,6 +163,14 @@
   justify-content: space-between;
   width: 100%;
 }
+.form-label {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+.form-group {
+  margin-bottom: 0;
+}
 .group {
   position: relative;
   display: flex;
@@ -171,7 +178,7 @@
   flex-direction: column;
 }
 .group input {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 textarea {
   margin-top: 20px;
@@ -305,12 +312,16 @@ div.testimonial:nth-child(2) {
   flex-direction: column;
   align-items: center;
   position: absolute;
-  top: 110px;
+  top: 115px;
   left: 9px;
   width: 305px;
-  height: 341px;
+  height: 335px;
   padding: 30px;
   background-color: #047388;
+}
+.additionalInfo img {
+  width: 15px;
+  height: 15px;
 }
 
 .workingHours {
@@ -374,6 +385,29 @@ div.testimonial:nth-child(2) {
 }
 
 /* Media Query */
+@media screen and (min-width: 320px) and (max-width: 360px) {
+  div.testimonial:nth-child(2) {
+    align-self: initial;
+  }
+}
+@media screen and (max-width: 399px) {
+  .additionalInfo {
+    width: 294px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .testimonial {
+    width: 270px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .additionalInfo {
+    display: none;
+  }
+}
 
 @media screen and (max-width: 992px) {
   .box {
@@ -383,6 +417,17 @@ div.testimonial:nth-child(2) {
   .box2 {
     border-right: none;
     border-left: none;
+  }
+  .appointment-section {
+    flex-direction: column;
+  }
+  .appointment {
+    width: 100%;
+  }
+  .testimonials-subsection {
+    padding: 0;
+    width: 100%;
+    margin: 0px 0 80px 0;
   }
 }
 @media screen and (min-width: 993px) and (max-width: 1200px) {

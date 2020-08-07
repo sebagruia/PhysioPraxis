@@ -1,4 +1,4 @@
-import React, {Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import "./home.css";
 import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
@@ -10,14 +10,18 @@ import Face3 from "../../assets/face3.jpg";
 import MapLocation from "../../components/MapLocation/mapLocation";
 import Phone from "../../assets/iconmonstr-phone.png";
 import Mail from "../../assets/iconmonstr-email.png";
-
+import AdditionalInfoButton from "../../components/AdditionalInfoButton/additionalInfoButton";
 
 const Home = () => {
+  const [display, setDisplay] = useState(false);
+
+  const handleDisplay = ()=>{
+    setDisplay(!display);
+  }
 
   return (
     <Fragment>
       <div className="container-fluid hero-section">
-       
         <div className="hero-img"></div>
         <div className=" container hero-description">
           <div className="box box1">
@@ -99,16 +103,17 @@ const Home = () => {
                   type="text"
                   placeholder="Your Full Name"
                   aria-label="Your Full Name"
-                  aria-describedby="basic-addon1"
                   required
                 />
-                <FormControl
-                  type="date"
-                  placeholder="Date"
-                  aria-label="Date"
-                  aria-describedby="basic-addon1"
-                  required
-                />
+                <Form.Group>
+                  <Form.Label>Date</Form.Label>
+                  <FormControl
+                    type="date"
+                    placeholder="Date"
+                    aria-label="Date"
+                    required
+                  />
+                </Form.Group>
               </div>
               <div className="group">
                 <FormControl
@@ -118,15 +123,19 @@ const Home = () => {
                   aria-describedby="basic-addon1"
                   required
                 />
-                <FormControl
-                  type="time"
-                  min="08:00"
-                  max="18:00"
-                  placeholder="Time"
-                  aria-label="Time"
-                  aria-describedby="basic-addon1"
-                  required
-                />
+                <Form.Group>
+                <Form.Label>Time</Form.Label>
+                  <FormControl
+                    type="time"
+                    min="08:00"
+                    max="18:00"
+                    placeholder="Time"
+                    aria-label="Time"
+                    aria-describedby="basic-addon1"
+                    required
+                  />
+                </Form.Group>
+
                 <span className="validity"></span>
               </div>
             </div>
@@ -211,7 +220,8 @@ const Home = () => {
 
       <div className="container-fluid map">
         <MapLocation />
-        <div className="additionalInfo">
+        <AdditionalInfoButton handleDisplay={handleDisplay} display={display}/>
+        <div className="additionalInfo" style={display ? {display:"flex"} : {display:"none"}}>
           <div className="workingHours">
             <h5>Working Hours</h5>
             <h6>
