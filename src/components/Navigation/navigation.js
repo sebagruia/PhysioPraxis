@@ -41,7 +41,7 @@ const Navigation = () => {
 
        
 
-        <div onClick={handleInfoSlider} className="praxisInfo" style={sliderOn ? {right:'-200px'} : {right:'0px'}}>
+        <div onClick={handleInfoSlider} className="praxisInfo" style={sliderOn ? {transform:'translateX(260px)'} : {transform:'translateX(0px)'}}>
           <div className='schedule'>
             <div className="clock-container">
               <img src={Clock} alt="clock" />
@@ -50,7 +50,7 @@ const Navigation = () => {
               <h6 className="firstText">
                 Monday - Friday <span className="hours">08:00 - 19:00</span>
               </h6>
-              <h6 className="subText">Sunday Closed</h6>
+              <h6 className="subText">Saturday <span className="hours">08:00 -14:00</span>, Sunday Closed</h6>
             </div>
           </div>
 
@@ -81,9 +81,9 @@ const Navigation = () => {
             <div className="info">
               <h6 className="firstText">Follow Us</h6>
               <div className="social-container">
-                <img src={Facebook} alt="facebook-icon" role="button" />
-                <img src={Instagram} alt="facebook-icon" role="button" />
-                <img src={Twitter} alt="facebook-icon" role="button" />
+                <a href="https://www.facebook.com/physiopraxis.marian/"><img src={Facebook} alt="facebook-icon" role="button" /></a>
+                <a href="https://www.facebook.com/physiopraxis.marian/"><img src={Instagram} alt="facebook-icon" role="button" /></a>
+                <a href="https://www.facebook.com/physiopraxis.marian/"><img src={Twitter} alt="facebook-icon" role="button" /></a>
               </div>
             </div>
           </div>

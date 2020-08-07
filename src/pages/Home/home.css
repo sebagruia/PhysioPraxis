@@ -1,6 +1,5 @@
 /* Hero Section */
 .hero-section {
-  position:relative;
   width: 100%;
   padding: 0;
 }
@@ -21,7 +20,7 @@
   width: 100%;
   margin-top: -25px;
   margin-bottom: 50px;
-  height: 250px;
+  /* height: 250px; */
   z-index: 1;
 }
 .box {
@@ -314,7 +313,7 @@ div.testimonial:nth-child(2) {
   background-color: #047388;
 }
 
-.workingHours{
+.workingHours {
   margin-bottom: 20px;
 }
 .workingHours,
@@ -359,7 +358,7 @@ div.testimonial:nth-child(2) {
   justify-content: center;
   align-items: center;
   margin-bottom: 10px;
-  color:#fff;
+  color: #fff;
 }
 
 .phone-details img,
@@ -372,4 +371,22 @@ div.testimonial:nth-child(2) {
 .contactDetails h6 {
   font-variant: normal !important;
   font-size: 0.7rem;
+}
+
+/* Media Query */
+
+@media screen and (max-width: 992px) {
+  .box {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .box2 {
+    border-right: none;
+    border-left: none;
+  }
+}
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  .box {
+    width: 250px;
+  }
 }

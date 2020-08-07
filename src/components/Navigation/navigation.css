@@ -97,11 +97,18 @@
   justify-content: space-evenly;
 }
 
-.social-container img {
+/* .social-container img {
   width: 18px;
   height: auto;
   margin-right: 2px;
   opacity: 0.5;
+} */
+.social-container a img {
+  width: 18px;
+  height: auto;
+  margin-right: 2px;
+  opacity: 0.5;
+  cursor:hand;
 }
 
 .navMenu-content,
@@ -172,23 +179,10 @@
   font-size: 1.3rem;
 }
 
-
-
 /* Media Query */
 
 @media screen and (max-width: 992px) {
-  .praxisInfo {
-    position: absolute;
-    top: 204px;
-    width: 250px;
-    display: flex;
-    flex-direction: column;
-    z-index: 3;
-    background-color: #fff;
-    padding-bottom: 20px;
-    transition:right 0.5s;
-    cursor:pointer;
-  }
+  
   .navMenu {
     display: none;
   }
@@ -213,12 +207,32 @@
   .menu-buttons {
     width: 50%;
     flex-direction: column;
-    margin-left:0;
+    margin-left: 0;
   }
   .message-button {
     margin-bottom: 30px;
   }
 
+  
+}
+
+@media screen and (max-width:1200px){
+  .logo {
+    padding-left: 30px;
+}
+  .praxisInfo {
+    position: absolute;
+    top: 204px;
+    right: 0px;
+    width: 308px;
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+    background-color: #fff;
+    padding-bottom: 20px;
+    transition: transform 0.5s;
+    cursor: pointer;
+  }
   .navInfo-container {
     flex-direction: column;
   }
@@ -229,10 +243,22 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 220px;
+    width: 270px;
     margin-bottom: 10px;
-    margin-right: 0px;
+    margin-right: 10px;
   }
+  .clock-container,
+  .phone-container,
+  .location-container,
+  .hand-container {
+    padding-right: 15px;
+  }
+  .subText {
+    font-variant: normal;
+  }
+  .hours {
+    font-size: 0.9rem;
+}
 }
 
 /* Mobile Version */
@@ -241,5 +267,3 @@
   height: 100vh;
   display: flex;
 }
-
-
