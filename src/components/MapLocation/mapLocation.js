@@ -11,11 +11,11 @@ const MapLocation = () => {
         title="PhysioPraxis Marian"
         width="100%"
         height="450"
-        frameborder="0"
+        frameBorder="0"
         style={{ border: 0 }}
-        allowfullscreen=""
+        allowFullScreen=""
         aria-hidden="false"
-        tabindex="0"
+        tabIndex="0"
       />
     </div>
   );

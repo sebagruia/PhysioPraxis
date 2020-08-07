@@ -1,4 +1,5 @@
 .navigation {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 0;
@@ -23,6 +24,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-right: 5px;
 }
 .clock-container,
 .phone-container,
@@ -67,10 +69,11 @@
 
 .logo {
   display: flex;
+  align-items: center;
 }
 .logo-img {
   width: 120px;
-  height: auto;
+  height: 100px;
 }
 .logo-text {
   font-family: "Roboto Condensed", sans-serif;
@@ -114,7 +117,7 @@
   border-top: 2px solid #e6e6e6;
 }
 
-.navMenu-content{
+.navMenu-content {
   height: 50px;
 }
 
@@ -132,12 +135,12 @@
   color: #003a45;
   opacity: 0.8;
   cursor: pointer;
-  transition:font-size 0.5s;
+  transition: font-size 0.5s;
 }
-.menu li:hover{
-  font-weight:700;
-  opacity:1;
-  color:#6AB5AE;
+.menu li:hover {
+  font-weight: 700;
+  opacity: 1;
+  color: #6ab5ae;
 }
 .menu-buttons {
   width: 200px;
@@ -159,14 +162,84 @@
   background-color: rgb(196, 196, 196, 0.3);
 }
 
-.language-button img{
-  width:10px;
+.language-button img {
+  width: 10px;
   margin-left: 5px;
   margin-top: 2px;
-  opacity:0.7;
-  
+  opacity: 0.7;
 }
-.language-button h6{
+.language-button h6 {
   font-size: 1.3rem;
-
 }
+
+
+
+/* Media Query */
+
+@media screen and (max-width: 992px) {
+  .praxisInfo {
+    position: absolute;
+    top: 204px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+    background-color: #fff;
+    padding-bottom: 20px;
+    transition:right 0.5s;
+    cursor:pointer;
+  }
+  .navMenu {
+    display: none;
+  }
+  .navMenu-content {
+    height: initial;
+  }
+  .menu {
+    flex-direction: column;
+  }
+
+  .menu li {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #003a45;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: font-size 0.5s;
+    margin-bottom: 20px;
+    font-variant: all-small-caps;
+    font-family: "Montserrat";
+  }
+  .menu-buttons {
+    width: 50%;
+    flex-direction: column;
+    margin-left:0;
+  }
+  .message-button {
+    margin-bottom: 30px;
+  }
+
+  .navInfo-container {
+    flex-direction: column;
+  }
+  .schedule,
+  .phone,
+  .location,
+  .hand {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 220px;
+    margin-bottom: 10px;
+    margin-right: 0px;
+  }
+}
+
+/* Mobile Version */
+
+.navMenuMobile {
+  height: 100vh;
+  display: flex;
+}
+
+

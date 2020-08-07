@@ -12,7 +12,7 @@ const Footer = () => {
       <div className=" container footer-container">
         <div className="copyright">
           <h6>Copyright Physiopraxis Marian</h6>
-          <div class="footer-social">
+          <div className="footer-social">
             <img src={Facebook} alt="facebook icon" />
             <img src={Instagram} alt="facebook icon" />
             <img src={Twitter} alt="facebook icon" />

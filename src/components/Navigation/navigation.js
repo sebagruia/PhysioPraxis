@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useState} from "react";
 import "./navigation.css";
+import Hamburger from "../Hamburger/hamburger";
 import Logo from "../../assets/PhysiopraxisLogoShadow.png";
 import Clock from "../../assets/iconmonstr-time-2.png";
 import Phone from "../../assets/iconmonstr-smartphone.png";
@@ -11,9 +12,25 @@ import Twitter from "../../assets/iconmonstr-twitter.png";
 import ArrowLanguage from "../../assets/iconmonstr-arrow.png";
 
 const Navigation = () => {
+
+  const[active, setActivate] = useState(false);
+  const [sliderOn, setSliderOn] = useState(false)
+
+
+  const handleHamburgerMenu = ()=>{
+    setActivate(!active)
+  }
+  
+
+  const handleInfoSlider = ()=>{
+    setSliderOn(!sliderOn);
+  }
+
+
   return (
     <div className="container-fluid navigation">
-      <div className="navInfo-container container">
+      <Hamburger handleHamburgerMenu={handleHamburgerMenu} active={active}/>
+      <div className="navInfo-container container-xl" style={active ? {display:"none"} : {display: "flex"}}>
         <div className="logo">
           <img className="logo-img" src={Logo} alt="logo" />
           <div className="logo-text">
@@ -21,8 +38,11 @@ const Navigation = () => {
             <h6>Marian</h6>
           </div>
         </div>
-        <div className="praxisInfo">
-          <div className="schedule">
+
+       
+
+        <div onClick={handleInfoSlider} className="praxisInfo" style={sliderOn ? {right:'-200px'} : {right:'0px'}}>
+          <div className='schedule'>
             <div className="clock-container">
               <img src={Clock} alt="clock" />
             </div>
@@ -34,7 +54,7 @@ const Navigation = () => {
             </div>
           </div>
 
-          <div className="phone">
+          <div className='phone'>
             <div className="phone-container">
               <img src={Phone} alt="phone" />
             </div>
@@ -44,7 +64,7 @@ const Navigation = () => {
             </div>
           </div>
 
-          <div className="location">
+          <div className='location'>
             <div className="location-container">
               <img src={LocationIcon} alt="location" />
             </div>
@@ -53,7 +73,8 @@ const Navigation = () => {
               <h6 className="subText">Crumstadt, Hessen, Germany</h6>
             </div>
           </div>
-          <div className="hand">
+
+          <div className='hand' >
             <div className="hand-container">
               <img src={Hand} alt="hand" />
             </div>
@@ -68,8 +89,9 @@ const Navigation = () => {
           </div>
         </div>
       </div>
-      <div className="navMenu">
-        <div className="container navMenu-content">
+
+      <div className={`navMenu ${active ? 'navMenuMobile' : ""}`}>
+        <div className="container-xl navMenu-content">
           <ul className="menu">
             <li>Home</li>
             <li>About us</li>

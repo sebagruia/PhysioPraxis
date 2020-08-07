@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { useState, Fragment } from "react";
 import "./home.css";
 import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
@@ -13,9 +13,11 @@ import Mail from "../../assets/iconmonstr-email.png";
 
 
 const Home = () => {
+
   return (
     <Fragment>
       <div className="container-fluid hero-section">
+       
         <div className="hero-img"></div>
         <div className=" container hero-description">
           <div className="box box1">
