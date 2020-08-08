@@ -200,6 +200,10 @@ textarea {
   background-color: #003a45;
   color: #fff;
 }
+input[type='text'],
+textarea{
+  cursor:text;
+}
 input + span {
   padding-right: 30px;
 }

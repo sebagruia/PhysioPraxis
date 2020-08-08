@@ -1,5 +1,7 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./navigation.css";
+import Form from "react-bootstrap/Form";
+import FormControl from "react-bootstrap/FormControl";
 import Hamburger from "../Hamburger/hamburger";
 import Logo from "../../assets/PhysiopraxisLogoShadow.png";
 import Clock from "../../assets/iconmonstr-time-2.png";
@@ -11,27 +13,32 @@ import Instagram from "../../assets/iconmonstr-instagram.png";
 import Twitter from "../../assets/iconmonstr-twitter.png";
 import ArrowLanguage from "../../assets/iconmonstr-arrow.png";
 import InfoTable from "../InfoTable/infoTable";
+import LeaveAMessageButton from "../LeaveAMessageButton/leaveAMessageButton";
 
 const Navigation = () => {
+  const [active, setActivate] = useState(false);
+  const [InfoTableOn, setInfoTableOn] = useState(false);
+  const [leaveMessageOn, setleaveMessageOn] = useState(false);
 
-  const[active, setActivate] = useState(false);
-  const [InfoTableOn, setInfoTableOn] = useState(false)
+  const handleHamburgerMenu = () => {
+    setActivate(!active);
+  };
 
-
-  const handleHamburgerMenu = ()=>{
-    setActivate(!active)
-  }
-  
-
-  const handleInfoTable = ()=>{
+  const handleInfoTable = () => {
     setInfoTableOn(!InfoTableOn);
-  }
+  };
 
+  const handleLeaveAMessageButton = ()=>{
+    setleaveMessageOn(!leaveMessageOn);
+  }
 
   return (
     <div className="container-fluid navigation">
-      <Hamburger handleHamburgerMenu={handleHamburgerMenu} active={active}/>
-      <div className="navInfo-container container-xl" style={active ? {display:"none"} : {display: "flex"}}>
+      <Hamburger handleHamburgerMenu={handleHamburgerMenu} active={active} />
+      <div
+        className="navInfo-container container-xl"
+        style={active ? { display: "none" } : { display: "flex" }}
+      >
         <div className="logo">
           <img className="logo-img" src={Logo} alt="logo" />
           <div className="logo-text">
@@ -40,10 +47,12 @@ const Navigation = () => {
           </div>
         </div>
 
-       
-        <InfoTable handleInfoTable={handleInfoTable} InfoTableOn={InfoTableOn}/>
-        <div  className="praxisInfo" >
-          <div className='schedule'>
+        <InfoTable
+          handleInfoTable={handleInfoTable}
+          InfoTableOn={InfoTableOn}
+        />
+        <div className="praxisInfo">
+          <div className="schedule">
             <div className="clock-container">
               <img src={Clock} alt="clock" />
             </div>
@@ -51,11 +60,14 @@ const Navigation = () => {
               <h6 className="firstText">
                 Monday - Friday <span className="hours">08:00 - 19:00</span>
               </h6>
-              <h6 className="subText">Saturday <span className="hours">08:00 -14:00</span>, Sunday Closed</h6>
+              <h6 className="subText">
+                Saturday <span className="hours">08:00 -14:00</span>, Sunday
+                Closed
+              </h6>
             </div>
           </div>
 
-          <div className='phone'>
+          <div className="phone">
             <div className="phone-container">
               <img src={Phone} alt="phone" />
             </div>
@@ -65,7 +77,7 @@ const Navigation = () => {
             </div>
           </div>
 
-          <div className='location'>
+          <div className="location">
             <div className="location-container">
               <img src={LocationIcon} alt="location" />
             </div>
@@ -75,23 +87,29 @@ const Navigation = () => {
             </div>
           </div>
 
-          <div className='hand' >
+          <div className="hand">
             <div className="hand-container">
               <img src={Hand} alt="hand" />
             </div>
             <div className="info">
               <h6 className="firstText">Follow Us</h6>
               <div className="social-container">
-                <a href="https://www.facebook.com/physiopraxis.marian/"><img src={Facebook} alt="facebook-icon" role="button" /></a>
-                <a href="https://www.facebook.com/physiopraxis.marian/"><img src={Instagram} alt="facebook-icon" role="button" /></a>
-                <a href="https://www.facebook.com/physiopraxis.marian/"><img src={Twitter} alt="facebook-icon" role="button" /></a>
+                <a href="https://www.facebook.com/physiopraxis.marian/">
+                  <img src={Facebook} alt="facebook-icon" role="button" />
+                </a>
+                <a href="https://www.facebook.com/physiopraxis.marian/">
+                  <img src={Instagram} alt="facebook-icon" role="button" />
+                </a>
+                <a href="https://www.facebook.com/physiopraxis.marian/">
+                  <img src={Twitter} alt="facebook-icon" role="button" />
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className={`navMenu ${active ? 'navMenuMobile' : ""}`}>
+      <div className={`navMenu ${active ? "navMenuMobile" : ""}`}>
         <div className="container-xl navMenu-content">
           <ul className="menu">
             <li>Home</li>
@@ -102,15 +120,45 @@ const Navigation = () => {
             <li>Appointment</li>
           </ul>
           <div className="menu-buttons">
-            <div className="message-button" role="button">
-              <h6>Leave a Message</h6>
-            </div>
+            <LeaveAMessageButton handleLeaveAMessageButton={handleLeaveAMessageButton}/>
             <div className="language-button" role="button">
               <h6>DE</h6>
               <img src={ArrowLanguage} alt="arrow" />
             </div>
           </div>
         </div>
+      </div>
+
+      <div className={`leave-a-message`} style={leaveMessageOn ? {height:"100px"} : {height:"0px"}}>
+        <Form className="leave-a-message-container container" style={leaveMessageOn ? { opacity: "1"} :  { opacity: "0"}}>
+          <h5>Your Message Here</h5>
+          <Form.Group className="leave-a-message-form">
+            <FormControl
+              className="message-input"
+              type="text"
+              placeholder="Full Name"
+              aria-label="Full Name"
+              required
+            />
+            <FormControl
+              className="message-input"
+              type="email"
+              placeholder="Email"
+              aria-label="Date"
+              required
+            />
+            <Form.Control
+              className="message-input"
+              as="textarea"
+              rows="1"
+              cols="50"
+              placeholder="your message..."
+            ></Form.Control>
+          </Form.Group>
+          <div className="book-button" role="button" type="submit">
+            <p>SEND</p>
+          </div>
+        </Form>
       </div>
     </div>
   );

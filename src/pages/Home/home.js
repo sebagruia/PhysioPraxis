@@ -98,14 +98,13 @@ const Home = () => {
               <h6>We are here for you</h6>
             </div>
             <div className="appointment-inputs">
-              <div className="group">
+              <Form.Group className="group">
                 <FormControl
                   type="text"
                   placeholder="Your Full Name"
                   aria-label="Your Full Name"
                   required
                 />
-                <Form.Group>
                   <Form.Label>Date</Form.Label>
                   <FormControl
                     type="date"
@@ -113,9 +112,8 @@ const Home = () => {
                     aria-label="Date"
                     required
                   />
-                </Form.Group>
-              </div>
-              <div className="group">
+              </Form.Group>
+              <Form.Group className="group">
                 <FormControl
                   type="text"
                   placeholder="Phone"
@@ -123,7 +121,6 @@ const Home = () => {
                   aria-describedby="basic-addon1"
                   required
                 />
-                <Form.Group>
                 <Form.Label>Time</Form.Label>
                   <FormControl
                     type="time"
@@ -134,22 +131,21 @@ const Home = () => {
                     aria-describedby="basic-addon1"
                     required
                   />
-                </Form.Group>
 
                 <span className="validity"></span>
-              </div>
+              </Form.Group>
             </div>
-            <textarea
-              className="form-control"
-              aria-label="With textarea"
+            <Form.Control
+              as="textarea"
               rows="4"
               cols="50"
               placeholder="Special request..."
-            ></textarea>
+            ></Form.Control>
             <div className="book-button" role="button" type="submit">
               <p>BOOK</p>
             </div>
           </Form>
+          
           <div className="testimonials-subsection">
             <h1 className="testimonials-title">Testimonials</h1>
             <div className="testimonials-container">
