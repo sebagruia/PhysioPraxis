@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "./navigation.css";
-import Form from "react-bootstrap/Form";
-import FormControl from "react-bootstrap/FormControl";
+import LeaveAMessageForm from "../LeaveAMessageForm/leaveAMessageForm";
 import Hamburger from "../Hamburger/hamburger";
+
+import LanguageButton from "../LanguageButton/languageButton";
 import Logo from "../../assets/PhysiopraxisLogoShadow.png";
 import Clock from "../../assets/iconmonstr-time-2.png";
 import Phone from "../../assets/iconmonstr-smartphone.png";
@@ -11,7 +12,6 @@ import Hand from "../../assets/iconmonstr-direction.png";
 import Facebook from "../../assets/iconmonstr-facebook.png";
 import Instagram from "../../assets/iconmonstr-instagram.png";
 import Twitter from "../../assets/iconmonstr-twitter.png";
-import ArrowLanguage from "../../assets/iconmonstr-arrow.png";
 import InfoTable from "../InfoTable/infoTable";
 import LeaveAMessageButton from "../LeaveAMessageButton/leaveAMessageButton";
 
@@ -22,6 +22,7 @@ const Navigation = () => {
 
   const handleHamburgerMenu = () => {
     setActivate(!active);
+    setleaveMessageOn(false);
   };
 
   const handleInfoTable = () => {
@@ -121,45 +122,12 @@ const Navigation = () => {
           </ul>
           <div className="menu-buttons">
             <LeaveAMessageButton handleLeaveAMessageButton={handleLeaveAMessageButton}/>
-            <div className="language-button" role="button">
-              <h6>DE</h6>
-              <img src={ArrowLanguage} alt="arrow" />
-            </div>
+            <LanguageButton />
           </div>
         </div>
       </div>
-
-      <div className={`leave-a-message`} style={leaveMessageOn ? {height:"100px"} : {height:"0px"}}>
-        <Form className="leave-a-message-container container" style={leaveMessageOn ? { opacity: "1"} :  { opacity: "0"}}>
-          <h5>Your Message Here</h5>
-          <Form.Group className="leave-a-message-form">
-            <FormControl
-              className="message-input"
-              type="text"
-              placeholder="Full Name"
-              aria-label="Full Name"
-              required
-            />
-            <FormControl
-              className="message-input"
-              type="email"
-              placeholder="Email"
-              aria-label="Date"
-              required
-            />
-            <Form.Control
-              className="message-input"
-              as="textarea"
-              rows="1"
-              cols="50"
-              placeholder="your message..."
-            ></Form.Control>
-          </Form.Group>
-          <div className="book-button" role="button" type="submit">
-            <p>SEND</p>
-          </div>
-        </Form>
-      </div>
+    <LeaveAMessageForm handleLeaveAMessageButton={handleLeaveAMessageButton} leaveMessageOn={leaveMessageOn}/>
+    
     </div>
   );
 };

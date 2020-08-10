@@ -4,7 +4,6 @@
   flex-direction: column;
   padding: 0;
   background-color: #fff;
-  
 }
 .navInfo-container {
   width: 100%;
@@ -132,6 +131,7 @@
   list-style: none;
   font-family: "Roboto Condensed", sans-serif;
 }
+
 .menu li {
   font-size: 0.9rem;
   font-weight: 500;
@@ -140,88 +140,40 @@
   cursor: pointer;
   transition: font-size 0.5s;
 }
+
 .menu li:hover {
   font-weight: 700;
   opacity: 1;
   color: #6ab5ae;
 }
+
 .menu-buttons {
   width: 200px;
   margin-left: auto;
   justify-content: space-around;
 }
-.menu-buttons h6 {
-  font-family: "Roboto Condensed", sans-serif;
-  font-size: 1.2rem;
-  font-weight: 700;
-  font-variant-caps: all-small-caps;
-  color: #003a45;
-  opacity: 0.5;
-  cursor: pointer;
-}
 
 
-.language-button img {
-  width: 10px;
-  margin-left: 5px;
-  margin-top: 2px;
-  opacity: 0.7;
-}
-.language-button h6 {
-  font-size: 1.3rem;
-}
 
-.leave-a-message{
-  position:absolute;
-  top:192px;
-  left:0px;
-  width:100%;
-  height:100px;
-  display: flex;
-  align-items: center;
-  background-color: rgba(40, 92, 102,0.8);
-  color:#fff;
-  transition: height 0.5s;
-  
-  
-}
-
-.leave-a-message-container{
-  display:flex;
-  justify-content:space-evenly;
-  align-items: center;
-  transition: opacity  0.3s ease-in;
-}
-.leave-a-message-container h5{
-  font-family: "Roboto Condensed", sans-serif;
-  font-variant: all-small-caps;
-  font-size: 1.5rem;
-  opacity:0.9;
-}
-.leave-a-message-form{
-  width:70%;
-  display:flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-.leave-a-message-form .form-control{
-  margin-bottom:0px;
-  margin-right: 10px;
-}
-.leave-a-message-form textarea{
-  margin-top: 0px;
-  height: 37px;
-}
-
-.message-input{
-  padding-right: 10px;
-}
 
 /* Media Query */
 
 @media screen and (max-width: 1200px) {
+  .logo {
+    padding-left: 30px;
+  }
+  .praxisInfo {
+    display: none;
+  }
+  .navInfo-container {
+    flex-direction: column;
+  }
   .navMenu {
     display: none;
+  }
+  .navMenuMobile {
+    height: 100vh;
+    display: flex;
   }
   .navMenu-content {
     height: initial;
@@ -246,26 +198,13 @@
     flex-direction: column;
     margin-left: 0;
   }
-  .message-button {
-    margin-bottom: 30px;
-  }
+ 
+
+  
 }
 
-@media screen and (max-width: 1200px) {
-  .logo {
-    padding-left: 30px;
-  }
-  .praxisInfo {
-    display: none;
-  }
+@media screen and (min-width:1200px){
   .navInfo-container {
-    flex-direction: column;
-  }
+    display: flex!important;
 }
-
-/* Mobile Version */
-
-.navMenuMobile {
-  height: 100vh;
-  display: flex;
 }

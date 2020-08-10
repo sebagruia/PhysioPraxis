@@ -1,7 +1,9 @@
 import React, { Fragment, useState } from "react";
 import "./home.css";
-import Form from "react-bootstrap/Form";
-import FormControl from "react-bootstrap/FormControl";
+// import Form from "react-bootstrap/Form";
+// import FormControl from "react-bootstrap/FormControl";
+// import BookButton from "../../components/BookButton/bookButton";
+import BookingForm from "../../components/BookingForm/bookingForm";
 import Doctor from "../../assets/doctor1.png";
 import Quote from "../../assets/iconmonstr-quote.png";
 import Face1 from "../../assets/face1.jpg";
@@ -19,6 +21,8 @@ const Home = () => {
     setDisplay(!display);
   }
 
+
+  
   return (
     <Fragment>
       <div className="container-fluid hero-section">
@@ -92,59 +96,7 @@ const Home = () => {
 
       <div className="container-fluid appointment-container">
         <div className="container appointment-section">
-          <Form className="appointment">
-            <div className="appointment-text">
-              <h1>Book Appointment</h1>
-              <h6>We are here for you</h6>
-            </div>
-            <div className="appointment-inputs">
-              <Form.Group className="group">
-                <FormControl
-                  type="text"
-                  placeholder="Your Full Name"
-                  aria-label="Your Full Name"
-                  required
-                />
-                  <Form.Label>Date</Form.Label>
-                  <FormControl
-                    type="date"
-                    placeholder="Date"
-                    aria-label="Date"
-                    required
-                  />
-              </Form.Group>
-              <Form.Group className="group">
-                <FormControl
-                  type="text"
-                  placeholder="Phone"
-                  aria-label="Phone"
-                  aria-describedby="basic-addon1"
-                  required
-                />
-                <Form.Label>Time</Form.Label>
-                  <FormControl
-                    type="time"
-                    min="08:00"
-                    max="18:00"
-                    placeholder="Time"
-                    aria-label="Time"
-                    aria-describedby="basic-addon1"
-                    required
-                  />
-
-                <span className="validity"></span>
-              </Form.Group>
-            </div>
-            <Form.Control
-              as="textarea"
-              rows="4"
-              cols="50"
-              placeholder="Special request..."
-            ></Form.Control>
-            <div className="book-button" role="button" type="submit">
-              <p>BOOK</p>
-            </div>
-          </Form>
+          <BookingForm />
           
           <div className="testimonials-subsection">
             <h1 className="testimonials-title">Testimonials</h1>
@@ -217,7 +169,7 @@ const Home = () => {
       <div className="container-fluid map">
         <MapLocation />
         <AdditionalInfoButton handleDisplay={handleDisplay} display={display}/>
-        <div className="additionalInfo" style={display ? {display:"flex"} : {display:"none"}}>
+        <div className="additionalInfo" style={display ? {display:"none"} : {display:"flex"}}>
           <div className="workingHours">
             <h5>Working Hours</h5>
             <h6>

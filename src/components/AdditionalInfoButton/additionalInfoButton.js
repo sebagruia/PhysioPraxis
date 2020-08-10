@@ -6,7 +6,7 @@ import ArrowLeft from "../../assets/iconmonstr-arrow-left.png"
 const AdditionalInfoButton = ({handleDisplay, display})=>{
     return(
         <div className="additionalInfoButton" onClick={handleDisplay} role="button">
-            <img src={display ? ArrowLeft : ArrowRight} alt="arrow icon" />
+            <img src={display ? ArrowRight  : ArrowLeft} alt="arrow icon" />
         </div>
     );
 }
