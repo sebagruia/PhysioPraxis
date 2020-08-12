@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./navigation.css";
 import LeaveAMessageForm from "../LeaveAMessageForm/leaveAMessageForm";
 import Hamburger from "../Hamburger/hamburger";
-
+import {Link} from "react-router-dom";
 import LanguageButton from "../LanguageButton/languageButton";
 import Logo from "../../assets/PhysiopraxisLogoShadow.png";
 import Clock from "../../assets/iconmonstr-time-2.png";
@@ -113,8 +113,8 @@ const Navigation = () => {
       <div className={`navMenu ${active ? "navMenuMobile" : ""}`}>
         <div className="container-xl navMenu-content">
           <ul className="menu">
-            <li>Home</li>
-            <li>About us</li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/aboutUs">About us</Link></li>
             <li>Team</li>
             <li>Services</li>
             <li>News</li>

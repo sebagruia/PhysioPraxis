@@ -3,9 +3,9 @@
     margin-bottom: 150px;
 }
 .carousel-item{
-    
     width:100%;
 }
+
 .slide-image-container{
     display:grid!important;
     grid-template-columns: 30% 30% 30%;

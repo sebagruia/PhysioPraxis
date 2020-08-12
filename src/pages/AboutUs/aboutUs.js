@@ -1,5 +1,6 @@
 import React from "react";
 import "./aboutUs.css";
+import {withRouter} from "react-router-dom";
 import AboutUsWorkinHours from "../../components/AboutUsWorkinHours/aboutUsWorkingHours";
 import Socials from "../../components/Socials/socials";
 import BootstrapCarousel from "../../components/BootstrapCarousel/bootstrapCarousel";
@@ -67,4 +68,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default withRouter(AboutUs);

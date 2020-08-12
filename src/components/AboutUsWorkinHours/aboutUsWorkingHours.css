@@ -53,8 +53,7 @@
   justify-content: space-between;
   align-items: center;
 }
-.aboutUsWorkingHours-hours h6,
-.contactDetails h5 {
+.aboutUsWorkingHours-hours h6 {
   margin-bottom: 10px;
   opacity: 0.8;
 }
@@ -115,8 +114,8 @@
   font-weight: 500;
 }
 
-.phone-details,
-.contact-details {
+.aboutUsWorkingHours-phone-details,
+.aboutUsWorkingHours-contact-details {
   width: 250px;
   display: flex;
   justify-content: flex-start;
@@ -125,8 +124,8 @@
   opacity: 0.8;
 }
 
-.phone-details img,
-.contact-details img {
+.aboutUsWorkingHours-phone-details img,
+.aboutUsWorkingHours-contact-details img {
   width: 15px;
   height: 15px;
   margin-right: 10px;

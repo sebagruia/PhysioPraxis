@@ -144,7 +144,11 @@
 .menu li:hover {
   font-weight: 700;
   opacity: 1;
-  color: #6ab5ae;
+  color: #003a45;
+}
+
+.menu li a{
+  color: #003a45;
 }
 
 .menu-buttons {

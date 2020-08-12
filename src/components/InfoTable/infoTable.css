@@ -68,6 +68,10 @@
   font-size: 0.9rem;
 }
 
+.not-visible{
+  display:none;
+}
+
 /* Media Query */
 
 @media screen and (min-width:1200px){

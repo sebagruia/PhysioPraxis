@@ -71,11 +71,11 @@ const AboutUsWorkinHours = () => {
       <div className="aboutUsWorkingHours-contactDetails">
       <p className="contactMarian">Contact Marian</p>
         <h5>contact details</h5>
-        <div className="phone-details">
+        <div className="aboutUsWorkingHours-phone-details">
           <img src={Phone} alt="phone" />
           <h6>0172 2869619</h6>
         </div>
-        <div className="contact-details">
+        <div className="aboutUsWorkingHours-contact-details">
           <img src={Mail} alt="email" />
           <h6>physiopraxis.marian@gmail.com</h6>
         </div>
