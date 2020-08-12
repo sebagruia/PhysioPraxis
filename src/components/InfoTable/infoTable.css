@@ -67,18 +67,6 @@
 .infoTable-hours {
   font-size: 0.9rem;
 }
-.infoTable-social-container {
-    display: flex;
-    justify-content: space-evenly;
-  }
-  
-  .infoTable-social-container a img {
-    width: 22px;
-    height: auto;
-    margin-right: 2px;
-    opacity: 0.5;
-    cursor: hand;
-  }
 
 /* Media Query */
 

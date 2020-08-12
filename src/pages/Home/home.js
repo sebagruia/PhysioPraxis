@@ -1,8 +1,5 @@
 import React, { Fragment, useState } from "react";
 import "./home.css";
-// import Form from "react-bootstrap/Form";
-// import FormControl from "react-bootstrap/FormControl";
-// import BookButton from "../../components/BookButton/bookButton";
 import BookingForm from "../../components/BookingForm/bookingForm";
 import Doctor from "../../assets/doctor1.png";
 import Quote from "../../assets/iconmonstr-quote.png";

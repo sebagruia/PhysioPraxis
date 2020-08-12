@@ -4,9 +4,8 @@ import Clock from "../../assets/iconmonstr-time-2.png";
 import Phone from "../../assets/iconmonstr-smartphone.png";
 import LocationIcon from "../../assets/iconmonstr-location.png";
 import HandLeft from "../../assets/iconmonstr-direction-left.png";
-import Facebook from "../../assets/iconmonstr-facebook.png";
-import Instagram from "../../assets/iconmonstr-instagram.png";
-import Twitter from "../../assets/iconmonstr-twitter.png";
+import Socials from "../Socials/socials";
+
 
 const InfoTable = ({handleInfoTable, InfoTableOn})=>{
     return(
@@ -47,11 +46,7 @@ const InfoTable = ({handleInfoTable, InfoTableOn})=>{
           <div className='infoTable-hand' >
             <div className="infoTable-info">
               <h6 className="infoTable-firstText">Follow Us</h6>
-              <div className="infoTable-social-container">
-                <a href="https://www.facebook.com/physiopraxis.marian/"><img src={Facebook} alt="facebook-icon" role="button" /></a>
-                <a href="https://www.facebook.com/physiopraxis.marian/"><img src={Instagram} alt="facebook-icon" role="button" /></a>
-                <a href="https://www.facebook.com/physiopraxis.marian/"><img src={Twitter} alt="facebook-icon" role="button" /></a>
-              </div>
+             <Socials />
             </div>
             <div className="infoTable-hand-container">
               <img src={HandLeft} alt="hand" />

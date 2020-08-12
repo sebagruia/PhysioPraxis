@@ -1,0 +1,150 @@
+.aboutUsWorkingHours {
+  position: relative;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #eae7e7;
+}
+.title-container {
+  position: absolute;
+  top: 0px;
+  left: 340px;
+  width: 300px;
+  font-variant: all-small-caps;
+  font-family: "Montserrat", sans-serif;
+  text-align: start;
+  color: #fff;
+}
+.title-container h6 {
+  font-size: 1.2rem;
+}
+.aboutUsWorkingHours-img-container {
+  width: 90%;
+  margin-top: 10px;
+  align-self: center;
+}
+
+.aboutUsWorkingHours-img-container img {
+  width: 100%;
+  height: auto;
+}
+
+.aboutUsWorkingHours-hours,
+.aboutUsWorkingHours-contactDetails {
+  width: 100%;
+  padding: 25px;
+}
+.aboutUsWorkingHours-hours,
+.aboutUsWorkingHours-contactDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 20px;
+}
+.aboutUsWorkingHours-day {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+.aboutUsWorkingHours-day-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.aboutUsWorkingHours-hours h6,
+.contactDetails h5 {
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+.aboutUsWorkingHours-hr {
+  width: 100%;
+  height: 2px;
+}
+.contactMarian {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  color: #003a45;
+  opacity: 0.8;
+  font-weight: 400;
+  text-decoration: underline;
+}
+.aboutUsWorkingHours-hours h5,
+.aboutUsWorkingHours-contactDetails h5 {
+  font-variant-caps: all-small-caps;
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #003a45;
+  opacity: 0.8;
+}
+.aboutUsWorkingHours-contactDetails h5,
+.aboutUsWorkingHours-hours h5 {
+  margin-bottom: 20px;
+}
+.aboutUsWorkingHours-hours h5 {
+  color: #003a45;
+}
+
+.aboutUsWorkingHours-hours h6,
+.aboutUsWorkingHours-contactDetails h6 {
+  color: #003a45;
+}
+
+.aboutUsWorkingHours-hours h6 {
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-variant-caps: all-small-caps;
+  font-weight: 700;
+  color: #003a45;
+}
+.aboutUsWorkingHours-contactDetails h6 {
+  font-family: "Montserrat", sans-serif;
+  font-variant: normal !important;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.aboutUsWorkingHours-hours p {
+  font-weight: 300;
+  font-size: 0.7rem;
+  padding-left: 10px;
+  color: #003a45;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+.phone-details,
+.contact-details {
+  width: 250px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+.phone-details img,
+.contact-details img {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  color: #003a45;
+}
+
+@media screen and (max-width: 361px) {
+  .title-container h1 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .aboutUsWorkingHours {
+    width: 90%;
+  }
+  .title-container {
+    top: -90px;
+    left: 25px;
+  }
+}

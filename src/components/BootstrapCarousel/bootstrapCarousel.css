@@ -1,0 +1,33 @@
+.carousel-container{
+    margin-top: 100px;
+    margin-bottom: 150px;
+}
+.carousel-item{
+    
+    width:100%;
+}
+.slide-image-container{
+    display:grid!important;
+    grid-template-columns: 30% 30% 30%;
+    grid-column-gap: 20px;
+    justify-content: center;
+}
+
+.image-container{
+    width:100%;
+}
+.image-container img{
+    width:150%;
+}
+.carousel-indicators {
+    top: 198px;
+    left: 58px;
+}
+
+@media screen and (max-width:992px){
+    .slide-image-container {
+        grid-template-columns:auto;
+        grid-row-gap: 20px;
+    }
+
+}

@@ -320,6 +320,9 @@ div.testimonial:nth-child(2) {
 }
 
 @media screen and (max-width: 992px) {
+  .hero-description {
+   margin-top:-90px;
+  }
   .box {
     width: 100%;
     margin-bottom: 10px;

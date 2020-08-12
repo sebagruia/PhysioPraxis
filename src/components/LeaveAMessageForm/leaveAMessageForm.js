@@ -58,8 +58,8 @@ class LeaveAMessageForm extends Component {
           className="leave-a-message-container container"
           style={
             leaveMessageOn
-              ? { opacity: "1" }
-              : { opacity: "0", transition: " opacity  0.1s linear" }
+              ? { visibility: "visible", transition: " visibility 0.1s ease-in 0.2s"}
+              : { visibility:"hidden", transition: " visibility  0.1s linear" }
           }
         >
           <h5>Your Message Here</h5>
@@ -96,7 +96,7 @@ class LeaveAMessageForm extends Component {
               required
             ></Form.Control>
           </Form.Group>
-          <button className="book-button" type="submit">
+          <button className="book-button" type="submit" >
             <p>SEND</p>
           </button>
         </Form>
