@@ -1,32 +1,39 @@
 {
   "files": {
-    "main.css": "/PhysioPraxis/static/css/main.cfc08bbb.chunk.css",
-    "main.js": "/PhysioPraxis/static/js/main.2e5f9cee.chunk.js",
-    "main.js.map": "/PhysioPraxis/static/js/main.2e5f9cee.chunk.js.map",
+    "main.css": "/PhysioPraxis/static/css/main.83d8e8a9.chunk.css",
+    "main.js": "/PhysioPraxis/static/js/main.8b13c90d.chunk.js",
+    "main.js.map": "/PhysioPraxis/static/js/main.8b13c90d.chunk.js.map",
     "runtime-main.js": "/PhysioPraxis/static/js/runtime-main.3f77e469.js",
     "runtime-main.js.map": "/PhysioPraxis/static/js/runtime-main.3f77e469.js.map",
-    "static/js/2.e0f4e93d.chunk.js": "/PhysioPraxis/static/js/2.e0f4e93d.chunk.js",
-    "static/js/2.e0f4e93d.chunk.js.map": "/PhysioPraxis/static/js/2.e0f4e93d.chunk.js.map",
+    "static/js/2.f4597a52.chunk.js": "/PhysioPraxis/static/js/2.f4597a52.chunk.js",
+    "static/js/2.f4597a52.chunk.js.map": "/PhysioPraxis/static/js/2.f4597a52.chunk.js.map",
     "index.html": "/PhysioPraxis/index.html",
-    "precache-manifest.5a03bc366bdb14452df1358f3a449d20.js": "/PhysioPraxis/precache-manifest.5a03bc366bdb14452df1358f3a449d20.js",
+    "precache-manifest.3d311401e0b171abdffaa8a813066450.js": "/PhysioPraxis/precache-manifest.3d311401e0b171abdffaa8a813066450.js",
     "service-worker.js": "/PhysioPraxis/service-worker.js",
-    "static/css/main.cfc08bbb.chunk.css.map": "/PhysioPraxis/static/css/main.cfc08bbb.chunk.css.map",
-    "static/js/2.e0f4e93d.chunk.js.LICENSE.txt": "/PhysioPraxis/static/js/2.e0f4e93d.chunk.js.LICENSE.txt",
+    "static/css/main.83d8e8a9.chunk.css.map": "/PhysioPraxis/static/css/main.83d8e8a9.chunk.css.map",
+    "static/js/2.f4597a52.chunk.js.LICENSE.txt": "/PhysioPraxis/static/js/2.f4597a52.chunk.js.LICENSE.txt",
     "static/media/PhysiopraxisLogoOuterGlow.png": "/PhysioPraxis/static/media/PhysiopraxisLogoOuterGlow.52ed50ad.png",
     "static/media/PhysiopraxisLogoShadow.png": "/PhysioPraxis/static/media/PhysiopraxisLogoShadow.6728a7ac.png",
+    "static/media/carousel1.jpg": "/PhysioPraxis/static/media/carousel1.81a13b8c.jpg",
     "static/media/carousel2.jpg": "/PhysioPraxis/static/media/carousel2.663ee06e.jpg",
     "static/media/carousel3.webp": "/PhysioPraxis/static/media/carousel3.5190902e.webp",
     "static/media/carousel4.webp": "/PhysioPraxis/static/media/carousel4.ed8e460d.webp",
     "static/media/carousel5.jpg": "/PhysioPraxis/static/media/carousel5.c8deb64c.jpg",
-    "static/media/carousel6.jpg": "/PhysioPraxis/static/media/carousel6.309ef1a0.jpg",
+    "static/media/carousel6.jpg": "/PhysioPraxis/static/media/carousel6.e80a3767.jpg",
     "static/media/carousel7.jpg": "/PhysioPraxis/static/media/carousel7.1e19086c.jpg",
     "static/media/doctor1.png": "/PhysioPraxis/static/media/doctor1.2e64a1f3.png",
-    "static/media/home.css": "/PhysioPraxis/static/media/hero_img_reduced.4629ae84.jpg"
+    "static/media/home.css": "/PhysioPraxis/static/media/hero_img_reduced.4629ae84.jpg",
+    "static/media/services3.jpg": "/PhysioPraxis/static/media/services3.a5e86e58.jpg",
+    "static/media/services4.jpg": "/PhysioPraxis/static/media/services4.77bf481b.jpg",
+    "static/media/services5.jpg": "/PhysioPraxis/static/media/services5.1776ca74.jpg",
+    "static/media/services7.jpg": "/PhysioPraxis/static/media/services7.aed614d7.jpg",
+    "static/media/services8.jpg": "/PhysioPraxis/static/media/services8.87c19ef8.jpg",
+    "static/media/services9.jpg": "/PhysioPraxis/static/media/services9.6e699e77.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.3f77e469.js",
-    "static/js/2.e0f4e93d.chunk.js",
-    "static/css/main.cfc08bbb.chunk.css",
-    "static/js/main.2e5f9cee.chunk.js"
+    "static/js/2.f4597a52.chunk.js",
+    "static/css/main.83d8e8a9.chunk.css",
+    "static/js/main.8b13c90d.chunk.js"
   ]
 }
