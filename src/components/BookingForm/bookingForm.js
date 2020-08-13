@@ -16,6 +16,7 @@ class BookingForm extends Component {
       phone: "",
       message: "",
     };
+
   }
 
   handleSubmit = (event) => {

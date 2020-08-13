@@ -4,6 +4,7 @@ import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import CloseThinButton from "../CloseThinButton/closeThinButton";
 import emailjs from "emailjs-com";
+import { Transition } from 'react-transition-group';
 
 class LeaveAMessageForm extends Component {
   constructor() {

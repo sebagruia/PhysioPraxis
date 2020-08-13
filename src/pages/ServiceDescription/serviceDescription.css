@@ -31,6 +31,10 @@
   color: #003a45;
   opacity: 0.9;
 }
+
+.serviceDescription-description-container h1{
+  font-size:2rem;
+}
 .serviceDescription-description-container p {
   font-family: "Montserrat", sans-serif;
   font-variant: normal;

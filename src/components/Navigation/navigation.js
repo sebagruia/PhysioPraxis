@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./navigation.css";
 import LeaveAMessageForm from "../LeaveAMessageForm/leaveAMessageForm";
 import Hamburger from "../Hamburger/hamburger";
-import {Link} from "react-router-dom";
+import { NavLink, useHistory} from "react-router-dom";
 import LanguageButton from "../LanguageButton/languageButton";
 import Logo from "../../assets/PhysiopraxisLogoShadow.png";
 import Clock from "../../assets/iconmonstr-time-2.png";
@@ -14,24 +14,32 @@ import Instagram from "../../assets/iconmonstr-instagram.png";
 import Twitter from "../../assets/iconmonstr-twitter.png";
 import InfoTable from "../InfoTable/infoTable";
 import LeaveAMessageButton from "../LeaveAMessageButton/leaveAMessageButton";
+import { Link as ScrollLink } from "react-scroll";
 
 const Navigation = () => {
   const [active, setActivate] = useState(false);
   const [InfoTableOn, setInfoTableOn] = useState(false);
   const [leaveMessageOn, setleaveMessageOn] = useState(false);
 
+  const history = useHistory();
+  const{pathname} = history.location;
+
   const handleHamburgerMenu = () => {
     setActivate(!active);
     setleaveMessageOn(false);
+    if(pathname !== "/"){
+      history.push('/')
+    }
+   
   };
 
   const handleInfoTable = () => {
     setInfoTableOn(!InfoTableOn);
   };
 
-  const handleLeaveAMessageButton = ()=>{
+  const handleLeaveAMessageButton = () => {
     setleaveMessageOn(!leaveMessageOn);
-  }
+  };
 
   return (
     <div className="container-fluid navigation">
@@ -113,21 +121,43 @@ const Navigation = () => {
       <div className={`navMenu ${active ? "navMenuMobile" : ""}`}>
         <div className="container-xl navMenu-content">
           <ul className="menu">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/aboutUs">About us</Link></li>
-            <li style={{display:"none"}}>Team</li>
-            <li><Link to="/services">Services</Link></li>
-            <li>News</li>
-            <li>Appointment</li>
+            <li onClick={handleHamburgerMenu}>
+              <NavLink to="/">Home</NavLink>
+            </li>
+            <li onClick={handleHamburgerMenu}>
+              <NavLink to="/aboutUs">About us</NavLink>
+            </li>
+            <li onClick={handleHamburgerMenu} style={{ display: "none" }}>
+              Team
+            </li>
+            <li onClick={handleHamburgerMenu}>
+              <NavLink to="/services">Services</NavLink>
+            </li>
+            <li onClick={handleHamburgerMenu}>News</li>
+            <li onClick={handleHamburgerMenu}>
+              <ScrollLink
+                to="scroll-to-appointment"
+                spy={true}
+                smooth={true}
+                offset={20}
+                duration={1000}
+              >
+                Appointment
+              </ScrollLink>
+            </li>
           </ul>
           <div className="menu-buttons">
-            <LeaveAMessageButton handleLeaveAMessageButton={handleLeaveAMessageButton}/>
+            <LeaveAMessageButton
+              handleLeaveAMessageButton={handleLeaveAMessageButton}
+            />
             <LanguageButton />
           </div>
         </div>
       </div>
-    <LeaveAMessageForm handleLeaveAMessageButton={handleLeaveAMessageButton} leaveMessageOn={leaveMessageOn}/>
-    
+      <LeaveAMessageForm
+        handleLeaveAMessageButton={handleLeaveAMessageButton}
+        leaveMessageOn={leaveMessageOn}
+      />
     </div>
   );
 };

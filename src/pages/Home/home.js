@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState} from "react";
 import "./home.css";
 import BookingForm from "../../components/BookingForm/bookingForm";
 import Doctor from "../../assets/doctor1.png";
@@ -17,6 +17,7 @@ const Home = () => {
   const handleDisplay = () => {
     setDisplay(!display);
   };
+
 
   return (
     <Fragment>
@@ -89,7 +90,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="container-fluid appointment-container">
+      <div className="container-fluid appointment-container" id="scroll-to-appointment">
         <div className="container appointment-section">
           <BookingForm />
 
