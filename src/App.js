@@ -5,6 +5,9 @@ import Footer from "./components/Footer/footer";
 import { Route, Switch } from "react-router-dom";
 import Home from "./pages/Home/home";
 import AboutUs from "./pages/AboutUs/aboutUs";
+import Services from "./pages/Services/services";
+import ServiceDescription from "./pages/ServiceDescription/serviceDescription";
+
 class App extends Component {
   render() {
     return (
@@ -16,6 +19,12 @@ class App extends Component {
           </Route>
           <Route path="/aboutUs">
             <AboutUs />
+          </Route>
+          <Route path="/services">
+            <Services />
+          </Route>
+          <Route path="/serviceDescription">
+            <ServiceDescription />
           </Route>
         </Switch>
 

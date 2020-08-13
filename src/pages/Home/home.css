@@ -287,7 +287,6 @@ div.testimonial:nth-child(2) {
   color: #fff;
 }
 
-
 .phone-details img,
 .contact-details img {
   width: 15px;
@@ -322,7 +321,7 @@ div.testimonial:nth-child(2) {
 
 @media screen and (max-width: 992px) {
   .hero-description {
-   margin-top:-90px;
+    margin-top: -90px;
   }
   .box {
     width: 100%;

@@ -5,7 +5,7 @@ import CaruselFoto1 from "../../assets/carousel4.webp";
 import CaruselFoto2 from "../../assets/carousel2.jpg";
 import CaruselFoto3 from "../../assets/carousel3.webp";
 import CaruselFoto4 from "../../assets/carousel5.jpg";
-import CaruselFoto5 from "../../assets/carousel6.jpg";
+import CaruselFoto5 from "../../assets/carousel61.jpg";
 import CaruselFoto6 from "../../assets/carousel7.jpg";
 
 const BootstrapCarousel = () => {

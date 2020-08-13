@@ -14,12 +14,10 @@ import AdditionalInfoButton from "../../components/AdditionalInfoButton/addition
 const Home = () => {
   const [display, setDisplay] = useState(false);
 
-  const handleDisplay = ()=>{
+  const handleDisplay = () => {
     setDisplay(!display);
-  }
+  };
 
-
-  
   return (
     <Fragment>
       <div className="container-fluid hero-section">
@@ -94,7 +92,7 @@ const Home = () => {
       <div className="container-fluid appointment-container">
         <div className="container appointment-section">
           <BookingForm />
-          
+
           <div className="testimonials-subsection">
             <h1 className="testimonials-title">Testimonials</h1>
             <div className="testimonials-container">
@@ -165,8 +163,11 @@ const Home = () => {
 
       <div className="container-fluid map">
         <MapLocation />
-        <AdditionalInfoButton handleDisplay={handleDisplay} display={display}/>
-        <div className="additionalInfo" style={display ? {display:"none"} : {display:"flex"}}>
+        <AdditionalInfoButton handleDisplay={handleDisplay} display={display} />
+        <div
+          className="additionalInfo"
+          style={display ? { display: "none" } : { display: "flex" }}
+        >
           <div className="workingHours">
             <h5>Working Hours</h5>
             <h6>

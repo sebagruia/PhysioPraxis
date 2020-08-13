@@ -115,8 +115,8 @@ const Navigation = () => {
           <ul className="menu">
             <li><Link to="/">Home</Link></li>
             <li><Link to="/aboutUs">About us</Link></li>
-            <li>Team</li>
-            <li>Services</li>
+            <li style={{display:"none"}}>Team</li>
+            <li><Link to="/services">Services</Link></li>
             <li>News</li>
             <li>Appointment</li>
           </ul>

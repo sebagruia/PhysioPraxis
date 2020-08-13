@@ -1,0 +1,20 @@
+.column {
+  width: 270px;
+}
+.column-image-container {
+  width: 270px;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.column-image-container:hover img {
+  transform: scale(1.1, 1.1);
+  transition: transform 5s;
+}
+.column-image-container:hover .label {
+  background-color: rgb(196, 196, 196, 0.9);
+  z-index: 1;
+}
+.column-image-container img {
+  width: 100%;
+}
