@@ -21,7 +21,6 @@
 }
 .carousel-indicators {
     top: 198px;
-    left: 58px;
 }
 
 @media screen and (max-width:992px){
@@ -29,5 +28,6 @@
         grid-template-columns:auto;
         grid-row-gap: 20px;
     }
+    
 
 }

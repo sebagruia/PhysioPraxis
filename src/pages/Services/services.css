@@ -18,6 +18,8 @@
 .services-title h1 {
   font-size: 2.2rem;
   opacity: 0.8;
+  padding-top: 55px;
+  text-align: center;
 }
 
 .services-container {
@@ -57,5 +59,8 @@
     grid-template-rows: auto auto auto;
     margin-bottom: 100px;
     margin-top: 100px;
+  }
+  .services-header {
+    height: 180px;
   }
 }

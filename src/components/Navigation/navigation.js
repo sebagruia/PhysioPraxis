@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./navigation.css";
 import LeaveAMessageForm from "../LeaveAMessageForm/leaveAMessageForm";
 import Hamburger from "../Hamburger/hamburger";
-import { NavLink, useHistory} from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import LanguageButton from "../LanguageButton/languageButton";
 import Logo from "../../assets/PhysiopraxisLogoShadow.png";
 import Clock from "../../assets/iconmonstr-time-2.png";
@@ -22,15 +22,12 @@ const Navigation = () => {
   const [leaveMessageOn, setleaveMessageOn] = useState(false);
 
   const history = useHistory();
-  const{pathname} = history.location;
+  const { pathname } = history.location;
 
-  const handleHamburgerMenu = () => {
+  const handleHamburgerMenu = (event) => {
+    console.log(event.target.innerText);
     setActivate(!active);
     setleaveMessageOn(false);
-    if(pathname !== "/"){
-      history.push('/')
-    }
-   
   };
 
   const handleInfoTable = () => {
@@ -135,15 +132,20 @@ const Navigation = () => {
             </li>
             <li onClick={handleHamburgerMenu}>News</li>
             <li onClick={handleHamburgerMenu}>
-              <ScrollLink
-                to="scroll-to-appointment"
-                spy={true}
-                smooth={true}
-                offset={20}
-                duration={1000}
-              >
-                Appointment
-              </ScrollLink>
+              {pathname !== "/" ? (
+                <NavLink to="/appointmentPage">Appointment</NavLink>
+              ) : (
+                <ScrollLink
+                  activeClass="active"
+                  to="scroll-to-appointment"
+                  spy={true}
+                  smooth={true}
+                  offset={20}
+                  duration={1000}
+                >
+                  Appointment
+                </ScrollLink>
+              )}
             </li>
           </ul>
           <div className="menu-buttons">

@@ -4,7 +4,6 @@ import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import CloseThinButton from "../CloseThinButton/closeThinButton";
 import emailjs from "emailjs-com";
-import { Transition } from 'react-transition-group';
 
 class LeaveAMessageForm extends Component {
   constructor() {
@@ -59,8 +58,8 @@ class LeaveAMessageForm extends Component {
           className="leave-a-message-container container"
           style={
             leaveMessageOn
-              ? { visibility: "visible", transition: " visibility 0.1s ease-in 0.2s"}
-              : { visibility:"hidden", transition: " visibility  0.1s linear" }
+              ? { opacity: "1", transition: "opacity 0.8s"}
+              : { opacity: "0", visibility:"hidden", transition: "opacity 0.3s, visibility 0.8s" }
           }
         >
           <h5>Your Message Here</h5>

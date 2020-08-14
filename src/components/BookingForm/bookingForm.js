@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./bookingForm.css";
+import {withRouter} from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import BookButton from "../../components/BookButton/bookButton";
@@ -52,9 +53,14 @@ class BookingForm extends Component {
   };
 
   render() {
+    const {history} = this.props;
+    const {pathname} = history.location;
+    console.log(pathname);
+
     const { email, name, date, time, phone, message } = this.state;
+
     return (
-      <Form onSubmit={this.handleSubmit} className="appointment">
+      <Form onSubmit={this.handleSubmit} className={`appointment ${pathname === "/appointmentPage" ? "substractMarginBottom" : ""} `}>
         <div className="appointment-text">
           <h1>Book Appointment</h1>
           <h6>We are here for you</h6>
@@ -133,4 +139,4 @@ class BookingForm extends Component {
   }
 }
 
-export default BookingForm;
+export default withRouter(BookingForm);
