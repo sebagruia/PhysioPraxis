@@ -24,8 +24,7 @@ const Navigation = () => {
   const history = useHistory();
   const { pathname } = history.location;
 
-  const handleHamburgerMenu = (event) => {
-    console.log(event.target.innerText);
+  const handleHamburgerMenu = () => {
     setActivate(!active);
     setleaveMessageOn(false);
   };
@@ -41,10 +40,7 @@ const Navigation = () => {
   return (
     <div className="container-fluid navigation">
       <Hamburger handleHamburgerMenu={handleHamburgerMenu} active={active} />
-      <div
-        className="navInfo-container container-xl"
-        style={active ? { display: "none" } : { display: "flex" }}
-      >
+      <div className="navInfo-container container-xl">
         <div className="logo">
           <img className="logo-img" src={Logo} alt="logo" />
           <div className="logo-text">
@@ -140,8 +136,9 @@ const Navigation = () => {
                   to="scroll-to-appointment"
                   spy={true}
                   smooth={true}
-                  offset={20}
+                  offset={0}
                   duration={1000}
+                  onClick={handleHamburgerMenu}
                 >
                   Appointment
                 </ScrollLink>

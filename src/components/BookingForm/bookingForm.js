@@ -55,7 +55,6 @@ class BookingForm extends Component {
   render() {
     const {history} = this.props;
     const {pathname} = history.location;
-    console.log(pathname);
 
     const { email, name, date, time, phone, message } = this.state;
 
