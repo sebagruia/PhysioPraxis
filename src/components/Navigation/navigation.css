@@ -133,8 +133,8 @@
   font-family: "Roboto Condensed", sans-serif;
 }
 
-.menu li {
-  font-size: 0.9rem;
+.menu a {
+  font-size: 1rem;
   font-weight: 500;
   color: #003a45;
   opacity: 0.8;
@@ -142,13 +142,9 @@
   transition: font-size 0.5s;
 }
 
-.menu li:hover {
+.menu a:hover {
   font-weight: 700;
   opacity: 1;
-  color: #003a45;
-}
-
-.menu li a {
   color: #003a45;
 }
 
@@ -199,17 +195,10 @@
     flex-direction: column;
   }
 
-  .menu li {
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: #003a45;
-    opacity: 0.8;
-    cursor: pointer;
-    transition: font-size 0.5s;
+  .menu a {
     margin-bottom: 20px;
-    font-variant: all-small-caps;
-    font-family: "Montserrat";
   }
+  
   .menu-buttons {
     width: 50%;
     flex-direction: column;

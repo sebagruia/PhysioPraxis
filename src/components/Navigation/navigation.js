@@ -37,6 +37,13 @@ const Navigation = () => {
     setleaveMessageOn(!leaveMessageOn);
   };
 
+  const activeClass = {
+    opacity: 1,
+    color: "#003a45",
+    fontWeight: "700",
+    textDecoration: "underline",
+  };
+
   return (
     <div className="container-fluid navigation">
       <Hamburger handleHamburgerMenu={handleHamburgerMenu} active={active} />
@@ -114,37 +121,70 @@ const Navigation = () => {
       <div className={`navMenu ${active ? "navMenuMobile" : ""}`}>
         <div className="container-xl navMenu-content">
           <ul className="menu">
-            <li onClick={handleHamburgerMenu}>
-              <NavLink to="/">Home</NavLink>
-            </li>
-            <li onClick={handleHamburgerMenu}>
-              <NavLink to="/aboutUs">About us</NavLink>
-            </li>
-            <li onClick={handleHamburgerMenu} style={{ display: "none" }}>
+            <NavLink
+              exact
+              to="/"
+              onClick={handleHamburgerMenu}
+              activeStyle={activeClass}
+            >
+              Home
+            </NavLink>
+
+            <NavLink
+              to="/aboutUs"
+              onClick={handleHamburgerMenu}
+              activeStyle={activeClass}
+            >
+              About us
+            </NavLink>
+
+            <NavLink
+              to="/team"
+              onClick={handleHamburgerMenu}
+              activeStyle={activeClass}
+              style={{ display: "none" }}
+            >
               Team
-            </li>
-            <li onClick={handleHamburgerMenu}>
-              <NavLink to="/services">Services</NavLink>
-            </li>
-            <li onClick={handleHamburgerMenu}>News</li>
-            <li onClick={handleHamburgerMenu}>
-              {pathname !== "/" ? (
-                <NavLink to="/appointmentPage">Appointment</NavLink>
-              ) : (
-                <ScrollLink
-                  activeClass="active"
-                  to="scroll-to-appointment"
-                  spy={true}
-                  smooth={true}
-                  offset={0}
-                  duration={1000}
-                  onClick={handleHamburgerMenu}
-                >
-                  Appointment
-                </ScrollLink>
-              )}
-            </li>
+            </NavLink>
+
+            <NavLink
+              to="/services"
+              activeStyle={activeClass}
+              onClick={handleHamburgerMenu}
+            >
+              Services
+            </NavLink>
+
+            <NavLink
+              to="/news"
+              activeStyle={activeClass}
+              onClick={handleHamburgerMenu}
+            >
+              News
+            </NavLink>
+
+            {pathname !== "/" ? (
+              <NavLink
+                to="/appointmentPage"
+                onClick={handleHamburgerMenu}
+                activeStyle={activeClass}
+              >
+                Appointment
+              </NavLink>
+            ) : (
+              <ScrollLink
+                to="scroll-to-appointment"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={1000}
+                onClick={handleHamburgerMenu}
+              >
+                Appointment
+              </ScrollLink>
+            )}
           </ul>
+
           <div className="menu-buttons">
             <LeaveAMessageButton
               handleLeaveAMessageButton={handleLeaveAMessageButton}
