@@ -1,0 +1,19 @@
+.page-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(176, 201, 180, 0.3);
+    height: 120px;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .page-title {
+    font-family: "Montserrat", sans-serif;
+    font-variant-caps: small-caps;
+  }
+  .page-title h1 {
+    font-size: 2.2rem;
+    opacity: 0.8;
+    padding-top: 55px;
+    text-align: center;
+  }

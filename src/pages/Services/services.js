@@ -2,15 +2,12 @@ import React from "react";
 import "./services.css";
 import { columnImageContainerContentArray } from "../../utils";
 import ColumnImageContainer from "../../components/ColumnImageContainer/columnImageContainer";
+import PageHeader from "../../components/PageHeader/pageHeader";
 
 const Services = () => {
   return (
     <div className="container-fluid services">
-      <div className="services-header container-fluid">
-        <div className="services-title container">
-          <h1>Services</h1>
-        </div>
-      </div>
+      <PageHeader>Services</PageHeader>
       <div className="services-container container">
         {Object.values(columnImageContainerContentArray).map((column) => (
           <ColumnImageContainer

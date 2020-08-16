@@ -49,3 +49,16 @@ export const columnImageContainerContentArray = {
     label: "Medi Taping",
   },
 };
+
+
+export const formatDate = () => {
+  const start = Date.now();
+  const now = new Date(start);
+
+  const options = {  year: 'numeric', month: 'long', day: 'numeric' };
+
+  const todayUTC = new Date(
+    Date.UTC(now.getFullYear(), now.getMonth(), now.getDate())
+  );
+  return todayUTC.toLocaleDateString(undefined, options);
+};

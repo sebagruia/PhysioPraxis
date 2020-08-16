@@ -2,25 +2,6 @@
   padding-right: 0px;
   padding-left: 0px;
 }
-.services-header {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  background-color: rgb(176, 201, 180, 0.3);
-  height: 120px;
-  padding-right: 0px;
-  padding-left: 0px;
-}
-.services-title {
-  font-family: "Montserrat", sans-serif;
-  font-variant-caps: small-caps;
-}
-.services-title h1 {
-  font-size: 2.2rem;
-  opacity: 0.8;
-  padding-top: 55px;
-  text-align: center;
-}
 
 .services-container {
   display: grid;
@@ -29,6 +10,8 @@
   margin-bottom: 200px;
   margin-top: 200px;
 }
+
+/* Media Query */
 
 @media screen and (min-width: 320px) {
   .services-container {
@@ -43,6 +26,7 @@
     grid-template-columns: auto;
   }
 }
+
 @media screen and (min-width: 576px) and (max-width: 992px) {
   .services-container {
     grid-template-columns: auto auto;
