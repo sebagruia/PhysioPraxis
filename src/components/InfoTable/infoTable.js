@@ -5,6 +5,9 @@ import Clock from "../../assets/iconmonstr-time-2.png";
 import Phone from "../../assets/iconmonstr-smartphone.png";
 import LocationIcon from "../../assets/iconmonstr-location.png";
 import HandLeft from "../../assets/iconmonstr-direction-left.png";
+import Facebook from "../../assets/iconmonstr-facebook.png";
+import Instagram from "../../assets/iconmonstr-instagram.png";
+import Twitter from "../../assets/iconmonstr-twitter.png";
 import Socials from "../Socials/socials";
 
 const InfoTable = ({ history, handleInfoTable, InfoTableOn }) => {
@@ -58,7 +61,7 @@ const InfoTable = ({ history, handleInfoTable, InfoTableOn }) => {
       <div className="infoTable-hand">
         <div className="infoTable-info">
           <h6 className="infoTable-firstText">Follow Us</h6>
-          <Socials />
+          <Socials facebook={Facebook} instagram={Instagram} twitter={Twitter}/>
         </div>
         <div className="infoTable-hand-container">
           <img src={HandLeft} alt="hand" />

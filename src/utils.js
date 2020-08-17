@@ -7,6 +7,31 @@ import Services6 from "./assets/services8.jpg";
 import Services7 from "./assets/carousel6.jpg";
 import Services8 from "./assets/services9.jpg";
 
+import PostImage1 from "./assets/services2.jpg";
+import PostImage2 from "./assets/carousel2.jpg";
+import PostImage3 from "./assets/carousel3.webp";
+
+// Formating Date
+export const formatDate = () => {
+  const start = Date.now();
+  const now = new Date(start);
+
+  const options = {  year: 'numeric', month: 'long', day: 'numeric' };
+
+  const todayUTC = new Date(
+    Date.UTC(now.getFullYear(), now.getMonth(), now.getDate())
+  );
+  return todayUTC.toLocaleDateString(undefined, options);
+};
+
+// Formating Ttitle
+export const arangedTitle = (title) => {
+  let nonSpaceRegex = /\S/g;
+  let titleWithoutSpaces = title.match(nonSpaceRegex);
+  return titleWithoutSpaces.join("");
+};
+
+// Services Page content
 export const columnImageContainerContentArray = {
   service1: {
     id: "service1",
@@ -49,16 +74,110 @@ export const columnImageContainerContentArray = {
     label: "Medi Taping",
   },
 };
+// =========================================
 
 
-export const formatDate = () => {
-  const start = Date.now();
-  const now = new Date(start);
+// News Page content
 
-  const options = {  year: 'numeric', month: 'long', day: 'numeric' };
+export const newsContent = {
+  post1:{
+    id:"post1",
+    image:PostImage1,
+    date:formatDate(),
+    postTitle:"Was ist Physiotherapie?.",
+    postText:`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare
+    vulputate maecenas eget tristique pharetra eu id eu molestie. In id
+    non tortor, tempus. Vitae mi odio nascetur libero luctus viverra. Eu
+    commodo fermentum blandit a quis quis neque tellus.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare
+    vulputate maecenas eget tristique pharetra eu id eu molestie. In id
+    non tortor, tempus. Vitae mi odio nascetur libero luctus viverra. Eu
+    commodo fermentum blandit a quis quis neque tellus.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare
+    vulputate maecenas eget tristique pharetra eu id eu molestie. In id
+    non tortor, tempus. Vitae mi odio nascetur libero luctus viverra. Eu
+    commodo fermentum blandit a quis quis neque tellus.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornar
+    vulputate maecenas eget tristique pharetra eu id eu molestie. In id
+    non tortor, tempus. Vitae mi odio nascetur libero luctus viverra. Eu
+    commodo fermentum blandit a quis quis neque tellus.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare
+    vulputate maecenas eget tristique pharetra eu id eu molestie. In id
+    non tortor, tempus. Vitae mi odio nascetur libero luctus viverra. Eu
+    commodo fermentum blandit a quis quis neque tellus.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare
+    vulputate maecenas eget tristique pharetra eu id eu molestie. In id
+    non tortor, tempus. Vitae mi odio nascetur libero luctus viverra. Eu
+    commodo fermentum blandit a quis quis neque tellus.`
+  },
+  post2:{
+    id:"post2",
+    image:PostImage2,
+    date:formatDate(),
+    postTitle:"Sportphysiotherapie.",
+    postText:`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare
+    vulputate maecenas eget tristique pharetra eu id eu molestie. In id
+    non tortor, tempus. Vitae mi odio nascetur libero luctus viverra. Eu
+    commodo fermentum blandit a quis quis neque tellus.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare
+    vulputate maecenas eget tristique pharetra eu id eu molestie. In id
+    non tortor, tempus. Vitae mi odio nascetur libero luctus viverra. Eu
+    commodo fermentum blandit a quis quis neque tellus.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare
+    vulputate maecenas eget tristique pharetra eu id eu molestie. In id
+    non tortor, tempus. Vitae mi odio nascetur libero luctus viverra. Eu
+    commodo fermentum blandit a quis quis neque tellus.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornar
+    vulputate maecenas eget tristique pharetra eu id eu molestie. In id
+    non tortor, tempus. Vitae mi odio nascetur libero luctus viverra. Eu
+    commodo fermentum blandit a quis quis neque tellus.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare
+    vulputate maecenas eget tristique pharetra eu id eu molestie. In id
+    non tortor, tempus. Vitae mi odio nascetur libero luctus viverra. Eu
+    commodo fermentum blandit a quis quis neque tellus.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare
+    vulputate maecenas eget tristique pharetra eu id eu molestie. In id
+    non tortor, tempus. Vitae mi odio nascetur libero luctus viverra. Eu
+    commodo fermentum blandit a quis quis neque tellus.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare
+    vulputate maecenas eget tristique pharetra eu id eu molestie. In id
+    non tortor, tempus. Vitae mi odio nascetur libero luctus viverra. Eu
+    commodo fermentum blandit a quis quis neque tellus.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare
+    vulputate maecenas eget tristique pharetra eu id eu molestie. In id
+    non tortor, tempus. Vitae mi odio nascetur libero luctus viverra. Eu
+    commodo fermentum blandit a quis quis neque tellus.`
+  },
+  post3:{
+    id:"post3",
+    image:PostImage3,
+    date:formatDate(),
+    postTitle:"CMD-Physiotherapie.",
+    postText:`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare
+    vulputate maecenas eget tristique pharetra eu id eu molestie. In id
+    non tortor, tempus. Vitae mi odio nascetur libero luctus viverra. Eu
+    commodo fermentum blandit a quis quis neque tellus.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare
+    vulputate maecenas eget tristique pharetra eu id eu molestie. In id
+    non tortor, tempus. Vitae mi odio nascetur libero luctus viverra. Eu
+    commodo fermentum blandit a quis quis neque tellus.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare
+    vulputate maecenas eget tristique pharetra eu id eu molestie. In id
+    non tortor, tempus. Vitae mi odio nascetur libero luctus viverra. Eu
+    commodo fermentum blandit a quis quis neque tellus.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornar
+    vulputate maecenas eget tristique pharetra eu id eu molestie. In id
+    non tortor, tempus. Vitae mi odio nascetur libero luctus viverra. Eu
+    commodo fermentum blandit a quis quis neque tellus.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare
+    vulputate maecenas eget tristique pharetra eu id eu molestie. In id
+    non tortor, tempus. Vitae mi odio nascetur libero luctus viverra. Eu
+    commodo fermentum blandit a quis quis neque tellus.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare
+    vulputate maecenas eget tristique pharetra eu id eu molestie. In id
+    non tortor, tempus. Vitae mi odio nascetur libero luctus viverra. Eu
+    commodo fermentum blandit a quis quis neque tellus.`
+  }
+}
 
-  const todayUTC = new Date(
-    Date.UTC(now.getFullYear(), now.getMonth(), now.getDate())
-  );
-  return todayUTC.toLocaleDateString(undefined, options);
-};
+

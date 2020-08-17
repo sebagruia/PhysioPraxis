@@ -9,6 +9,7 @@ import Services from "./pages/Services/services";
 import ServiceDescription from "./pages/ServiceDescription/serviceDescription";
 import AppointmentPage from "./pages/AppointmentPage/appointmentPage";
 import News from "./pages/News/news";
+import PostPage from "./pages/PostPage/postPage";
 
 class App extends Component {
   render() {
@@ -28,8 +29,11 @@ class App extends Component {
           <Route path="/serviceDescription">
             <ServiceDescription />
           </Route>
-          <Route path="/news">
+          <Route exact path="/news">
             <News />
+          </Route>
+          <Route path="/news/:post_id">
+            <PostPage />
           </Route>
           <Route path="/appointmentPage">
             <AppointmentPage />
