@@ -15,6 +15,7 @@ import Twitter from "../../assets/iconmonstr-twitter.png";
 import InfoTable from "../InfoTable/infoTable";
 import LeaveAMessageButton from "../LeaveAMessageButton/leaveAMessageButton";
 import { Link as ScrollLink } from "react-scroll";
+import UserButton from "../UserButton/userButton";
 
 const Navigation = () => {
   const [active, setActivate] = useState(false);
@@ -190,6 +191,7 @@ const Navigation = () => {
               handleLeaveAMessageButton={handleLeaveAMessageButton}
             />
             <LanguageButton />
+            <UserButton />
           </div>
         </div>
       </div>
