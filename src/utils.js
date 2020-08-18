@@ -11,6 +11,10 @@ import PostImage1 from "./assets/services2.jpg";
 import PostImage2 from "./assets/carousel2.jpg";
 import PostImage3 from "./assets/carousel3.webp";
 
+import Face1 from "./assets/face1.jpg";
+import Face2 from "./assets/face2.jpg";
+import Face3 from "./assets/face3.jpg";
+
 // Formating Date
 export const formatDate = () => {
   const start = Date.now();
@@ -180,4 +184,37 @@ export const newsContent = {
   }
 }
 
+// Testimonials Content
 
+export const testimonialsContent = {
+  testimonial1:{
+    id:"testimonial1",
+    text:`Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Urna egestas diam nunc orci. Nulla bibendum cum tristique
+    diam varius fringilla magna commodo at. Vel varius semper
+    nisl cursus aliquam urna semper quam. Vivamus proin blandit
+    pharetra quis porttitor massa.`,
+    image:Face1,
+    name:"Mirela Ionesc"
+  },
+  testimonial2:{
+    id:"testimonial2",
+    text:`Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Urna egestas diam nunc orci. Nulla bibendum cum tristique
+    diam varius fringilla magna commodo at. Vel varius semper
+    nisl cursus aliquam urna semper quam. Vivamus proin blandit
+    pharetra quis porttitor massa.`,
+    image:Face2,
+    name:"Andrei Baciu"
+  },
+  testimonial3:{
+    id:"testimonial3",
+    text:`Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Urna egestas diam nunc orci. Nulla bibendum cum tristique
+    diam varius fringilla magna commodo at. Vel varius semper
+    nisl cursus aliquam urna semper quam. Vivamus proin blandit
+    pharetra quis porttitor massa.`,
+    image:Face3,
+    name:"Delia Gruia"
+  }
+}

@@ -1,15 +1,13 @@
-import React, { Fragment, useState} from "react";
+import React, { Fragment, useState } from "react";
 import "./home.css";
 import BookingForm from "../../components/BookingForm/bookingForm";
 import Doctor from "../../assets/doctor1.png";
-import Quote from "../../assets/iconmonstr-quote.png";
-import Face1 from "../../assets/face1.jpg";
-import Face2 from "../../assets/face2.jpg";
-import Face3 from "../../assets/face3.jpg";
 import MapLocation from "../../components/MapLocation/mapLocation";
 import Phone from "../../assets/iconmonstr-phone.png";
 import Mail from "../../assets/iconmonstr-email.png";
 import AdditionalInfoButton from "../../components/AdditionalInfoButton/additionalInfoButton";
+import Testimonial from "../../components/Testimonial/testimonial";
+import { testimonialsContent } from "../../utils";
 
 const Home = () => {
   const [display, setDisplay] = useState(false);
@@ -17,7 +15,6 @@ const Home = () => {
   const handleDisplay = () => {
     setDisplay(!display);
   };
-
 
   return (
     <Fragment>
@@ -90,73 +87,24 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="container-fluid appointment-container" id="scroll-to-appointment">
+      <div
+        className="container-fluid appointment-container"
+        id="scroll-to-appointment"
+      >
         <div className="container appointment-section">
           <BookingForm />
 
           <div className="testimonials-subsection">
             <h1 className="testimonials-title">Testimonials</h1>
             <div className="testimonials-container">
-              <div className="testimonial">
-                <div className="quote">
-                  <img src={Quote} alt="quote" />
-                </div>
-                <div className="quote-text">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Urna egestas diam nunc orci. Nulla bibendum cum tristique
-                    diam varius fringilla magna commodo at. Vel varius semper
-                    nisl cursus aliquam urna semper quam. Vivamus proin blandit
-                    pharetra quis porttitor massa.
-                  </p>
-                </div>
-                <div className="avatar">
-                  <div className="avatar-face">
-                    <img src={Face1} alt="a woman" />
-                  </div>
-                  <h6>Mirela Ionescu</h6>
-                </div>
-              </div>
-              <div className="testimonial">
-                <div className="quote">
-                  <img src={Quote} alt="quote" />
-                </div>
-                <div className="quote-text">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Urna egestas diam nunc orci. Nulla bibendum cum tristique
-                    diam varius fringilla magna commodo at. Vel varius semper
-                    nisl cursus aliquam urna semper quam. Vivamus proin blandit
-                    pharetra quis porttitor massa.
-                  </p>
-                </div>
-                <div className="avatar">
-                  <div className="avatar-face">
-                    <img src={Face2} alt="a man" />
-                  </div>
-                  <h6>Andrei Baciu</h6>
-                </div>
-              </div>
-              <div className="testimonial">
-                <div className="quote">
-                  <img src={Quote} alt="quote" />
-                </div>
-                <div className="quote-text">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Urna egestas diam nunc orci. Nulla bibendum cum tristique
-                    diam varius fringilla magna commodo at. Vel varius semper
-                    nisl cursus aliquam urna semper quam. Vivamus proin blandit
-                    pharetra quis porttitor massa.
-                  </p>
-                </div>
-                <div className="avatar">
-                  <div className="avatar-face">
-                    <img src={Face3} alt="a woman" />
-                  </div>
-                  <h6>Delia Gruia</h6>
-                </div>
-              </div>
+              {Object.values(testimonialsContent).map((testimonial) => (
+                <Testimonial
+                  key={testimonial.id}
+                  text={testimonial.text}
+                  image={testimonial.image}
+                  name={testimonial.name}
+                />
+              ))}
             </div>
           </div>
         </div>
