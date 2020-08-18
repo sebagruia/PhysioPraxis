@@ -1,0 +1,48 @@
+.testimonial {
+    width: 300px;
+    margin-bottom: 5px;
+  }
+
+  .quote {
+    width: 30px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .quote img {
+    width: 100%;
+    opacity: 0.7;
+  }
+  .quote-text {
+    padding-left: 20px;
+    font-size: 0.8rem;
+    color: #000;
+    opacity: 0.8;
+  }
+
+  .avatar {
+    display: flex;
+    align-items: center;
+  }
+  .avatar-face {
+    width: 50px;
+    height: auto;
+    margin: 10px 0 0 20px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .avatar-face img {
+    width: 100%;
+  }
+  .avatar h6 {
+    padding: 13px 0 0 10px;
+    font-size: 0.8rem;
+    font-family: "Montserrat", sans-serif;
+    opacity: 0.8;
+  }
+
+  div.testimonial:nth-child(even) {
+    align-self: flex-end;
+  }
