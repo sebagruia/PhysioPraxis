@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/PhysioPraxis/static/css/main.423cf402.chunk.css",
-    "main.js": "/PhysioPraxis/static/js/main.a2722ef8.chunk.js",
-    "main.js.map": "/PhysioPraxis/static/js/main.a2722ef8.chunk.js.map",
+    "main.css": "/PhysioPraxis/static/css/main.176e42f4.chunk.css",
+    "main.js": "/PhysioPraxis/static/js/main.6c8a0754.chunk.js",
+    "main.js.map": "/PhysioPraxis/static/js/main.6c8a0754.chunk.js.map",
     "runtime-main.js": "/PhysioPraxis/static/js/runtime-main.3f77e469.js",
     "runtime-main.js.map": "/PhysioPraxis/static/js/runtime-main.3f77e469.js.map",
-    "static/js/2.14b00583.chunk.js": "/PhysioPraxis/static/js/2.14b00583.chunk.js",
-    "static/js/2.14b00583.chunk.js.map": "/PhysioPraxis/static/js/2.14b00583.chunk.js.map",
+    "static/js/2.e11abff8.chunk.js": "/PhysioPraxis/static/js/2.e11abff8.chunk.js",
+    "static/js/2.e11abff8.chunk.js.map": "/PhysioPraxis/static/js/2.e11abff8.chunk.js.map",
     "index.html": "/PhysioPraxis/index.html",
-    "precache-manifest.2af004e1fb6a7ccce58330ff273a2e10.js": "/PhysioPraxis/precache-manifest.2af004e1fb6a7ccce58330ff273a2e10.js",
+    "precache-manifest.c449b75222c6cdc99e8c908a000c942c.js": "/PhysioPraxis/precache-manifest.c449b75222c6cdc99e8c908a000c942c.js",
     "service-worker.js": "/PhysioPraxis/service-worker.js",
-    "static/css/main.423cf402.chunk.css.map": "/PhysioPraxis/static/css/main.423cf402.chunk.css.map",
-    "static/js/2.14b00583.chunk.js.LICENSE.txt": "/PhysioPraxis/static/js/2.14b00583.chunk.js.LICENSE.txt",
+    "static/css/main.176e42f4.chunk.css.map": "/PhysioPraxis/static/css/main.176e42f4.chunk.css.map",
+    "static/js/2.e11abff8.chunk.js.LICENSE.txt": "/PhysioPraxis/static/js/2.e11abff8.chunk.js.LICENSE.txt",
     "static/media/PhysiopraxisLogoOuterGlow.png": "/PhysioPraxis/static/media/PhysiopraxisLogoOuterGlow.52ed50ad.png",
     "static/media/PhysiopraxisLogoShadow.png": "/PhysioPraxis/static/media/PhysiopraxisLogoShadow.6728a7ac.png",
     "static/media/carousel1.jpg": "/PhysioPraxis/static/media/carousel1.81a13b8c.jpg",
@@ -34,8 +34,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.3f77e469.js",
-    "static/js/2.14b00583.chunk.js",
-    "static/css/main.423cf402.chunk.css",
-    "static/js/main.a2722ef8.chunk.js"
+    "static/js/2.e11abff8.chunk.js",
+    "static/css/main.176e42f4.chunk.css",
+    "static/js/main.6c8a0754.chunk.js"
   ]
 }
