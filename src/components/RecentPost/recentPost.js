@@ -1,7 +1,7 @@
 import React from "react";
 import "./recentPost.css";
 import { useHistory } from "react-router-dom";
-import {arangedTitle} from "../../utils";
+import {arangedTitle} from "../../DATA";
 
 const RecentPost = ({id, date, image, title, text}) => {
 

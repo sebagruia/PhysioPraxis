@@ -3,7 +3,7 @@ import "./news.css";
 import Post from "../../components/Post/post";
 import RecentPost from "../../components/RecentPost/recentPost";
 import PageHeader from "../../components/PageHeader/pageHeader";
-import { newsContent } from "../../utils";
+import { newsContent } from "../../DATA";
 
 const News = () => {
   return (

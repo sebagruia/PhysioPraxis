@@ -15,12 +15,19 @@ import Face1 from "./assets/face1.jpg";
 import Face2 from "./assets/face2.jpg";
 import Face3 from "./assets/face3.jpg";
 
+import CaruselFoto1 from "./assets/carousel4.webp";
+import CaruselFoto2 from "./assets/carousel2.jpg";
+import CaruselFoto3 from "./assets/carousel3.webp";
+import CaruselFoto4 from "./assets/carousel5.jpg";
+import CaruselFoto5 from "./assets/carousel61.jpg";
+import CaruselFoto6 from "./assets/carousel7.jpg";
+
 // Formating Date
 export const formatDate = () => {
   const start = Date.now();
   const now = new Date(start);
 
-  const options = {  year: 'numeric', month: 'long', day: 'numeric' };
+  const options = { year: "numeric", month: "long", day: "numeric" };
 
   const todayUTC = new Date(
     Date.UTC(now.getFullYear(), now.getMonth(), now.getDate())
@@ -80,16 +87,15 @@ export const columnImageContainerContentArray = {
 };
 // =========================================
 
-
 // News Page content
 
 export const newsContent = {
-  post1:{
-    id:"post1",
-    image:PostImage1,
-    date:formatDate(),
-    postTitle:"Was ist Physiotherapie?.",
-    postText:`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare
+  post1: {
+    id: "post1",
+    image: PostImage1,
+    date: formatDate(),
+    postTitle: "Was ist Physiotherapie?.",
+    postText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare
     vulputate maecenas eget tristique pharetra eu id eu molestie. In id
     non tortor, tempus. Vitae mi odio nascetur libero luctus viverra. Eu
     commodo fermentum blandit a quis quis neque tellus.
@@ -112,14 +118,14 @@ export const newsContent = {
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare
     vulputate maecenas eget tristique pharetra eu id eu molestie. In id
     non tortor, tempus. Vitae mi odio nascetur libero luctus viverra. Eu
-    commodo fermentum blandit a quis quis neque tellus.`
+    commodo fermentum blandit a quis quis neque tellus.`,
   },
-  post2:{
-    id:"post2",
-    image:PostImage2,
-    date:formatDate(),
-    postTitle:"Sportphysiotherapie.",
-    postText:`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare
+  post2: {
+    id: "post2",
+    image: PostImage2,
+    date: formatDate(),
+    postTitle: "Sportphysiotherapie.",
+    postText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare
     vulputate maecenas eget tristique pharetra eu id eu molestie. In id
     non tortor, tempus. Vitae mi odio nascetur libero luctus viverra. Eu
     commodo fermentum blandit a quis quis neque tellus.
@@ -150,14 +156,14 @@ export const newsContent = {
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare
     vulputate maecenas eget tristique pharetra eu id eu molestie. In id
     non tortor, tempus. Vitae mi odio nascetur libero luctus viverra. Eu
-    commodo fermentum blandit a quis quis neque tellus.`
+    commodo fermentum blandit a quis quis neque tellus.`,
   },
-  post3:{
-    id:"post3",
-    image:PostImage3,
-    date:formatDate(),
-    postTitle:"CMD-Physiotherapie.",
-    postText:`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare
+  post3: {
+    id: "post3",
+    image: PostImage3,
+    date: formatDate(),
+    postTitle: "CMD-Physiotherapie.",
+    postText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare
     vulputate maecenas eget tristique pharetra eu id eu molestie. In id
     non tortor, tempus. Vitae mi odio nascetur libero luctus viverra. Eu
     commodo fermentum blandit a quis quis neque tellus.
@@ -180,41 +186,52 @@ export const newsContent = {
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare
     vulputate maecenas eget tristique pharetra eu id eu molestie. In id
     non tortor, tempus. Vitae mi odio nascetur libero luctus viverra. Eu
-    commodo fermentum blandit a quis quis neque tellus.`
-  }
-}
+    commodo fermentum blandit a quis quis neque tellus.`,
+  },
+};
 
 // Testimonials Content
 
 export const testimonialsContent = {
-  testimonial1:{
-    id:"testimonial1",
-    text:`Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  testimonial1: {
+    id: "testimonial1",
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     Urna egestas diam nunc orci. Nulla bibendum cum tristique
     diam varius fringilla magna commodo at. Vel varius semper
     nisl cursus aliquam urna semper quam. Vivamus proin blandit
     pharetra quis porttitor massa.`,
-    image:Face1,
-    name:"Mirela Ionesc"
+    image: Face1,
+    name: "Mirela Ionesc",
   },
-  testimonial2:{
-    id:"testimonial2",
-    text:`Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  testimonial2: {
+    id: "testimonial2",
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     Urna egestas diam nunc orci. Nulla bibendum cum tristique
     diam varius fringilla magna commodo at. Vel varius semper
     nisl cursus aliquam urna semper quam. Vivamus proin blandit
     pharetra quis porttitor massa.`,
-    image:Face2,
-    name:"Andrei Baciu"
+    image: Face2,
+    name: "Andrei Baciu",
   },
-  testimonial3:{
-    id:"testimonial3",
-    text:`Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  testimonial3: {
+    id: "testimonial3",
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     Urna egestas diam nunc orci. Nulla bibendum cum tristique
     diam varius fringilla magna commodo at. Vel varius semper
     nisl cursus aliquam urna semper quam. Vivamus proin blandit
     pharetra quis porttitor massa.`,
-    image:Face3,
-    name:"Delia Gruia"
-  }
-}
+    image: Face3,
+    name: "Delia Gruia",
+  },
+};
+
+// BootstrapCarousel Images
+
+export const carouselImages = [
+  CaruselFoto1,
+  CaruselFoto2,
+  CaruselFoto3,
+  CaruselFoto4,
+  CaruselFoto5,
+  CaruselFoto6,
+];

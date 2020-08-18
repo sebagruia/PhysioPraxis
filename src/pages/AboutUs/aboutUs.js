@@ -4,6 +4,9 @@ import {withRouter} from "react-router-dom";
 import AboutUsWorkinHours from "../../components/AboutUsWorkinHours/aboutUsWorkingHours";
 import Socials from "../../components/Socials/socials";
 import BootstrapCarousel from "../../components/BootstrapCarousel/bootstrapCarousel";
+import Facebook from "../../assets/iconmonstr-facebook.png";
+import Instagram from "../../assets/iconmonstr-instagram.png";
+import Twitter from "../../assets/iconmonstr-twitter.png";
 
 const AboutUs = () => {
   return (
@@ -60,7 +63,7 @@ const AboutUs = () => {
             </div>
           </div>
           <hr className="aboutUs-text-hr"></hr>
-          <Socials />
+          <Socials facebook={Facebook} instagram={Instagram} twitter={Twitter}/>
         </div>
       </div>
       <BootstrapCarousel />

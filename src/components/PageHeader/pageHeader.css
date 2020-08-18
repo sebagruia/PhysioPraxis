@@ -3,7 +3,7 @@
     justify-content: flex-start;
     align-items: center;
     background-color: rgb(176, 201, 180, 0.3);
-    height: 120px;
+    height: 180px;
     padding-right: 0px;
     padding-left: 0px;
   }
@@ -16,4 +16,10 @@
     opacity: 0.8;
     padding-top: 55px;
     text-align: center;
+  }
+
+  @media screen and (max-width:1200px){
+    .page-header {
+      height: 120px;
+    }
   }

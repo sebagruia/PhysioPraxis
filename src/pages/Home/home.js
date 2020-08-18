@@ -7,7 +7,7 @@ import Phone from "../../assets/iconmonstr-phone.png";
 import Mail from "../../assets/iconmonstr-email.png";
 import AdditionalInfoButton from "../../components/AdditionalInfoButton/additionalInfoButton";
 import Testimonial from "../../components/Testimonial/testimonial";
-import { testimonialsContent } from "../../utils";
+import { testimonialsContent } from "../../DATA";
 
 const Home = () => {
   const [display, setDisplay] = useState(false);

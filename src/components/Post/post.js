@@ -6,7 +6,7 @@ import Pin from "../../assets/iconmonstr-pin.png";
 import FacebookEmpty from "../../assets/iconmonstr-facebook-empty.png";
 import TwitterEmpty from "../../assets/iconmonstr-twitter-empty.png";
 import InstagramEmpty from "../../assets/iconmonstr-instagram-empty.png";
-import { arangedTitle } from "../../utils";
+import { arangedTitle } from "../../DATA";
 
 const Post = ({ id, date, image, title, text }) => {
   const history = useHistory();

@@ -1,6 +1,6 @@
 import React from "react";
 import "./services.css";
-import { columnImageContainerContentArray } from "../../utils";
+import { columnImageContainerContentArray } from "../../DATA";
 import ColumnImageContainer from "../../components/ColumnImageContainer/columnImageContainer";
 import PageHeader from "../../components/PageHeader/pageHeader";
 
