@@ -17,7 +17,7 @@ import LeaveAMessageButton from "../LeaveAMessageButton/leaveAMessageButton";
 import { Link as ScrollLink } from "react-scroll";
 import UserButton from "../UserButton/userButton";
 
-const Navigation = () => {
+const Navigation = ({currentUser}) => {
   const [active, setActivate] = useState(false);
   const [InfoTableOn, setInfoTableOn] = useState(false);
   const [leaveMessageOn, setleaveMessageOn] = useState(false);
@@ -68,10 +68,10 @@ const Navigation = () => {
             </div>
             <div className="info">
               <h6 className="firstText">
-                Monday - Friday <span className="hours">08:00 - 19:00</span>
+              Termine nach Vereinbarung
               </h6>
               <h6 className="subText">
-                Saturday <span className="hours">08:00 -14:00</span>, Sunday
+                 Sunday
                 Closed
               </h6>
             </div>
@@ -92,8 +92,8 @@ const Navigation = () => {
               <img src={LocationIcon} alt="location" />
             </div>
             <div className="info">
-              <h6 className="firstText">Nibelungenstrasse 42</h6>
-              <h6 className="subText">Crumstadt, Hessen, Germany</h6>
+              <h6 className="firstText">Bismarckstr. 41</h6>
+              <h6 className="subText">Darmstadt 64293</h6>
             </div>
           </div>
 
@@ -191,7 +191,7 @@ const Navigation = () => {
               handleLeaveAMessageButton={handleLeaveAMessageButton}
             />
             <LanguageButton />
-            <UserButton />
+            <UserButton currentUser={currentUser}/>
           </div>
         </div>
       </div>

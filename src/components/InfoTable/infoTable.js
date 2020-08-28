@@ -11,8 +11,7 @@ import Twitter from "../../assets/iconmonstr-twitter.png";
 import Socials from "../Socials/socials";
 
 const InfoTable = ({ history, handleInfoTable, InfoTableOn }) => {
-  
-  const {pathname} = history.location;
+  const { pathname } = history.location;
 
   return (
     <div
@@ -26,12 +25,8 @@ const InfoTable = ({ history, handleInfoTable, InfoTableOn }) => {
     >
       <div className="infoTable-schedule">
         <div className="infoTable-info">
-          <h6 className="infoTable-firstText">
-            Monday - Friday <span className="hours">08:00 - 19:00</span>
-          </h6>
-          <h6 className="infoTable-subText">
-            Saturday <span className="hours">08:00 -14:00</span>, Sunday Closed
-          </h6>
+          <h6 className="infoTable-firstText">Termine nach Vereinbarung</h6>
+          <h6 className="infoTable-subText">Sunday Closed</h6>
         </div>
         <div className="infoTable-clock-container">
           <img src={Clock} alt="clock" />
@@ -50,8 +45,8 @@ const InfoTable = ({ history, handleInfoTable, InfoTableOn }) => {
 
       <div className="infoTable-location">
         <div className="infoTable-info">
-          <h6 className="infoTable-firstText">Nibelungenstrasse 42</h6>
-          <h6 className="infoTable-subText">Crumstadt, Hessen, Germany</h6>
+          <h6 className="infoTable-firstText">Bismarckstr. 41</h6>
+          <h6 className="infoTable-subText">Darmstadt 64293 </h6>
         </div>
         <div className="infoTable-location-container">
           <img src={LocationIcon} alt="location" />
@@ -61,7 +56,11 @@ const InfoTable = ({ history, handleInfoTable, InfoTableOn }) => {
       <div className="infoTable-hand">
         <div className="infoTable-info">
           <h6 className="infoTable-firstText">Follow Us</h6>
-          <Socials facebook={Facebook} instagram={Instagram} twitter={Twitter}/>
+          <Socials
+            facebook={Facebook}
+            instagram={Instagram}
+            twitter={Twitter}
+          />
         </div>
         <div className="infoTable-hand-container">
           <img src={HandLeft} alt="hand" />

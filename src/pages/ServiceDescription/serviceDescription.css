@@ -35,6 +35,10 @@
 .serviceDescription-description-container h1{
   font-size:2rem;
 }
+.serviceDescription-description-container .p-container {
+  height:500px;
+  width: 100%;
+}
 .serviceDescription-description-container p {
   font-family: "Montserrat", sans-serif;
   font-variant: normal;

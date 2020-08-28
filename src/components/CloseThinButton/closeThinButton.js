@@ -2,7 +2,7 @@ import React from "react";
 import "./closeThinButton.css";
 import CloseThin from "../../assets/iconmonstr-x-thin.png";
 
-const CloseThinButton = ({ handleLeaveAMessageButton, leaveMessageOn }) => {
+const CloseThinButton = ({ handleLeaveAMessageButton, leaveMessageOn}) => {
   return (
     <img
       onClick={handleLeaveAMessageButton}

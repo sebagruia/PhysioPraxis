@@ -1,21 +1,28 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment } from "react";
 import "./userButton.css";
 import User from "../../assets/iconmonstr-user.png";
-import LogIn from "../LogIn/logIn";
+import UserBlue from "../../assets/iconmonstr-user-blue.png";
+import { signInWithGoogle } from "../../firebase/firebase";
+import { signOutWithGoogle } from "../../firebase/firebase";
 
-const UserButton = () => {
-  const [activeUser, setActiveUser] = useState(false);
+const UserButton = ({ currentUser }) => {
   const handleClick = () => {
-    setActiveUser(!activeUser);
+    if (currentUser) {
+      if (window.confirm("Sign out?")) {
+        signOutWithGoogle();
+      }
+    } else {
+      alert("Only for Administrator");
+      signInWithGoogle();
+    }
   };
 
   return (
     <Fragment>
       <div onClick={handleClick} className="user" role="button">
-        <img src={User} alt="user logo" />
+        <img src={currentUser ? UserBlue : User} alt="user logo" />
       </div>
-        <LogIn activeUser={activeUser}/>
-    </Fragment >
+    </Fragment>
   );
 };
 

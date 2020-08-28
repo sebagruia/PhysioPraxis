@@ -35,6 +35,9 @@ const Home = () => {
             </div>
           </div>
           <div className="box box2">
+          <div className="boxTitle boxTitle-box2">
+              <h4>Insurance Partner</h4>
+            </div>
             <div className="boxTitle-text">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
