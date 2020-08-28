@@ -3,6 +3,7 @@ import "./leaveAMessageForm.css";
 import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import CloseThinButton from "../CloseThinButton/closeThinButton";
+import BookButton from "../../components/BookButton/bookButton";
 import emailjs from "emailjs-com";
 
 class LeaveAMessageForm extends Component {
@@ -96,9 +97,7 @@ class LeaveAMessageForm extends Component {
               required
             ></Form.Control>
           </Form.Group>
-          <button className="book-button" type="submit" >
-            <p>SEND</p>
-          </button>
+          <BookButton  buttonName="SEND" />
         </Form>
       </div>
     );

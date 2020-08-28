@@ -1,0 +1,15 @@
+.userLogIn {
+  position: absolute;
+  top: calc(50% + 135px);
+  left: calc(50% - 135px);
+  width: 270px !important;
+  background-color: rgb(196, 196, 196, 0.9) !important;
+}
+
+/* Media Query */
+
+@media screen and (max-width: 992px) {
+  .userLogIn {
+    top: 0;
+  }
+}

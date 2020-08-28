@@ -132,7 +132,7 @@ class BookingForm extends Component {
           value={message}
           name="message"
         ></Form.Control>
-        <BookButton />
+        <BookButton buttonName="BOOK"/>
       </Form>
     );
   }

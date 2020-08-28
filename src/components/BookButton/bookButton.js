@@ -1,10 +1,10 @@
 import React from "react";
 import "./bookButton.css";
 
-const BookButton = () => {
+const BookButton = ({buttonName}) => {
   return (
     <button className="book-button"  type="submit">
-      <p>BOOK</p>
+      <p>{buttonName}</p>
     </button>
   );
 };
