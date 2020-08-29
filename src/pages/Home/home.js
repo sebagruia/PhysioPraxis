@@ -1,7 +1,6 @@
 import React, { Fragment, useState } from "react";
 import "./home.css";
 import BookingForm from "../../components/BookingForm/bookingForm";
-import Doctor from "../../assets/doctor1.png";
 import MapLocation from "../../components/MapLocation/mapLocation";
 import Phone from "../../assets/iconmonstr-phone.png";
 import Mail from "../../assets/iconmonstr-email.png";
@@ -85,7 +84,7 @@ const Home = () => {
             <h4>Marian Popescu (signature)</h4>
           </div>
           <div className="professionalPreview-img">
-            <img src={Doctor} alt="the doctor" />
+            <img src='https://firebasestorage.googleapis.com/v0/b/physiopraxis-51c08.appspot.com/o/home%2Fdoctor1.png?alt=media&token=0ae9fe55-57e9-42ef-abc7-86bc84a8833d' alt="the doctor" />
           </div>
         </div>
       </div>

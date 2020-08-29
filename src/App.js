@@ -10,34 +10,40 @@ import ServiceDescription from "./pages/ServiceDescription/serviceDescription";
 import AppointmentPage from "./pages/AppointmentPage/appointmentPage";
 import News from "./pages/News/news";
 import PostPage from "./pages/PostPage/postPage";
-import {auth} from "./firebase/firebase";
+import { auth, createUserProfileDocument } from "./firebase/firebase";
 
 class App extends Component {
-
-  constructor(){
+  constructor() {
     super();
 
     this.state = {
-      currentUser:null
-    }
+      currentUser: null,
+    };
   }
 
   unsubscribeFromAuth = null;
 
-  componentDidMount(){
-    this.unsubscribeFromAuth = auth.onAuthStateChanged(user=>{
-      this.setState({currentUser:user});
-      console.log(user);
-    })
+  componentDidMount() {
+    this.unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
+      if (userAuth) {
+        const userRef = await createUserProfileDocument(userAuth);
+        const snapShot = await userRef.get();
+        if (snapShot.exists) {
+          this.setState({ currentUser: userAuth });
+        }
+      } else {
+        this.setState({ currentUser: null });
+      }
+    });
   }
 
-  componentWillUnmount(){
+  componentWillUnmount() {
     this.unsubscribeFromAuth();
   }
   render() {
     return (
       <div className="App">
-        <Navigation currentUser={this.state.currentUser}/>
+        <Navigation currentUser={this.state.currentUser} />
         <Switch>
           <Route exact path="/">
             <Home />

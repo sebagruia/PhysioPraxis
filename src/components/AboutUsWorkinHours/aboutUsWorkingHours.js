@@ -1,6 +1,5 @@
 import React from "react";
 import "./aboutUsWorkingHours.css";
-import Doctor from "../../assets/doctor1.png";
 import Phone from "../../assets/iconmonstr-phone-blue.png";
 import Mail from "../../assets/iconmonstr-email-blue.png";
 
@@ -12,7 +11,7 @@ const AboutUsWorkinHours = () => {
             <h1 className="header-title">Marian Popescu</h1>
           </div>
       <div className="aboutUsWorkingHours-img-container">
-        <img src={Doctor} alt="doctor" />
+        <img src='https://firebasestorage.googleapis.com/v0/b/physiopraxis-51c08.appspot.com/o/home%2Fdoctor1.png?alt=media&token=0ae9fe55-57e9-42ef-abc7-86bc84a8833d' alt="doctor" />
       </div>
 
       <div className="aboutUsWorkingHours-hours">

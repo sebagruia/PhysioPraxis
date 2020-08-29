@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import "./userButton.css";
 import User from "../../assets/iconmonstr-user.png";
-import UserBlue from "../../assets/iconmonstr-user-blue.png";
+import UserRed from "../../assets/iconmonstr-user-red.png";
 import { signInWithGoogle } from "../../firebase/firebase";
 import { signOutWithGoogle } from "../../firebase/firebase";
 
@@ -20,7 +20,7 @@ const UserButton = ({ currentUser }) => {
   return (
     <Fragment>
       <div onClick={handleClick} className="user" role="button">
-        <img src={currentUser ? UserBlue : User} alt="user logo" />
+        <img src={currentUser ? UserRed : User} alt="user logo" />
       </div>
     </Fragment>
   );
