@@ -215,7 +215,7 @@ export const testimonialsContent = {
     nisl cursus aliquam urna semper quam. Vivamus proin blandit
     pharetra quis porttitor massa.`,
     image: 'https://firebasestorage.googleapis.com/v0/b/physiopraxis-51c08.appspot.com/o/testimonials%2Fface1.jpg?alt=media&token=f11ccf01-a1be-4d38-b277-5ecc404ef34b',
-    name: "Mirela Ionesc",
+    name: "Mirela Ionescu",
   },
   testimonial2: {
     id: "testimonial2",

@@ -1,14 +1,17 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState} from "react";
 import "./home.css";
+import { connect } from "react-redux";
 import BookingForm from "../../components/BookingForm/bookingForm";
 import MapLocation from "../../components/MapLocation/mapLocation";
 import Phone from "../../assets/iconmonstr-phone.png";
 import Mail from "../../assets/iconmonstr-email.png";
 import AdditionalInfoButton from "../../components/AdditionalInfoButton/additionalInfoButton";
+import AddTestimonialButton from "../../components/AddTestimonialButton/addTestimonialButton";
 import Testimonial from "../../components/Testimonial/testimonial";
-import { testimonialsContent } from "../../DATA";
 
-const Home = () => {
+
+const Home = ({currentUser, testimonials}) => {
+
   const [display, setDisplay] = useState(false);
 
   const handleDisplay = () => {
@@ -34,7 +37,7 @@ const Home = () => {
             </div>
           </div>
           <div className="box box2">
-          <div className="boxTitle boxTitle-box2">
+            <div className="boxTitle boxTitle-box2">
               <h4>Insurance Partner</h4>
             </div>
             <div className="boxTitle-text">
@@ -84,7 +87,10 @@ const Home = () => {
             <h4>Marian Popescu (signature)</h4>
           </div>
           <div className="professionalPreview-img">
-            <img src='https://firebasestorage.googleapis.com/v0/b/physiopraxis-51c08.appspot.com/o/home%2Fdoctor1.png?alt=media&token=0ae9fe55-57e9-42ef-abc7-86bc84a8833d' alt="the doctor" />
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/physiopraxis-51c08.appspot.com/o/home%2Fdoctor1.png?alt=media&token=0ae9fe55-57e9-42ef-abc7-86bc84a8833d"
+              alt="the doctor"
+            />
           </div>
         </div>
       </div>
@@ -97,13 +103,16 @@ const Home = () => {
           <BookingForm />
 
           <div className="testimonials-subsection">
-            <h1 className="testimonials-title">Testimonials</h1>
+            <div className="testimonial-title-container">
+              <h1 className="testimonials-title">Testimonials</h1>
+              <AddTestimonialButton currentUser={currentUser}/>
+            </div>
             <div className="testimonials-container">
-              {Object.values(testimonialsContent).map((testimonial) => (
+              {Object.values(testimonials).map((testimonial) => (
                 <Testimonial
                   key={testimonial.id}
-                  text={testimonial.text}
-                  image={testimonial.image}
+                  text={testimonial.message}
+                  image={testimonial.selectionAvatar}
                   name={testimonial.name}
                 />
               ))}
@@ -122,13 +131,13 @@ const Home = () => {
           <div className="workingHours">
             <h5>Working Hours</h5>
             <h6>
-              Mon - Fri <span>8:00 - 19:00</span>
+              Mon - Fre <span>8:00 - 19:00</span>
             </h6>
             <h6>
-              Saturday <span>8:00 - 14:00</span>
+              Samstag <span>8:00 - 14:00</span>
             </h6>
             <h6>
-              Sunday <span>Closed</span>
+              Sonntag <span>Geschlossen</span>
             </h6>
           </div>
           <div className="contactDetails">
@@ -148,4 +157,11 @@ const Home = () => {
   );
 };
 
-export default Home;
+const mapStateToProps = (state) => {
+  return {
+    currentUser: state.userReducer.currentUser,
+    testimonials:state.userReducer.testimonials
+  };
+};
+
+export default connect(mapStateToProps)(Home);

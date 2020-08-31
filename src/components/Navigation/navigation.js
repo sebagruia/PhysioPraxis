@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./navigation.css";
+import { connect } from "react-redux";
 import LeaveAMessageForm from "../LeaveAMessageForm/leaveAMessageForm";
 import Hamburger from "../Hamburger/hamburger";
 import { NavLink, useHistory } from "react-router-dom";
@@ -17,7 +18,7 @@ import LeaveAMessageButton from "../LeaveAMessageButton/leaveAMessageButton";
 import { Link as ScrollLink } from "react-scroll";
 import UserButton from "../UserButton/userButton";
 
-const Navigation = ({currentUser}) => {
+const Navigation = ({ currentUser }) => {
   const [active, setActivate] = useState(false);
   const [InfoTableOn, setInfoTableOn] = useState(false);
   const [leaveMessageOn, setleaveMessageOn] = useState(false);
@@ -67,13 +68,8 @@ const Navigation = ({currentUser}) => {
               <img src={Clock} alt="clock" />
             </div>
             <div className="info">
-              <h6 className="firstText">
-              Termine nach Vereinbarung
-              </h6>
-              <h6 className="subText">
-                 Sunday
-                Closed
-              </h6>
+              <h6 className="firstText">Termine nach Vereinbarung</h6>
+              <h6 className="subText">Sonntag Geschlossen</h6>
             </div>
           </div>
 
@@ -191,7 +187,7 @@ const Navigation = ({currentUser}) => {
               handleLeaveAMessageButton={handleLeaveAMessageButton}
             />
             <LanguageButton />
-            <UserButton currentUser={currentUser}/>
+            <UserButton currentUser={currentUser} />
           </div>
         </div>
       </div>
@@ -203,4 +199,10 @@ const Navigation = ({currentUser}) => {
   );
 };
 
-export default Navigation;
+const mapStateToProps = (state) => {
+  return {
+    currentUser: state.userReducer.currentUser,
+  };
+};
+
+export default connect(mapStateToProps)(Navigation);

@@ -138,6 +138,7 @@
 /* Testimonials Subsection */
 
 .testimonials-subsection {
+  position:relative;
   height: 500px;
   margin: 80px 0 80px 0;
   padding: 0 30px 0px 30px;
@@ -145,9 +146,19 @@
   display: flex;
   flex-direction: column;
 }
-
-.testimonials-title {
+.testimonial-title-container{
+  width:100%;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
   margin-bottom: 30px;
+}
+.testimonial-title-container img{
+  width: 25px;
+  height: 25px;
+  opacity:0.8;
+}
+.testimonials-title {
   font-family: "Montserrat", sans-serif;
   font-size: 2rem;
   font-variant: all-small-caps;
