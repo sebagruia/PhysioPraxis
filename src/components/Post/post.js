@@ -24,7 +24,6 @@ const Post = ({ id, date, image, title, text }) => {
   const goBack = () => {
     history.goBack();
   };
-
   return (
     <div className="post-container" id={id}>
       <img src={image} alt="post" />

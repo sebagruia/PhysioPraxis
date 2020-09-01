@@ -1,7 +1,7 @@
 import { firestore } from "../firebase/firebase";
 export const SET_CURRENT_USER = "SET_CURRENT_USER";
 export const GET_TESTIMONIALS = "GET_TESTIMONIALS";
-export const ADD_TESTIMONIAL = "ADD_TESTIMONIAL";
+export const GET_NEWS = "GET_NEWS";
 
 export const setCurrentUser = (user) => {
   return {
@@ -24,6 +24,23 @@ export const getTestimonials = () => async (dispatch) => {
     });
   } catch (error) {
     console.log(`Error getting testimonials ${error.message}`);
+  }
+};
+
+export const getNews = () => async (dispatch) => {
+  const docRef = firestore.collection("/news");
+  try {
+    const docSnapshot = await docRef.get();
+    const allDocuments = docSnapshot.docs;
+    const data = allDocuments.map((document) => {
+      return document.data();
+    });
+    dispatch({
+      type: GET_NEWS,
+      payload: data,
+    });
+  } catch (error) {
+    console.log(`Error getting news ${error.message}`);
   }
 };
 

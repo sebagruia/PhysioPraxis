@@ -11,7 +11,7 @@ import ServiceDescription from "./pages/ServiceDescription/serviceDescription";
 import AppointmentPage from "./pages/AppointmentPage/appointmentPage";
 import News from "./pages/News/news";
 import PostPage from "./pages/PostPage/postPage";
-import {setCurrentUser, getTestimonials} from "./redux/redux-actions";
+import {setCurrentUser, getTestimonials, getNews} from "./redux/redux-actions";
 import { auth, createUserProfileDocument } from "./firebase/firebase";
 
 class App extends Component {
@@ -32,6 +32,7 @@ class App extends Component {
       }
     });
     this.props.getTestimonials();
+    this.props.getNews();
   }
 
   componentWillUnmount() {
@@ -79,7 +80,8 @@ const mapStateToProps = (state)=>{
 const mapDispatchToProps = (dispatch)=>{
   return{
     setCurrentUser : (user)=>dispatch(setCurrentUser(user)),
-    getTestimonials: ()=>dispatch(getTestimonials())
+    getTestimonials: ()=>dispatch(getTestimonials()),
+    getNews: ()=>dispatch(getNews())
   }
 }
 

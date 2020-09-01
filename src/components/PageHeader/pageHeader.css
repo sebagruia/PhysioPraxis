@@ -8,13 +8,16 @@
     padding-left: 0px;
   }
   .page-title {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    padding-top: 55px;
     font-family: "Montserrat", sans-serif;
     font-variant-caps: small-caps;
   }
   .page-title h1 {
     font-size: 2.2rem;
     opacity: 0.8;
-    padding-top: 55px;
     text-align: center;
   }
 

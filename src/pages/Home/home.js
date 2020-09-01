@@ -6,7 +6,7 @@ import MapLocation from "../../components/MapLocation/mapLocation";
 import Phone from "../../assets/iconmonstr-phone.png";
 import Mail from "../../assets/iconmonstr-email.png";
 import AdditionalInfoButton from "../../components/AdditionalInfoButton/additionalInfoButton";
-import AddTestimonialButton from "../../components/AddTestimonialButton/addTestimonialButton";
+import AddTestimonialAndPostButton from "../../components/AddTestimonialAndPostButton/addTestimonialAndPostButton";
 import Testimonial from "../../components/Testimonial/testimonial";
 
 
@@ -105,7 +105,7 @@ const Home = ({currentUser, testimonials}) => {
           <div className="testimonials-subsection">
             <div className="testimonial-title-container">
               <h1 className="testimonials-title">Testimonials</h1>
-              <AddTestimonialButton currentUser={currentUser}/>
+              <AddTestimonialAndPostButton currentUser={currentUser}/>
             </div>
             <div className="testimonials-container">
               {Object.values(testimonials).map((testimonial) => (

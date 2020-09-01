@@ -1,8 +1,9 @@
-import { SET_CURRENT_USER, GET_TESTIMONIALS } from "./redux-actions";
+import { SET_CURRENT_USER, GET_TESTIMONIALS, GET_NEWS } from "./redux-actions";
 
 const initialState = {
   currentUser: null,
   testimonials: {},
+  news:{}
 };
 
 export const userReducer = (state = initialState, action) => {
@@ -16,6 +17,11 @@ export const userReducer = (state = initialState, action) => {
       return {
         ...state,
         testimonials: action.payload,
+      };
+    case GET_NEWS:
+      return {
+        ...state,
+        news: action.payload,
       };
     default:
       return state;

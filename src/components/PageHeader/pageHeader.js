@@ -1,11 +1,11 @@
 import React from "react";
 import "./pageHeader.css";
 
-const PageHeader = (props)=>{
+const PageHeader = ({children})=>{
     return(
         <div className="page-header container-fluid">
         <div className="page-title container">
-          <h1>{props.children}</h1>
+          <h1>{children}</h1>
         </div>
       </div>
     );

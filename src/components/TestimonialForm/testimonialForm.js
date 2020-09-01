@@ -1,10 +1,11 @@
 import React, { Component, Fragment } from "react";
 import "./testimonialForm.css";
+import { withRouter } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import BookButton from "../../components/BookButton/bookButton";
 
-class TestimonialFrom extends Component {
+class TestimonialForm extends Component {
   constructor() {
     super();
     this.state = {
@@ -21,7 +22,7 @@ class TestimonialFrom extends Component {
   };
 
   render() {
-    const { active, handleSubmit } = this.props;
+    const { active, handleSubmitTestimonialOrPost } = this.props;
     const { name, message, selectionAvatar } = this.state;
 
     const femaleAvatarImageLink =
@@ -34,7 +35,12 @@ class TestimonialFrom extends Component {
         {active ? (
           <Form
             onSubmit={(event) => {
-              handleSubmit(event, name, message, selectionAvatar);
+              handleSubmitTestimonialOrPost(
+                event,
+                name,
+                message,
+                selectionAvatar
+              );
               this.setState({
                 name: "",
                 message: "",
@@ -70,13 +76,12 @@ class TestimonialFrom extends Component {
                 <option value={femaleAvatarImageLink}>weiblich</option>
               </Form.Control>
             </Form.Group>
-
             <Form.Control
               onChange={this.handleOnChange}
               as="textarea"
               rows="4"
               cols="50"
-              placeholder="Your feedback..."
+              placeholder="Text..."
               value={message}
               name="message"
             ></Form.Control>
@@ -88,4 +93,4 @@ class TestimonialFrom extends Component {
   }
 }
 
-export default TestimonialFrom;
+export default withRouter(TestimonialForm);

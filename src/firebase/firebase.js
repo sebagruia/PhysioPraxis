@@ -53,26 +53,6 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
   return userRef;
 };
 
-// export const addTestimonial = async (text, name, image)=>{
-//   const docRef = firestore.collection('/testimonials');
-//   try{
-//     await docRef.add({
-//       id:`testimonial${Math.floor(Math.random()*1000000)}`,
-//       createDate: formatDate(),
-//       text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-//       Urna egestas diam nunc orci. Nulla bibendum cum tristique
-//       diam varius fringilla magna commodo at. Vel varius semper
-//       nisl cursus aliquam urna semper quam. Vivamus proin blandit
-//       pharetra quis porttitor massa.`,
-//       image: 'https://firebasestorage.googleapis.com/v0/b/physiopraxis-51c08.appspot.com/o/testimonials%2Fface3.jpg?alt=media&token=8476aa05-9005-4419-acd8-f52162a37fed',
-//       name: "Delia Gruia",
-//     })
-//   }
-//   catch(error){
-//     console.log(`Error creating testimonial ${error.message}`);
-//   }
-
-// }
 
 export const addTestimonial = async (name, message, selectionAvatar)=>{
   const docRef = firestore.collection('/testimonials');
@@ -88,6 +68,23 @@ export const addTestimonial = async (name, message, selectionAvatar)=>{
   }
   catch(error){
     console.log(`Error creating testimonial ${error.message}`);
+  }
+
+}
+
+export const addPost = async (postTitle, postText, postImageLink)=>{
+  const docRef = firestore.collection('/news');
+  try{
+    await docRef.add({
+      id:`post${Math.floor(Math.random()*1000000)}`,
+      createDate: formatDate(),
+      postTitle,
+      postText,
+      postImageLink
+    })
+  }
+  catch(error){
+    console.log(`Error creating post ${error.message}`);
   }
 
 }
