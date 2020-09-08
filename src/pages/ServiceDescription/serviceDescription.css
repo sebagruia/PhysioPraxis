@@ -5,6 +5,7 @@
 }
 
 .serviceDescription-container {
+  position:relative;
   display: flex;
   margin: 100px 0 100px 0;
   border: 1px solid #f1f1f1;
@@ -16,11 +17,14 @@
   width: 50%;
 }
 
+
+
 .serviceDescription-img-container img {
   width: 100%;
 }
 
 .serviceDescription-description-container {
+  position:relative;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;

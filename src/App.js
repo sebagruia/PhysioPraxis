@@ -49,10 +49,10 @@ class App extends Component {
           <Route path="/aboutUs">
             <AboutUs />
           </Route>
-          <Route path="/services">
+          <Route exact path="/services">
             <Services />
           </Route>
-          <Route path="/serviceDescription">
+          <Route path="/services/serviceDescription">
             <ServiceDescription />
           </Route>
           <Route exact path="/news">
@@ -65,7 +65,7 @@ class App extends Component {
             <AppointmentPage />
           </Route>
         </Switch>
-l        <Footer />
+        <Footer />
       </div>
     );
   }

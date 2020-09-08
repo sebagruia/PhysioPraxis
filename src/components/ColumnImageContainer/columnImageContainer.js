@@ -3,10 +3,10 @@ import { useHistory } from "react-router-dom";
 import "./columnImageContainer.css";
 import Label from "../../components/Label/label";
 
-const ColumnImageContainer = ({ service, label, description }) => {
+const ColumnImageContainer = ({ service, label, description}) => {
   let history = useHistory();
   const handleOnClick = () => {
-    history.push("/serviceDescription", { service, label, description });
+    history.push("/services/serviceDescription", { service, label, description});
   };
   return (
     <div

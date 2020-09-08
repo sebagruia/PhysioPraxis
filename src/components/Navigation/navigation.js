@@ -145,7 +145,7 @@ const Navigation = ({ currentUser }) => {
             </NavLink>
 
             <NavLink
-              to="/services"
+              to = "/services"
               activeStyle={activeClass}
               onClick={handleHamburgerMenu}
             >
