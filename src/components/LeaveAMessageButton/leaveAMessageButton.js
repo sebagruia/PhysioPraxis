@@ -1,12 +1,26 @@
 import React from "react";
 import "./leaveAMessageButton.css";
+import {connect} from "react-redux";
+import {leaveMessageStatusChange} from "../../redux/redux-actions";
 
-const LeaveAMessageButton = ({handleLeaveAMessageButton}) => {
+
+
+const LeaveAMessageButton = ({dispatch,leaveMessageStatus}) => {
+
+  const handleClick = () => {
+    dispatch(leaveMessageStatusChange(leaveMessageStatus))
+  };
   return (
-    <div onClick={handleLeaveAMessageButton} className="message-button" role="button">
+    <div onClick={handleClick} className="message-button" role="button">
       <h6>Leave a Message</h6>
     </div>
   );
 };
 
-export default LeaveAMessageButton;
+const mapStateToProps = (state) => {
+  return {
+    leaveMessageStatus: state.userReducer.leaveMessageStatus,
+  };
+};
+
+export default connect(mapStateToProps)(LeaveAMessageButton);

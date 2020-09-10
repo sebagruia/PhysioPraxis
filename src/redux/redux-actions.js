@@ -2,6 +2,7 @@ import { firestore } from "../firebase/firebase";
 export const SET_CURRENT_USER = "SET_CURRENT_USER";
 export const GET_TESTIMONIALS = "GET_TESTIMONIALS";
 export const GET_NEWS = "GET_NEWS";
+export const LEAVE_MESSAGE_STATUS = "LEAVE_MESSAGE_STATUS";
 
 export const setCurrentUser = (user) => {
   return {
@@ -44,5 +45,12 @@ export const getNews = () => async (dispatch) => {
   }
 };
 
+export const leaveMessageStatusChange = (value)=>{
+  return{
+    type:LEAVE_MESSAGE_STATUS,
+    payload:!value
+
+  }
+}
 
 

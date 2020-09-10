@@ -5,12 +5,72 @@
 }
 
 .hero-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 500px;
   background-image: url("https://firebasestorage.googleapis.com/v0/b/physiopraxis-51c08.appspot.com/o/home%2Fhero_img_reduced.jpg?alt=media&token=7cf2f6cb-fb90-459e-91e4-47eaf44dffd3");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  z-index: 0;
+}
+.hero-img-title-container {
+  display: flex;
+  flex-direction: column;
+  margin: -70px 200px 0 0px;
+}
+
+.full-title {
+  width: 450px;
+  font-family: "Montserrat", sans-serif;
+  margin-left: auto;
+}
+
+.full-title h1:first-child,
+.full-title h1:last-child {
+  font-weight: 600;
+}
+
+.background-for-text {
+  background-color: rgb(255, 255, 255, 0.1);
+  margin-bottom: 10px;
+  -webkit-box-shadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.full-title .background-for-text:first-child {
+  margin-bottom: 10px;
+}
+
+.moto {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  font-family: "Montserrat", sans-serif;
+  color: #c4c4c4;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0);
+  margin-top: 5px;
+}
+
+.moto-text {
+  font-weight: 700;
+}
+
+.hero-img-title-span {
+  font-size: 2.8rem !important;
+}
+
+.hero-img-title,
+.hero-img-title-span {
+  color: #fff;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+  font-variant: small-caps;
+  font-size: 4rem;
+  opacity: 0.9;
+  font-weight: 300;
 }
 
 .hero-description {
@@ -138,7 +198,7 @@
 /* Testimonials Subsection */
 
 .testimonials-subsection {
-  position:relative;
+  position: relative;
   height: 497px;
   margin: 80px 0 80px 0;
   padding: 0 30px 0px 30px;
@@ -146,9 +206,9 @@
   display: flex;
   flex-direction: column;
 }
-.testimonial-title-container{
-  width:100%;
-  display:flex;
+.testimonial-title-container {
+  width: 100%;
+  display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 30px;
@@ -267,6 +327,65 @@
     width: 294px;
   }
 }
+@media screen and (max-width: 576px) {
+  .hero-img-title-container {
+    margin: -348px 0px 0px 0px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .full-title {
+    width: 270px;
+  }
+  .hero-img-title-span {
+    font-size: 1.5rem !important;
+  }
+
+  .hero-img-title {
+    font-size: 2.3rem;
+  }
+  .moto-text {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .hero-img-title-container {
+    margin: -348px 0px 0 245px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .hero-img-title-container {
+    margin: -310px 0px 0 345px;
+  }
+  .full-title {
+    width: 350px;
+  }
+  .hero-img-title-span {
+    font-size: 1.9rem !important;
+  }
+  .hero-img-title {
+    font-size: 3rem;
+  }
+  .moto-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  .hero-img-title-container {
+    margin: -240px 0px 0 345px;
+  }
+  .full-title {
+    width: 400px;
+  }
+  .hero-img-title-span {
+    font-size: 2.3rem !important;
+  }
+  .hero-img-title {
+    font-size: 3.5rem;
+  }
+}
 
 @media screen and (max-width: 992px) {
   .hero-description {
@@ -280,12 +399,12 @@
     border-right: none;
     border-left: none;
   }
-  .box .boxTitle-box2:nth-child(1){
+  .box .boxTitle-box2:nth-child(1) {
     display: flex;
-  } 
-  .box .boxTitle-box2:nth-child(3){
+  }
+  .box .boxTitle-box2:nth-child(3) {
     display: none;
-  } 
+  }
   .appointment-section {
     flex-direction: column;
   }
@@ -296,20 +415,29 @@
   }
 
   .testimonials-container {
-    align-items:center;
+    align-items: center;
   }
 }
 
-@media screen and (min-width:993px){
-  .box .boxTitle-box2:nth-child(1){
-    display:none;
-  } 
-  .box .boxTitle-box2:nth-child(3){
+@media screen and (min-width: 993px) {
+  .box .boxTitle-box2:nth-child(1) {
+    display: none;
+  }
+  .box .boxTitle-box2:nth-child(3) {
     display: flex;
-  } 
+  }
 }
 @media screen and (min-width: 993px) and (max-width: 1200px) {
   .box {
     width: 250px;
+  }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1400px) {
+  .hero-img-title-container {
+    margin: -70px 150px 0 0px;
+  }
+  .full-title {
+    width: 450px;
   }
 }

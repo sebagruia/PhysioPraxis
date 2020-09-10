@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./leaveAMessageForm.css";
+import {connect} from "react-redux";
 import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import CloseThinButton from "../CloseThinButton/closeThinButton";
@@ -45,20 +46,19 @@ class LeaveAMessageForm extends Component {
     this.setState({ [name]: event.target.value });
   };
 
+
+
   render() {
-    const { handleLeaveAMessageButton, leaveMessageOn } = this.props;
+    const {leaveMessageStatus } = this.props;
     const { name, email, message } = this.state;
     return (
-      <div className={`leave-a-message ${leaveMessageOn ? "widen" : "shrink"}`}>
-        <CloseThinButton
-          handleLeaveAMessageButton={handleLeaveAMessageButton}
-          leaveMessageOn={leaveMessageOn}
-        />
+      <div className={`leave-a-message ${leaveMessageStatus ? "widen" : "shrink"}`}>
+        <CloseThinButton/>
         <Form
           onSubmit={this.handleSubmit}
           className="leave-a-message-container container"
           style={
-            leaveMessageOn
+            leaveMessageStatus
               ? { opacity: "1", transition: "opacity 0.8s"}
               : { opacity: "0", visibility:"hidden", transition: "opacity 0.3s, visibility 0.8s" }
           }
@@ -104,4 +104,10 @@ class LeaveAMessageForm extends Component {
   }
 }
 
-export default LeaveAMessageForm;
+const mapStateToProps = (state) => {
+  return {
+    leaveMessageStatus: state.userReducer.leaveMessageStatus,
+  };
+};
+
+export default connect(mapStateToProps)(LeaveAMessageForm);

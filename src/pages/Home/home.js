@@ -1,4 +1,4 @@
-import React, { Fragment, useState} from "react";
+import React, { Fragment, useState } from "react";
 import "./home.css";
 import { connect } from "react-redux";
 import BookingForm from "../../components/BookingForm/bookingForm";
@@ -9,9 +9,7 @@ import AdditionalInfoButton from "../../components/AdditionalInfoButton/addition
 import AddTestimonialAndPostButton from "../../components/AddTestimonialAndPostButton/addTestimonialAndPostButton";
 import Testimonial from "../../components/Testimonial/testimonial";
 
-
-const Home = ({currentUser, testimonials}) => {
-
+const Home = ({ currentUser, testimonials }) => {
   const [display, setDisplay] = useState(false);
 
   const handleDisplay = () => {
@@ -21,7 +19,25 @@ const Home = ({currentUser, testimonials}) => {
   return (
     <Fragment>
       <div className="container-fluid hero-section">
-        <div className="hero-img"></div>
+        <div className="hero-img">
+          <div className="container hero-img-title-container">
+            <div className="full-title">
+              <div className="background-for-text">
+                <h1 className="hero-img-title">
+                  Praxis<span className="hero-img-title-span"> für</span>
+                </h1>
+              </div>
+              <div className="background-for-text">
+                <h1 className="hero-img-title">Physiotherapie</h1>
+              </div>
+              <div className="moto">
+                <h6 className="moto-text">QUALITÄT</h6>
+                <h6 className="moto-text">RESPEKT</h6>
+                <h6 className="moto-text">INNOVATION</h6>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className=" container hero-description">
           <div className="box box1">
             <div className="boxTitle">
@@ -105,7 +121,7 @@ const Home = ({currentUser, testimonials}) => {
           <div className="testimonials-subsection">
             <div className="testimonial-title-container">
               <h1 className="testimonials-title">Testimonials</h1>
-              <AddTestimonialAndPostButton currentUser={currentUser}/>
+              <AddTestimonialAndPostButton currentUser={currentUser} />
             </div>
             <div className="testimonials-container">
               {Object.values(testimonials).map((testimonial) => (
@@ -160,7 +176,7 @@ const Home = ({currentUser, testimonials}) => {
 const mapStateToProps = (state) => {
   return {
     currentUser: state.userReducer.currentUser,
-    testimonials:state.userReducer.testimonials
+    testimonials: state.userReducer.testimonials,
   };
 };
 

@@ -11,9 +11,15 @@
     display:flex;
     justify-content: center;
     align-items:center;
-    padding-top: 55px;
+    padding-top: 0px;
     font-family: "Montserrat", sans-serif;
     font-variant-caps: small-caps;
+    transition:padding-top 0.5s;
+    
+  }
+  .page-title-transition{
+    padding-top: 55px;
+    transition:padding-top 0.5s;
   }
   .page-title h1 {
     font-size: 2.2rem;

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./navigation.css";
 import { connect } from "react-redux";
+import {leaveMessageStatusChange} from "../../redux/redux-actions";
 import LeaveAMessageForm from "../LeaveAMessageForm/leaveAMessageForm";
 import Hamburger from "../Hamburger/hamburger";
 import { NavLink, useHistory } from "react-router-dom";
@@ -18,26 +19,25 @@ import LeaveAMessageButton from "../LeaveAMessageButton/leaveAMessageButton";
 import { Link as ScrollLink } from "react-scroll";
 import UserButton from "../UserButton/userButton";
 
-const Navigation = ({ currentUser }) => {
+const Navigation = ({dispatch, currentUser, leaveMessageStatus }) => {
   const [active, setActivate] = useState(false);
   const [InfoTableOn, setInfoTableOn] = useState(false);
-  const [leaveMessageOn, setleaveMessageOn] = useState(false);
 
   const history = useHistory();
   const { pathname } = history.location;
 
   const handleHamburgerMenu = () => {
     setActivate(!active);
-    setleaveMessageOn(false);
+    dispatch(leaveMessageStatusChange(true))
   };
 
   const handleInfoTable = () => {
     setInfoTableOn(!InfoTableOn);
   };
 
-  const handleLeaveAMessageButton = () => {
-    setleaveMessageOn(!leaveMessageOn);
-  };
+  // const handleLeaveAMessageButton = () => {
+  //   dispatch(leaveMessageStatusChange(leaveMessageStatus))
+  // };
 
   const activeClass = {
     opacity: 1,
@@ -78,7 +78,7 @@ const Navigation = ({ currentUser }) => {
               <img src={Phone} alt="phone" />
             </div>
             <div className="info">
-              <h6 className="firstText">0172 2869619</h6>
+              <h6 className="firstText">0172 3465 694</h6>
               <h6 className="subText">physiopraxis.marian@gmail.com</h6>
             </div>
           </div>
@@ -184,7 +184,7 @@ const Navigation = ({ currentUser }) => {
 
           <div className="menu-buttons">
             <LeaveAMessageButton
-              handleLeaveAMessageButton={handleLeaveAMessageButton}
+              // handleLeaveAMessageButton={handleLeaveAMessageButton}
             />
             <LanguageButton />
             <UserButton currentUser={currentUser} />
@@ -192,8 +192,8 @@ const Navigation = ({ currentUser }) => {
         </div>
       </div>
       <LeaveAMessageForm
-        handleLeaveAMessageButton={handleLeaveAMessageButton}
-        leaveMessageOn={leaveMessageOn}
+        // handleLeaveAMessageButton={handleLeaveAMessageButton}
+        leaveMessageStatus={leaveMessageStatus}
       />
     </div>
   );
@@ -202,6 +202,7 @@ const Navigation = ({ currentUser }) => {
 const mapStateToProps = (state) => {
   return {
     currentUser: state.userReducer.currentUser,
+    leaveMessageStatus: state.userReducer.leaveMessageStatus,
   };
 };
 
