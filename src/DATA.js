@@ -12,6 +12,18 @@ export const formatDate = () => {
   return todayUTC.toLocaleDateString(undefined, options);
 };
 
+export const todayDate = ()=>{
+  const start = Date.now();
+  const now = new Date(start);
+ return now.toISOString().slice(0,10);
+}
+
+export const day = ()=>{
+  const start = Date.now();
+  const now = new Date(start);
+ return now.getDay();
+}
+
 // Formating Ttitle
 export const arangedTitle = (title) => {
   let nonSpaceRegex = /\S/g;

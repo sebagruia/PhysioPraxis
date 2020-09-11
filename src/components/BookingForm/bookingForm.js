@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./bookingForm.css";
 import {withRouter} from "react-router-dom";
+import {todayDate, day} from "../../DATA";
 import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import BookButton from "../../components/BookButton/bookButton";
@@ -52,11 +53,13 @@ class BookingForm extends Component {
     this.setState({ [name]: event.target.value });
   };
 
+
   render() {
     const {history} = this.props;
     const {pathname} = history.location;
 
     const { email, name, date, time, phone, message } = this.state;
+    console.log(todayDate());
 
     return (
       <Form onSubmit={this.handleSubmit} className={`appointment ${pathname === "/appointmentPage" ? "substractMarginBottom" : ""} `}>
@@ -90,6 +93,7 @@ class BookingForm extends Component {
               type="date"
               placeholder="Date"
               aria-label="Date"
+              min={todayDate()}
               value={date}
               name="date"
               required
@@ -112,7 +116,7 @@ class BookingForm extends Component {
               onChange={this.handleOnChange}
               type="time"
               min="08:00"
-              max="18:00"
+              max={`${day() === 6 ? "14:00" : "20:00"}`}
               placeholder="Time"
               aria-label="Time"
               aria-describedby="basic-addon1"
@@ -120,7 +124,7 @@ class BookingForm extends Component {
               name="time"
               required
             />
-            <span className="validity"></span>
+            {/* <span className="validity"></span> */}
           </Form.Group>
         </div>
         <Form.Control
