@@ -35,7 +35,7 @@ const InfoTable = ({ history, handleInfoTable, InfoTableOn }) => {
 
       <div className="infoTable-phone">
         <div className="infoTable-info">
-          <h6 className="infoTable-firstText">0172 2869619</h6>
+          <h6 className="infoTable-firstText">0172 3465694</h6>
           <h6 className="infoTable-subText">physiopraxis.marian@gmail.com</h6>
         </div>
         <div className="infoTable-phone-container">

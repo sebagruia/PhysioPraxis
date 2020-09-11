@@ -3,8 +3,6 @@ import "./home.css";
 import { connect } from "react-redux";
 import BookingForm from "../../components/BookingForm/bookingForm";
 import MapLocation from "../../components/MapLocation/mapLocation";
-import Phone from "../../assets/iconmonstr-phone.png";
-import Mail from "../../assets/iconmonstr-email.png";
 import AdditionalInfoButton from "../../components/AdditionalInfoButton/additionalInfoButton";
 import AddTestimonialAndPostButton from "../../components/AddTestimonialAndPostButton/addTestimonialAndPostButton";
 import Testimonial from "../../components/Testimonial/testimonial";
@@ -144,28 +142,20 @@ const Home = ({ currentUser, testimonials }) => {
           className="additionalInfo"
           style={display ? { display: "none" } : { display: "flex" }}
         >
-          <div className="workingHours">
-            <h5>Working Hours</h5>
-            <h6>
-              Mon - Fre <span>8:00 - 19:00</span>
-            </h6>
-            <h6>
-              Samstag <span>8:00 - 14:00</span>
-            </h6>
-            <h6>
-              Sonntag <span>Geschlossen</span>
-            </h6>
-          </div>
-          <div className="contactDetails">
-            <h5>contact details</h5>
-            <div className="phone-details">
-              <img src={Phone} alt="phone" />
-              <h6>0172 2869619</h6>
-            </div>
-            <div className="contact-details">
-              <img src={Mail} alt="email" />
-              <h6>physiopraxis.marian@gmail.com</h6>
-            </div>
+          <div className="weg">
+            <ul>
+              <h5>WEGBESCHREIBUNG</h5>
+              <h6>Parkmöglichkeiten</h6>
+              <li>2 patienten Parkplätze stehen zur Verfügung</li>
+            </ul>
+            <ul>
+              <h6>Mit öffentlichen Verkersmittel</h6>
+              <p>Haltestelle:</p>
+              <li>Klinikum(150m)</li>
+              <li>Kasinostr.(150m)</li>
+              <li>Rhein-/Neckarstr. (500m)</li>
+              <li>Willy-Brandt-Platz (350m)</li>
+            </ul>
           </div>
         </div>
       </div>

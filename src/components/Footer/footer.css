@@ -1,75 +1,166 @@
-.footer{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px 0 50px 0;
-    background-color:rgb(0, 58, 69, 0.9) ;
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0 50px 0;
+  background-color: rgb(0, 58, 69, 0.9);
 }
-.footer-container{
-    display:flex;
-    justify-content: space-evenly;
-    align-items: center;
+.footer-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-items: center;
 }
-.copyright,
-.poweredBy{
-    display:flex;
-    justify-content: space-evenly;
-    align-items: center;
+.logo-footer,
+.contactDetails,
+.footer-details {
+  width: 100%;
 }
-.copyright h6,
-.poweredBy h6{
-    font-family: "Roboto Condensed", sans-serif;
-    font-variant: all-small-caps;
-    font-size:1.3rem;
-    font-weight: 300;
-    color:#fff;
-    opacity:0.7;
-    margin-right: 20px;
+
+.logo-footer {
+  display: flex;
+  flex-direction: column;
 }
-.copyright .infoTable-social-container a{
-    margin-right:5px;
+.poweredBy,
+.footer-socials {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.poweredBy h6 span{
-    font-variant: normal;
-    font-size:0.9rem;
+.logo-footer h6,
+.poweredBy h6,
+.footer-socials h6 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-variant: all-small-caps;
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #fff;
+  opacity: 0.7;
+  margin-right: 20px;
 }
-.github-container{
-    width:25px;
-    height: auto;
+.logo-footer .infoTable-social-container a {
+  margin-right: 5px;
 }
-.github-container img{
-    width:100%;
+
+.contactDetails {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+  color: #fff;
+  opacity: 0.7;
+}
+
+.contactDetails h5 {
+  margin-bottom: 10px;
+  font-variant-caps: all-small-caps;
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+.contactDetails h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-variant: normal !important;
+  font-size: 0.7rem;
+}
+.contactDetails h6 span {
+  font-weight: 300;
+  font-size: 0.7rem;
+  padding-left: 10px;
+}
+.phone-details,
+.email-details {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.phone-details img,
+.email-details img {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+}
+.footer-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+.footer-socials {
+  display: flex;
+  padding-bottom: 10px;
+}
+.poweredBy h6 span,
+.footer-socials h6 span {
+  font-variant: normal;
+  font-size: 0.9rem;
+}
+.github-container {
+  width: 23px;
+  height: auto;
+}
+.github-container img {
+  width: 100%;
+  margin-left:6px;
 }
 .footer-social,
-.poweredBy img{
-    opacity:0.7;
+.poweredBy img {
+  opacity: 0.7;
 }
-.footer-social img{
-    width:23px;
-    height:23px;
-    margin-right: 5px;
+.footer-social img {
+  width: 23px;
+  height: 23px;
+  margin-right: 5px;
 }
 
 /* Media Query */
 
-@media screen and (max-width:768px){
-    .footer {
-        padding: 30px 0 50px 0;
-    }
-    .footer-container {
-        flex-direction: column;    
-    }
-    .logo-img {
-        width: 80px;
-        height: auto;
-    }
-    .copyright {
-        margin-bottom: 10px;
-    }
-    .poweredBy {
-        margin-top:10px;
-    }
-    .copyright h6, .poweredBy h6 {
-        font-size: 1.1rem;
-    }
+@media screen and (max-width: 992px) {
+  .footer {
+    padding: 30px 0 50px 0;
+  }
+  .footer-container {
+    flex-direction: column;
+  }
+  .logo-img {
+    width: 80px;
+    height: auto;
+  }
+  .logo-footer,
+  .contactDetails {
+      display:none;
+  }
+  .poweredBy {
+    margin-top: 10px;
+  }
+  .logo-footer h6,
+  .poweredBy h6 {
+    font-size: 1.1rem;
+  }
+  .footer-container {
+    display: grid;
+    grid-template-columns: auto;
+    justify-items: center;
+  }
+  .logo-footer .logo {
+    padding-left: 0px;
+  }
+  .logo-footer {
+    justify-content: center;
+    flex-direction: row;
+  }
+  .phone-details,
+  .email-details {
+    justify-content: center;
+  }
+  .footer-socials h6 {
+    display: none;
+  }
 }
+
+
