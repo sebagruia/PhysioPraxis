@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d973e6426bad45338713a6f1abb1f65b",
+    "revision": "e7a7d587771a56e746d5efb402323fff",
     "url": "/PhysioPraxis/index.html"
   },
   {
-    "revision": "1dd36ca3736de8b91a57",
+    "revision": "301e23865055e0602221",
     "url": "/PhysioPraxis/static/css/main.4c538e65.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/PhysioPraxis/static/js/2.38adcc76.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1dd36ca3736de8b91a57",
-    "url": "/PhysioPraxis/static/js/main.215e1053.chunk.js"
+    "revision": "301e23865055e0602221",
+    "url": "/PhysioPraxis/static/js/main.b4a0dcc1.chunk.js"
   },
   {
     "revision": "7578d63ac553603c662c",

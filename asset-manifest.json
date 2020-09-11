@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/PhysioPraxis/static/css/main.4c538e65.chunk.css",
-    "main.js": "/PhysioPraxis/static/js/main.215e1053.chunk.js",
-    "main.js.map": "/PhysioPraxis/static/js/main.215e1053.chunk.js.map",
+    "main.js": "/PhysioPraxis/static/js/main.b4a0dcc1.chunk.js",
+    "main.js.map": "/PhysioPraxis/static/js/main.b4a0dcc1.chunk.js.map",
     "runtime-main.js": "/PhysioPraxis/static/js/runtime-main.3f77e469.js",
     "runtime-main.js.map": "/PhysioPraxis/static/js/runtime-main.3f77e469.js.map",
     "static/js/2.38adcc76.chunk.js": "/PhysioPraxis/static/js/2.38adcc76.chunk.js",
     "static/js/2.38adcc76.chunk.js.map": "/PhysioPraxis/static/js/2.38adcc76.chunk.js.map",
     "index.html": "/PhysioPraxis/index.html",
-    "precache-manifest.e76b38241658175a72a8a6a0df0aa120.js": "/PhysioPraxis/precache-manifest.e76b38241658175a72a8a6a0df0aa120.js",
+    "precache-manifest.7f3e62890da2f976c52716f52f8ae03f.js": "/PhysioPraxis/precache-manifest.7f3e62890da2f976c52716f52f8ae03f.js",
     "service-worker.js": "/PhysioPraxis/service-worker.js",
     "static/css/main.4c538e65.chunk.css.map": "/PhysioPraxis/static/css/main.4c538e65.chunk.css.map",
     "static/js/2.38adcc76.chunk.js.LICENSE.txt": "/PhysioPraxis/static/js/2.38adcc76.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.3f77e469.js",
     "static/js/2.38adcc76.chunk.js",
     "static/css/main.4c538e65.chunk.css",
-    "static/js/main.215e1053.chunk.js"
+    "static/js/main.b4a0dcc1.chunk.js"
   ]
 }
