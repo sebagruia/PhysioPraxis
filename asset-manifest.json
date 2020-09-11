@@ -1,24 +1,23 @@
 {
   "files": {
-    "main.css": "/PhysioPraxis/static/css/main.fbe3fccb.chunk.css",
-    "main.js": "/PhysioPraxis/static/js/main.aaffb69b.chunk.js",
-    "main.js.map": "/PhysioPraxis/static/js/main.aaffb69b.chunk.js.map",
+    "main.css": "/PhysioPraxis/static/css/main.4c538e65.chunk.css",
+    "main.js": "/PhysioPraxis/static/js/main.215e1053.chunk.js",
+    "main.js.map": "/PhysioPraxis/static/js/main.215e1053.chunk.js.map",
     "runtime-main.js": "/PhysioPraxis/static/js/runtime-main.3f77e469.js",
     "runtime-main.js.map": "/PhysioPraxis/static/js/runtime-main.3f77e469.js.map",
-    "static/js/2.1c7917e1.chunk.js": "/PhysioPraxis/static/js/2.1c7917e1.chunk.js",
-    "static/js/2.1c7917e1.chunk.js.map": "/PhysioPraxis/static/js/2.1c7917e1.chunk.js.map",
+    "static/js/2.38adcc76.chunk.js": "/PhysioPraxis/static/js/2.38adcc76.chunk.js",
+    "static/js/2.38adcc76.chunk.js.map": "/PhysioPraxis/static/js/2.38adcc76.chunk.js.map",
     "index.html": "/PhysioPraxis/index.html",
-    "precache-manifest.2975417ec5d7bccbbebbd585e8eac797.js": "/PhysioPraxis/precache-manifest.2975417ec5d7bccbbebbd585e8eac797.js",
+    "precache-manifest.e76b38241658175a72a8a6a0df0aa120.js": "/PhysioPraxis/precache-manifest.e76b38241658175a72a8a6a0df0aa120.js",
     "service-worker.js": "/PhysioPraxis/service-worker.js",
-    "static/css/main.fbe3fccb.chunk.css.map": "/PhysioPraxis/static/css/main.fbe3fccb.chunk.css.map",
-    "static/js/2.1c7917e1.chunk.js.LICENSE.txt": "/PhysioPraxis/static/js/2.1c7917e1.chunk.js.LICENSE.txt",
-    "static/media/PhysiopraxisLogoOuterGlow.png": "/PhysioPraxis/static/media/PhysiopraxisLogoOuterGlow.52ed50ad.png",
+    "static/css/main.4c538e65.chunk.css.map": "/PhysioPraxis/static/css/main.4c538e65.chunk.css.map",
+    "static/js/2.38adcc76.chunk.js.LICENSE.txt": "/PhysioPraxis/static/js/2.38adcc76.chunk.js.LICENSE.txt",
     "static/media/PhysiopraxisLogoShadow.png": "/PhysioPraxis/static/media/PhysiopraxisLogoShadow.6728a7ac.png"
   },
   "entrypoints": [
     "static/js/runtime-main.3f77e469.js",
-    "static/js/2.1c7917e1.chunk.js",
-    "static/css/main.fbe3fccb.chunk.css",
-    "static/js/main.aaffb69b.chunk.js"
+    "static/js/2.38adcc76.chunk.js",
+    "static/css/main.4c538e65.chunk.css",
+    "static/js/main.215e1053.chunk.js"
   ]
 }
