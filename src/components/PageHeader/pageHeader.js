@@ -3,7 +3,6 @@ import "./pageHeader.css";
 import { connect } from "react-redux";
 
 const PageHeader = ({ children, leaveMessageStatus }) => {
-  console.log(leaveMessageStatus);
 
   return (
     <div className="page-header container-fluid">

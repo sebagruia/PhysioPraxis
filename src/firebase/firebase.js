@@ -98,7 +98,6 @@ export const getTestimonials = async ()=>{
           return document.data();
     
       });
-  console.log(data);
       return data;
   }
   catch(error){

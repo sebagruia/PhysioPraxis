@@ -17,7 +17,6 @@ class TestimonialForm extends Component {
 
   handleOnChange = (event) => {
     const name = event.target.name;
-    console.log(name);
     this.setState({ [name]: event.target.value });
   };
 

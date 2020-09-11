@@ -59,7 +59,6 @@ class BookingForm extends Component {
     const {pathname} = history.location;
 
     const { email, name, date, time, phone, message } = this.state;
-    console.log(todayDate());
 
     return (
       <Form onSubmit={this.handleSubmit} className={`appointment ${pathname === "/appointmentPage" ? "substractMarginBottom" : ""} `}>
