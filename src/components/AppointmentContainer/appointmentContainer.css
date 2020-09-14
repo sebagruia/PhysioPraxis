@@ -1,0 +1,51 @@
+.appointment-container {
+    background-color: rgb(229, 229, 229, 0.5);
+  }
+  .appointment-section {
+    display: flex;
+  }
+
+  .testimonials-subsection {
+    position: relative;
+    height: 497px;
+    margin: 80px 0 80px 0;
+    padding: 0 30px 0px 30px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  .testimonial-title-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  .testimonials-title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    font-variant: all-small-caps;
+    opacity: 0.8;
+  }
+  .testimonials-container {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+
+  /* Media Query */
+
+  @media screen and (max-width: 992px) {
+    .appointment-section {
+      flex-direction: column;
+    }
+    .testimonials-subsection {
+      padding: 0;
+      width: 100%;
+      margin: 0px 0 80px 0;
+    }
+  
+    .testimonials-container {
+      align-items: center;
+    }
+  }

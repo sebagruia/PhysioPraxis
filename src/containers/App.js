@@ -1,18 +1,18 @@
 import React, { Component } from "react";
 import "./App.css";
 import {connect} from "react-redux";
-import Navigation from "./components/Navigation/navigation";
-import Footer from "./components/Footer/footer";
+import Navigation from "../components/Navigation/navigation";
+import Footer from "../components/Footer/footer";
 import { Route, Switch } from "react-router-dom";
-import Home from "./pages/Home/home";
-import AboutUs from "./pages/AboutUs/aboutUs";
-import Services from "./pages/Services/services";
-import ServiceDescription from "./pages/ServiceDescription/serviceDescription";
-import AppointmentPage from "./pages/AppointmentPage/appointmentPage";
-import News from "./pages/News/news";
-import PostPage from "./pages/PostPage/postPage";
-import {setCurrentUser, getTestimonials, getNews} from "./redux/redux-actions";
-import { auth, createUserProfileDocument } from "./firebase/firebase";
+import Home from "../pages/Home/home";
+import AboutUs from "../pages/AboutUs/aboutUs";
+import Services from "../pages/Services/services";
+import ServiceDescription from "../pages/ServiceDescription/serviceDescription";
+import AppointmentPage from "../pages/AppointmentPage/appointmentPage";
+import News from "../pages/News/news";
+import PostPage from "../pages/PostPage/postPage";
+import {setCurrentUser, getTestimonials, getNews} from "../redux/redux-actions";
+import { auth, createUserProfileDocument } from "../firebase/firebase";
 
 class App extends Component {
 
