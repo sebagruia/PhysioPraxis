@@ -1,22 +1,38 @@
-import React, { Component } from "react";
+import React, { Component, lazy, Suspense } from "react";
 import "./App.css";
-import {connect} from "react-redux";
+import { connect } from "react-redux";
+import { Route, Switch } from "react-router-dom";
+// import Home from "../pages/Home/home";
+// import AboutUs from "../pages/AboutUs/aboutUs";
+// import Services from "../pages/Services/services";
+// import ServiceDescription from "../pages/ServiceDescription/serviceDescription";
+// import AppointmentPage from "../pages/AppointmentPage/appointmentPage";
+// import News from "../pages/News/news";
+// import PostPage from "../pages/PostPage/postPage";
 import Navigation from "../components/Navigation/navigation";
 import Footer from "../components/Footer/footer";
-import { Route, Switch } from "react-router-dom";
-import Home from "../pages/Home/home";
-import AboutUs from "../pages/AboutUs/aboutUs";
-import Services from "../pages/Services/services";
-import ServiceDescription from "../pages/ServiceDescription/serviceDescription";
-import AppointmentPage from "../pages/AppointmentPage/appointmentPage";
-import News from "../pages/News/news";
-import PostPage from "../pages/PostPage/postPage";
-import {setCurrentUser, getTestimonials, getNews} from "../redux/redux-actions";
+import {
+  setCurrentUser,
+  getTestimonials,
+  getNews,
+} from "../redux/redux-actions";
 import { auth, createUserProfileDocument } from "../firebase/firebase";
 
+const Home = lazy(() => import("../pages/Home/home"));
+const AboutUs = lazy(() => import("../pages/AboutUs/aboutUs"));
+const Services = lazy(() => import("../pages/Services/services"));
+const ServiceDescription = lazy(() =>
+  import("../pages/ServiceDescription/serviceDescription")
+);
+const AppointmentPage = lazy(() =>
+  import("../pages/AppointmentPage/appointmentPage")
+);
+const News = lazy(() => import("../pages/News/news"));
+const PostPage = lazy(() => import("../pages/PostPage/postPage"));
+// const Navigation = lazy(() => import("../components/Navigation/navigation"));
+// const Footer = lazy(() => import("../components/Footer/footer"));
+
 class App extends Component {
-
-
   unsubscribeFromAuth = null;
 
   componentDidMount() {
@@ -25,10 +41,10 @@ class App extends Component {
         const userRef = await createUserProfileDocument(userAuth);
         const snapShot = await userRef.get();
         if (snapShot.exists) {
-          this.props.setCurrentUser(snapShot.data())
+          this.props.setCurrentUser(snapShot.data());
         }
       } else {
-        this.props.setCurrentUser(userAuth)
+        this.props.setCurrentUser(userAuth);
       }
     });
     this.props.getTestimonials();
@@ -41,29 +57,31 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Navigation/>
+        <Navigation />
         <Switch>
-          <Route exact path="/">
-            <Home/>
-          </Route>
-          <Route path="/aboutUs">
-            <AboutUs />
-          </Route>
-          <Route exact path="/services">
-            <Services />
-          </Route>
-          <Route path="/services/serviceDescription">
-            <ServiceDescription />
-          </Route>
-          <Route exact path="/news">
-            <News />
-          </Route>
-          <Route path="/news/:post_id">
-            <PostPage />
-          </Route>
-          <Route path="/appointmentPage">
-            <AppointmentPage />
-          </Route>
+          <Suspense fallback={<div>...Loading</div>}>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/aboutUs">
+              <AboutUs />
+            </Route>
+            <Route exact path="/services">
+              <Services />
+            </Route>
+            <Route path="/services/serviceDescription">
+              <ServiceDescription />
+            </Route>
+            <Route exact path="/news">
+              <News />
+            </Route>
+            <Route path="/news/:post_id">
+              <PostPage />
+            </Route>
+            <Route path="/appointmentPage">
+              <AppointmentPage />
+            </Route>
+          </Suspense>
         </Switch>
         <Footer />
       </div>
@@ -71,18 +89,18 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = (state)=>{
-  return{
-    currentUser:state.userReducer.currentUser
-  }
-}
+const mapStateToProps = (state) => {
+  return {
+    currentUser: state.userReducer.currentUser,
+  };
+};
 
-const mapDispatchToProps = (dispatch)=>{
-  return{
-    setCurrentUser : (user)=>dispatch(setCurrentUser(user)),
-    getTestimonials: ()=>dispatch(getTestimonials()),
-    getNews: ()=>dispatch(getNews())
-  }
-}
+const mapDispatchToProps = (dispatch) => {
+  return {
+    setCurrentUser: (user) => dispatch(setCurrentUser(user)),
+    getTestimonials: () => dispatch(getTestimonials()),
+    getNews: () => dispatch(getNews()),
+  };
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
