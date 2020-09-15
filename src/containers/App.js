@@ -2,13 +2,7 @@ import React, { Component, lazy, Suspense } from "react";
 import "./App.css";
 import { connect } from "react-redux";
 import { Route, Switch } from "react-router-dom";
-// import Home from "../pages/Home/home";
-// import AboutUs from "../pages/AboutUs/aboutUs";
-// import Services from "../pages/Services/services";
-// import ServiceDescription from "../pages/ServiceDescription/serviceDescription";
-// import AppointmentPage from "../pages/AppointmentPage/appointmentPage";
-// import News from "../pages/News/news";
-// import PostPage from "../pages/PostPage/postPage";
+import LoadingSpinner from "../components/LoadingSpinner/loadingSpinner";
 import Navigation from "../components/Navigation/navigation";
 import Footer from "../components/Footer/footer";
 import {
@@ -29,8 +23,6 @@ const AppointmentPage = lazy(() =>
 );
 const News = lazy(() => import("../pages/News/news"));
 const PostPage = lazy(() => import("../pages/PostPage/postPage"));
-// const Navigation = lazy(() => import("../components/Navigation/navigation"));
-// const Footer = lazy(() => import("../components/Footer/footer"));
 
 class App extends Component {
   unsubscribeFromAuth = null;
@@ -59,7 +51,7 @@ class App extends Component {
       <div className="App">
         <Navigation />
         <Switch>
-          <Suspense fallback={<div>...Loading</div>}>
+          <Suspense fallback={<LoadingSpinner />}>
             <Route exact path="/">
               <Home />
             </Route>
