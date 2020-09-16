@@ -3,7 +3,6 @@ import "./footer.css";
 import Facebook from "../../assets/iconmonstr-facebook-white.png";
 import Instagram from "../../assets/iconmonstr-instagram-white.png";
 import Twitter from "../../assets/iconmonstr-twitter-white.png";
-// import Logo from "../../assets/PhysiopraxisLogoOuterGlow.png";
 import GitHub from "../../assets/iconmonstr-github.png";
 import Socials from "../../components/Socials/socials";
 import Phone from "../../assets/iconmonstr-phone.png";
@@ -20,7 +19,7 @@ const Footer = () => {
         <div className="contactDetails">
           <div className="phone-details">
             <img src={Phone} alt="phone" />
-            <h6>0172 2869619</h6>
+            <h6>0172 3465694</h6>
           </div>
           <div className="email-details">
             <img src={Mail} alt="email" />

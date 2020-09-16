@@ -17,14 +17,11 @@
   width: 50%;
 }
 
-
-
 .serviceDescription-img-container img {
   width: 100%;
 }
 
 .serviceDescription-description-container {
-  position:relative;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;

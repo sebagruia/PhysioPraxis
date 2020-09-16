@@ -13,6 +13,9 @@ body {
 .hidden{
   display:none!important;
 }
+.notVisible{
+  visibility:hidden;
+}
 
 
 h1,

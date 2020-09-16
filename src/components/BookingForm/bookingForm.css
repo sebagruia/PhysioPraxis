@@ -45,6 +45,7 @@
   }
   textarea {
     margin-top: 20px;
+    resize:none;
   }
   .form-control {
     margin-bottom: 30px;
@@ -77,6 +78,12 @@
     top: 80px;
     right: -32px;
     color: #003a45;
+  }
+  .buttonAndPopUp-container{
+    display:flex;
+    width:170px;
+    align-items: center;
+    justify-content: space-between;
   }
   
 

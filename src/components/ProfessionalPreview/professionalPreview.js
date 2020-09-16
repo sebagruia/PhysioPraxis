@@ -1,5 +1,6 @@
 import React from "react";
 import "./professionalPreview.css";
+import Signature from "../../assets/semnaturaMarian.png"
 
 const ProfessionalPreview = () => {
   return (
@@ -19,7 +20,10 @@ const ProfessionalPreview = () => {
             proin ornare blandit mauris. Lacinia quisque vel auctor cursus
             aliquet sem placerat consequat.
           </p>
-          <h4>Marian Popescu (signature)</h4>
+          <div className="signature-container">
+            <h4>Marian Popescu</h4>
+            <img src={Signature} alt="signature" />
+          </div>
         </div>
         <div className="professionalPreview-img">
           <img

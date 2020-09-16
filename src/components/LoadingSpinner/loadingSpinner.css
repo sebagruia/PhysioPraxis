@@ -1,0 +1,85 @@
+.loadingSpinner{
+    position:absolute;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    top:calc(50% - 25px);
+    left:calc(50% - 25px);
+    width:50px;
+    height:50px;
+    border:3px solid #fff;
+    animation: myspin 1s infinite;
+}
+.loadingSpinner,
+.loadingSpinner-1,
+.loadingSpinner-2,
+.loadingSpinner-3,
+.loadingSpinner-4,
+.loadingSpinner-5{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+
+}
+@keyframes myspin {
+    from {border-color:  #fff;}
+    to {border-color:  #f0f5f1;}
+}
+
+.loadingSpinner-1{
+    width:40px;
+    height:40px;
+    border:3px solid #fff;
+    animation:myspin1 1s infinite;
+    animation-delay:0.5s;
+}
+@keyframes myspin1 {
+    from {border-color:  #fff;}
+    to {border-color:  #e0ebe3;}
+}
+.loadingSpinner-2{
+    width:30px;
+    height:30px;
+    border:3px solid #fff;
+    animation:myspin2 1s infinite;
+}
+@keyframes myspin2 {
+    from {border-color:  #fff;}
+    to {border-color:  #b3ccb9;}
+}
+.loadingSpinner-3{
+    width:20px;
+    height:20px;
+    border:3px solid  #fff;
+    animation:myspin3 1s infinite;
+    animation-delay:0.5s;
+}
+@keyframes myspin3 {
+    from {border-color:  #fff;}
+    to {border-color:  #94b89d;}
+}
+.loadingSpinner-4{
+    width:10px;
+    height:10px;
+    border:3px solid  #fff;
+    animation:myspin4 1s infinite;
+}
+@keyframes myspin4 {
+    from {border-color:  #fff;}
+    to {border-color:  #476b50;}
+}
+.loadingSpinner-5{
+    width:10px;
+    height:10px;
+    border:5px solid  #fff;
+    animation:myspin5 1s infinite;
+    animation-delay:0.5s;
+}
+
+@keyframes myspin5 {
+    from {border-color:  #fff;}
+    to {border-color:  #669973;}
+}
+

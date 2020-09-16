@@ -8,7 +8,7 @@ import TwitterEmpty from "../../assets/iconmonstr-twitter-empty.png";
 import InstagramEmpty from "../../assets/iconmonstr-instagram-empty.png";
 import { arangedTitle } from "../../DATA";
 
-const Post = ({ id, date, image, title, text }) => {
+const Post = ({ id, date, image, title, text}) => {
   const history = useHistory();
   const { pathname } = history.location;
 

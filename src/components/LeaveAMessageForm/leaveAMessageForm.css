@@ -42,6 +42,7 @@
   .leave-a-message-form textarea {
     margin-top: 0px;
     height: 37px;
+    resize: none;
   }
   
   .message-input {

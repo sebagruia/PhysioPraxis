@@ -1,10 +1,13 @@
 import React, { Component } from "react";
 import "./bookingForm.css";
-import {withRouter} from "react-router-dom";
-import {todayDate, day} from "../../DATA";
+import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
+import { todayDate, day } from "../../DATA";
+import { sendingMessageStatus } from "../../redux/redux-actions";
 import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import BookButton from "../../components/BookButton/bookButton";
+import PopUp from "../PopUp/popUp";
 import emailjs from "emailjs-com";
 
 class BookingForm extends Component {
@@ -18,11 +21,9 @@ class BookingForm extends Component {
       phone: "",
       message: "",
     };
-
   }
 
-  handleSubmit = (event) => {
-    event.preventDefault();
+  sendMessageWithEmailJs = () => {
     emailjs
       .send(
         process.env.REACT_APP_YOUR_SERVICE_ID,
@@ -32,12 +33,22 @@ class BookingForm extends Component {
       )
       .then(
         (result) => {
-          console.log("SUCCES", result.text);
+          if (result.text === "OK") {
+            this.props.dispatch(
+              sendingMessageStatus(this.props.bookingMessageStatus)
+            );
+            console.log("SUCCES", result.text);
+          }
         },
         (error) => {
           console.log("FAILED", error.text);
         }
       );
+  };
+
+  handleSubmit = (event) => {
+    event.preventDefault();
+    this.sendMessageWithEmailJs();
     this.setState({
       email: "",
       name: "",
@@ -53,15 +64,19 @@ class BookingForm extends Component {
     this.setState({ [name]: event.target.value });
   };
 
-
   render() {
-    const {history} = this.props;
-    const {pathname} = history.location;
+    const { history, bookingMessageStatus } = this.props;
+    const { pathname } = history.location;
 
     const { email, name, date, time, phone, message } = this.state;
 
     return (
-      <Form onSubmit={this.handleSubmit} className={`appointment ${pathname === "/appointmentPage" ? "substractMarginBottom" : ""} `}>
+      <Form
+        onSubmit={this.handleSubmit}
+        className={`appointment ${
+          pathname === "/appointmentPage" ? "substractMarginBottom" : ""
+        } `}
+      >
         <div className="appointment-text">
           <h1>Book Appointment</h1>
           <h6>We are here for you</h6>
@@ -135,10 +150,18 @@ class BookingForm extends Component {
           value={message}
           name="message"
         ></Form.Control>
-        <BookButton buttonName="BOOK"/>
+        <div className="buttonAndPopUp-container">
+          <BookButton buttonName="BOOK" />
+          <PopUp bookingMessageStatus={bookingMessageStatus}>Sent</PopUp>
+        </div>
       </Form>
     );
   }
 }
+const mapStateToProps = (state) => {
+  return {
+    bookingMessageStatus: state.userReducer.bookingMessageStatus,
+  };
+};
 
-export default withRouter(BookingForm);
+export default withRouter(connect(mapStateToProps)(BookingForm));

@@ -36,7 +36,7 @@ const AppointmentPage = () => {
             <h6 className="appointmentPage-firstText">
             TEL{" "}
             </h6>
-            <h6 className="appointmentPage-hours">0172 2869619</h6>
+            <h6 className="appointmentPage-hours">0172 3465694</h6>
           </div>
 
           <div className="appointmentPage-firstText-container">

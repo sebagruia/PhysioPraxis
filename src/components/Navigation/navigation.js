@@ -23,6 +23,8 @@ const Navigation = ({dispatch, currentUser, leaveMessageStatus }) => {
   const [active, setActivate] = useState(false);
   const [InfoTableOn, setInfoTableOn] = useState(false);
 
+
+
   const history = useHistory();
   const { pathname } = history.location;
 
@@ -35,9 +37,6 @@ const Navigation = ({dispatch, currentUser, leaveMessageStatus }) => {
     setInfoTableOn(!InfoTableOn);
   };
 
-  // const handleLeaveAMessageButton = () => {
-  //   dispatch(leaveMessageStatusChange(leaveMessageStatus))
-  // };
 
   const activeClass = {
     opacity: 1,
@@ -49,7 +48,7 @@ const Navigation = ({dispatch, currentUser, leaveMessageStatus }) => {
   return (
     <div className="container-fluid navigation">
       <Hamburger handleHamburgerMenu={handleHamburgerMenu} active={active} />
-      <div className="navInfo-container container-xl">
+      <div className="navInfo-container container-xl" >
        <Logo />
 
         <InfoTable
