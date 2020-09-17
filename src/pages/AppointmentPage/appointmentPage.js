@@ -9,27 +9,27 @@ const AppointmentPage = () => {
     <div className="appointmentPage-container container">
       <BookingForm  />
       <div className="appointmentPage-contactInfo">
-        <div className="appointmentPage-contactInfo-text">
+        <div className="appointmentPage-contactInfo-text" lang="de">
           <h1>Contact</h1>
           <div className="appointmentPage-firstText-container">
             <h6 className="appointmentPage-firstText">
-              MONDAY - FRIDAY{" "}
+              MONTAG - FREITAG{" "}
             </h6>
             <h6 className="appointmentPage-hours">08:00 - 19:00</h6>
           </div>
 
           <div className="appointmentPage-firstText-container">
             <h6 className="appointmentPage-firstText">
-            SATURDAY{" "}
+            SAMSTAG{" "}
             </h6>
             <h6 className="appointmentPage-hours">08:00 - 14:00</h6>
           </div>
 
           <div className="appointmentPage-firstText-container">
             <h6 className="appointmentPage-firstText">
-            SUNDAY{" "}
+            SONNTAG{" "}
             </h6>
-            <h6 className="appointmentPage-hours">CLOSED</h6>
+            <h6 className="appointmentPage-hours">GESCHLOSSEN</h6>
           </div>
 
           <div className="appointmentPage-firstText-container">
