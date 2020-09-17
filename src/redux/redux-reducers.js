@@ -3,7 +3,7 @@ import {
   GET_TESTIMONIALS,
   GET_NEWS,
   LEAVE_MESSAGE_STATUS,
-  SENDING_MESSAGE_STATUS
+  SENDING_MESSAGE_STATUS,
 } from "./redux-actions";
 
 const initialState = {
@@ -11,7 +11,7 @@ const initialState = {
   testimonials: {},
   news: {},
   leaveMessageStatus:false,
-  bookingMessageStatus:false
+  sendingMessageStatus:false,
 };
 
 export const userReducer = (state = initialState, action) => {
@@ -39,7 +39,7 @@ export const userReducer = (state = initialState, action) => {
     case SENDING_MESSAGE_STATUS:
       return {
         ...state,
-        bookingMessageStatus: action.payload,
+        sendingMessageStatus: action.payload,
       };
     default:
       return state;

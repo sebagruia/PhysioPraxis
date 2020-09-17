@@ -54,7 +54,7 @@ export const leaveMessageStatusChange = (value)=>{
   }
 }
 
-export const sendingMessageStatus = (status)=>{
+export const sendingMessageStatusAction = (status)=>{
   return{
     type:SENDING_MESSAGE_STATUS,
     payload:!status

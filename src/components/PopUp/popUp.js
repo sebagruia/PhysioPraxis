@@ -1,14 +1,14 @@
 import React from "react";
 import "./popUp.css";
 import { connect } from "react-redux";
-import { sendingMessageStatus } from "../../redux/redux-actions";
+import { sendingMessageStatusAction } from "../../redux/redux-actions";
 
-const PopUp = ({ dispatch, children, bookingMessageStatus }) => {
+const PopUp = ({ dispatch, children, messageStatus }) => {
 
-  if (bookingMessageStatus) {
+  if (messageStatus) {
     setTimeout(
-      () => dispatch(sendingMessageStatus(bookingMessageStatus)),
-      3000
+      () => dispatch(sendingMessageStatusAction(messageStatus)),
+      2000
     );
   }
 
@@ -17,7 +17,7 @@ const PopUp = ({ dispatch, children, bookingMessageStatus }) => {
       className={`popup-container `}
       role="button"
       style={
-        !bookingMessageStatus
+        !messageStatus
           ? { visibility: "hidden" }
           : { visibility: "visible" }
       }
@@ -27,10 +27,5 @@ const PopUp = ({ dispatch, children, bookingMessageStatus }) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    bookingMessageStatus: state.userReducer.bookingMessageStatus,
-  };
-};
 
-export default connect(mapStateToProps)(PopUp);
+export default connect()(PopUp);

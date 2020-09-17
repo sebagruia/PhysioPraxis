@@ -3,7 +3,7 @@ import "./bookingForm.css";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { todayDate, day } from "../../DATA";
-import { sendingMessageStatus } from "../../redux/redux-actions";
+import { sendingMessageStatusAction } from "../../redux/redux-actions";
 import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import BookButton from "../../components/BookButton/bookButton";
@@ -35,7 +35,7 @@ class BookingForm extends Component {
         (result) => {
           if (result.text === "OK") {
             this.props.dispatch(
-              sendingMessageStatus(this.props.bookingMessageStatus)
+              sendingMessageStatusAction(this.props.bookingMessageStatus)
             );
             console.log("SUCCES", result.text);
           }
@@ -65,7 +65,7 @@ class BookingForm extends Component {
   };
 
   render() {
-    const { history, bookingMessageStatus } = this.props;
+    const { history, sendingMessageStatus } = this.props;
     const { pathname } = history.location;
 
     const { email, name, date, time, phone, message } = this.state;
@@ -138,7 +138,6 @@ class BookingForm extends Component {
               name="time"
               required
             />
-            {/* <span className="validity"></span> */}
           </Form.Group>
         </div>
         <Form.Control
@@ -152,7 +151,7 @@ class BookingForm extends Component {
         ></Form.Control>
         <div className="buttonAndPopUp-container">
           <BookButton buttonName="BOOK" />
-          <PopUp bookingMessageStatus={bookingMessageStatus}>Sent</PopUp>
+          <PopUp messageStatus={sendingMessageStatus}>Sent</PopUp>
         </div>
       </Form>
     );
@@ -160,7 +159,7 @@ class BookingForm extends Component {
 }
 const mapStateToProps = (state) => {
   return {
-    bookingMessageStatus: state.userReducer.bookingMessageStatus,
+    sendingMessageStatus: state.userReducer.sendingMessageStatus,
   };
 };
 

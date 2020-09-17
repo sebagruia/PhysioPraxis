@@ -31,6 +31,7 @@ export const arangedTitle = (title) => {
   return titleWithoutSpaces.join("");
 };
 
+
 // Services Page content
 export const services = {
   service1: {

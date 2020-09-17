@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import "./leaveAMessageForm.css";
-import {connect} from "react-redux";
+import { connect } from "react-redux";
 import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import CloseThinButton from "../CloseThinButton/closeThinButton";
 import BookButton from "../../components/BookButton/bookButton";
+import PopUp from "../PopUp/popUp";
+import { sendingMessageStatusAction } from "../../redux/redux-actions";
 import emailjs from "emailjs-com";
 
 class LeaveAMessageForm extends Component {
@@ -28,6 +30,11 @@ class LeaveAMessageForm extends Component {
       )
       .then(
         (result) => {
+          if (result.text === "OK") {
+            this.props.dispatch(
+              sendingMessageStatusAction(this.props.bookingMessageStatus)
+            );
+          }
           console.log("SUCCES", result.text);
         },
         (error) => {
@@ -46,21 +53,25 @@ class LeaveAMessageForm extends Component {
     this.setState({ [name]: event.target.value });
   };
 
-
-
   render() {
-    const {leaveMessageStatus } = this.props;
+    const { leaveMessageStatus, sendingMessageStatus } = this.props;
     const { name, email, message } = this.state;
     return (
-      <div className={`leave-a-message ${leaveMessageStatus ? "widen" : "shrink"}`}>
-        <CloseThinButton/>
+      <div
+        className={`leave-a-message ${leaveMessageStatus ? "widen" : "shrink"}`}
+      >
+        <CloseThinButton />
         <Form
           onSubmit={this.handleSubmit}
           className="leave-a-message-container container"
           style={
             leaveMessageStatus
-              ? { opacity: "1", transition: "opacity 0.8s"}
-              : { opacity: "0", visibility:"hidden", transition: "opacity 0.3s, visibility 0.8s" }
+              ? { opacity: "1", transition: "opacity 0.8s" }
+              : {
+                  opacity: "0",
+                  visibility: "hidden",
+                  transition: "opacity 0.3s, visibility 0.8s",
+                }
           }
         >
           <h5>Your Message Here</h5>
@@ -97,7 +108,10 @@ class LeaveAMessageForm extends Component {
               required
             ></Form.Control>
           </Form.Group>
-          <BookButton  buttonName="SEND" />
+          <div className="buttonAndPopUp-container">
+            <BookButton buttonName="SEND" />
+            <PopUp messageStatus={sendingMessageStatus}>Sent</PopUp>
+          </div>
         </Form>
       </div>
     );
@@ -107,6 +121,7 @@ class LeaveAMessageForm extends Component {
 const mapStateToProps = (state) => {
   return {
     leaveMessageStatus: state.userReducer.leaveMessageStatus,
+    sendingMessageStatus: state.userReducer.sendingMessageStatus,
   };
 };
 
