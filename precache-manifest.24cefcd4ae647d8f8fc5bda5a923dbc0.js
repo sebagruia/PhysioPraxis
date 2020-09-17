@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4c38da604e88c1790798416d108619d5",
+    "revision": "708ab104b5a672fa0ce65b1d003e20a6",
     "url": "/PhysioPraxis/index.html"
   },
   {
@@ -8,16 +8,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/PhysioPraxis/static/css/3.d7ad65ac.chunk.css"
   },
   {
-    "revision": "47bc0993f656bb0c0d55",
-    "url": "/PhysioPraxis/static/css/4.1b9da7c9.chunk.css"
+    "revision": "3c0d72fb3fef975c52a7",
+    "url": "/PhysioPraxis/static/css/4.50c0219f.chunk.css"
   },
   {
     "revision": "99f43f247fd83310b386",
     "url": "/PhysioPraxis/static/css/5.a3ad746d.chunk.css"
   },
   {
-    "revision": "212627a76ca4064f3418",
-    "url": "/PhysioPraxis/static/css/6.b189c529.chunk.css"
+    "revision": "3edf1de5e5d88040f27c",
+    "url": "/PhysioPraxis/static/css/6.4d1d5f14.chunk.css"
   },
   {
     "revision": "cb57049e9306d12370b9",
@@ -52,16 +52,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/PhysioPraxis/static/js/3.41946d24.chunk.js"
   },
   {
-    "revision": "47bc0993f656bb0c0d55",
-    "url": "/PhysioPraxis/static/js/4.f699c021.chunk.js"
+    "revision": "3c0d72fb3fef975c52a7",
+    "url": "/PhysioPraxis/static/js/4.c68f2c60.chunk.js"
   },
   {
     "revision": "99f43f247fd83310b386",
     "url": "/PhysioPraxis/static/js/5.f322a1cd.chunk.js"
   },
   {
-    "revision": "212627a76ca4064f3418",
-    "url": "/PhysioPraxis/static/js/6.464fd974.chunk.js"
+    "revision": "3edf1de5e5d88040f27c",
+    "url": "/PhysioPraxis/static/js/6.5ca3ccce.chunk.js"
   },
   {
     "revision": "cb57049e9306d12370b9",
@@ -80,8 +80,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/PhysioPraxis/static/js/main.773b2481.chunk.js"
   },
   {
-    "revision": "69dca737b83e475073fa",
-    "url": "/PhysioPraxis/static/js/runtime-main.7fdae1f8.js"
+    "revision": "21025ec408d97486ef81",
+    "url": "/PhysioPraxis/static/js/runtime-main.55455159.js"
   },
   {
     "revision": "6728a7ac18e3ac0a4c39d73e2552398b",
