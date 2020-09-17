@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "35ec81323568d8053c4cbd07799b3003",
+    "revision": "9e1c05cf0b89a3f6f35e469b54b60fc1",
     "url": "/PhysioPraxis/index.html"
   },
   {
-    "revision": "f0476b2ae4b6d03ec061",
-    "url": "/PhysioPraxis/static/css/3.f5db9bee.chunk.css"
+    "revision": "7cc43c5d0a10a03afa8e",
+    "url": "/PhysioPraxis/static/css/3.d7ad65ac.chunk.css"
   },
   {
     "revision": "47bc0993f656bb0c0d55",
@@ -32,7 +32,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/PhysioPraxis/static/css/9.5525abfe.chunk.css"
   },
   {
-    "revision": "e6514e9fcc4993c33d4f",
+    "revision": "8d08314103fc51cc70e8",
     "url": "/PhysioPraxis/static/css/main.55dd6f73.chunk.css"
   },
   {
@@ -48,7 +48,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/PhysioPraxis/static/js/2.e990c786.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f0476b2ae4b6d03ec061",
+    "revision": "7cc43c5d0a10a03afa8e",
     "url": "/PhysioPraxis/static/js/3.41946d24.chunk.js"
   },
   {
@@ -76,12 +76,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/PhysioPraxis/static/js/9.82b50eb5.chunk.js"
   },
   {
-    "revision": "e6514e9fcc4993c33d4f",
-    "url": "/PhysioPraxis/static/js/main.50e90bae.chunk.js"
+    "revision": "8d08314103fc51cc70e8",
+    "url": "/PhysioPraxis/static/js/main.773b2481.chunk.js"
   },
   {
-    "revision": "3ab22f5feb13bf2feede",
-    "url": "/PhysioPraxis/static/js/runtime-main.57e26fb7.js"
+    "revision": "261814eaf44bdd2d0710",
+    "url": "/PhysioPraxis/static/js/runtime-main.cc66d3e4.js"
   },
   {
     "revision": "6728a7ac18e3ac0a4c39d73e2552398b",

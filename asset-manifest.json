@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/PhysioPraxis/static/css/main.55dd6f73.chunk.css",
-    "main.js": "/PhysioPraxis/static/js/main.50e90bae.chunk.js",
-    "main.js.map": "/PhysioPraxis/static/js/main.50e90bae.chunk.js.map",
-    "runtime-main.js": "/PhysioPraxis/static/js/runtime-main.57e26fb7.js",
-    "runtime-main.js.map": "/PhysioPraxis/static/js/runtime-main.57e26fb7.js.map",
+    "main.js": "/PhysioPraxis/static/js/main.773b2481.chunk.js",
+    "main.js.map": "/PhysioPraxis/static/js/main.773b2481.chunk.js.map",
+    "runtime-main.js": "/PhysioPraxis/static/js/runtime-main.cc66d3e4.js",
+    "runtime-main.js.map": "/PhysioPraxis/static/js/runtime-main.cc66d3e4.js.map",
     "static/js/2.e990c786.chunk.js": "/PhysioPraxis/static/js/2.e990c786.chunk.js",
     "static/js/2.e990c786.chunk.js.map": "/PhysioPraxis/static/js/2.e990c786.chunk.js.map",
-    "static/css/3.f5db9bee.chunk.css": "/PhysioPraxis/static/css/3.f5db9bee.chunk.css",
+    "static/css/3.d7ad65ac.chunk.css": "/PhysioPraxis/static/css/3.d7ad65ac.chunk.css",
     "static/js/3.41946d24.chunk.js": "/PhysioPraxis/static/js/3.41946d24.chunk.js",
     "static/js/3.41946d24.chunk.js.map": "/PhysioPraxis/static/js/3.41946d24.chunk.js.map",
     "static/css/4.1b9da7c9.chunk.css": "/PhysioPraxis/static/css/4.1b9da7c9.chunk.css",
@@ -31,9 +31,9 @@
     "static/js/10.f3c47d4c.chunk.js": "/PhysioPraxis/static/js/10.f3c47d4c.chunk.js",
     "static/js/10.f3c47d4c.chunk.js.map": "/PhysioPraxis/static/js/10.f3c47d4c.chunk.js.map",
     "index.html": "/PhysioPraxis/index.html",
-    "precache-manifest.1dd3b71ce1d85345ca6d9dc3d7fdd71c.js": "/PhysioPraxis/precache-manifest.1dd3b71ce1d85345ca6d9dc3d7fdd71c.js",
+    "precache-manifest.67ffa494f20df3f2a7d419a85c6f2a6d.js": "/PhysioPraxis/precache-manifest.67ffa494f20df3f2a7d419a85c6f2a6d.js",
     "service-worker.js": "/PhysioPraxis/service-worker.js",
-    "static/css/3.f5db9bee.chunk.css.map": "/PhysioPraxis/static/css/3.f5db9bee.chunk.css.map",
+    "static/css/3.d7ad65ac.chunk.css.map": "/PhysioPraxis/static/css/3.d7ad65ac.chunk.css.map",
     "static/css/4.1b9da7c9.chunk.css.map": "/PhysioPraxis/static/css/4.1b9da7c9.chunk.css.map",
     "static/css/5.a3ad746d.chunk.css.map": "/PhysioPraxis/static/css/5.a3ad746d.chunk.css.map",
     "static/css/6.b189c529.chunk.css.map": "/PhysioPraxis/static/css/6.b189c529.chunk.css.map",
@@ -46,9 +46,9 @@
     "static/media/semnaturaMarian.png": "/PhysioPraxis/static/media/semnaturaMarian.beaf2b4e.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.57e26fb7.js",
+    "static/js/runtime-main.cc66d3e4.js",
     "static/js/2.e990c786.chunk.js",
     "static/css/main.55dd6f73.chunk.css",
-    "static/js/main.50e90bae.chunk.js"
+    "static/js/main.773b2481.chunk.js"
   ]
 }
