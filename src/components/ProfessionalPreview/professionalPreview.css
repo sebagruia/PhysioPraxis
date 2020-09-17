@@ -56,9 +56,12 @@
   }
   .professionalPreview-img {
     display: flex;
-    justify-content: center;
+    justify-content:center;
+    align-items: flex-start;
     width: 350px;
+    height:auto;
   }
   .professionalPreview-img img {
     width: 90%;
+    height:auto;
   }
