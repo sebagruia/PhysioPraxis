@@ -52,10 +52,13 @@
   @media screen and (max-width: 1200px) {
     
     .widen {
-      height: 50vh;
+      height: 100vh;
+      top:0px;
       z-index: 10;
     }
-  
+    .leave-a-message .buttonAndPopUp-container{
+      align-self: flex-start;
+    }
     .leave-a-message {
       background-color: rgba(40, 92, 102);
     }
@@ -63,6 +66,7 @@
     .leave-a-message-container {
       flex-direction: column;
       width: 90%;
+      margin-top: -100px;
     }
   
     .leave-a-message-form {

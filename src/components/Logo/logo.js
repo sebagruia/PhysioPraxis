@@ -8,7 +8,7 @@ const Logo = ()=>{
     return(
         <Link to="/" className="logo">
         <img className="logo-img" src={LogoImage} alt="logo" />
-        <div className="logo-text">
+        <div className="logo-text" lang="de">
           <h6>PhysioPraxis</h6>
           <h6>Marian</h6>
         </div>

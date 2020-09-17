@@ -6,7 +6,7 @@ const HeroSection = ()=>{
         <div className="container-fluid hero-section">
         <div className="hero-img">
           <div className="container hero-img-title-container">
-            <div className="full-title">
+            <div className="full-title" lang="de">
               <div className="background-for-text">
                 <h1 className="hero-img-title">
                   Praxis<span className="hero-img-title-span"> für</span>

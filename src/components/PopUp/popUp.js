@@ -14,7 +14,7 @@ const PopUp = ({ dispatch, children, messageStatus }) => {
 
   return (
     <div
-      className={`popup-container `}
+      className="popup-container"
       role="button"
       style={
         !messageStatus

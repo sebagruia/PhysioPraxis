@@ -26,7 +26,7 @@ const InfoTable = ({ history, handleInfoTable, InfoTableOn }) => {
       <div className="infoTable-schedule">
         <div className="infoTable-info">
           <h6 className="infoTable-firstText">Termine nach Vereinbarung</h6>
-          <h6 className="infoTable-subText">Sunday Closed</h6>
+          <h6 className="infoTable-subText">Sonntag Geschlossen</h6>
         </div>
         <div className="infoTable-clock-container">
           <img src={Clock} alt="clock" />
