@@ -4,7 +4,9 @@
   width: 100%;
   margin: 50px 0 50px 0;
 }
-
+.post-container img{
+  cursor:pointer;
+}
 .post-container img,
 .post-date-clock img {
   width: 100%;

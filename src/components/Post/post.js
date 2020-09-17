@@ -26,7 +26,7 @@ const Post = ({ id, date, image, title, text}) => {
   };
   return (
     <div className="post-container" id={id}>
-      <img src={image} alt="post" />
+      <img src={image} alt="post" onClick={pathname === "/news" ? toPostPage : null}/>
       <div className="post-date">
         <div className="post-date-clock">
           <img src={Clock} alt="clock" />
