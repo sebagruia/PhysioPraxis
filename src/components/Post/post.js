@@ -8,7 +8,7 @@ import TwitterEmpty from "../../assets/iconmonstr-twitter-empty.png";
 import InstagramEmpty from "../../assets/iconmonstr-instagram-empty.png";
 import { arangedTitle } from "../../DATA";
 
-const Post = ({ id, date, image, title, text}) => {
+const Post = ({ id, date, image, title, text }) => {
   const history = useHistory();
   const { pathname } = history.location;
 
@@ -26,7 +26,11 @@ const Post = ({ id, date, image, title, text}) => {
   };
   return (
     <div className="post-container" id={id}>
-      <img src={image} alt="post" onClick={pathname === "/news" ? toPostPage : null}/>
+      <img
+        src={image}
+        alt="post"
+        onClick={pathname === "/news" ? toPostPage : null}
+      />
       <div className="post-date">
         <div className="post-date-clock">
           <img src={Clock} alt="clock" />
@@ -62,10 +66,10 @@ const Post = ({ id, date, image, title, text}) => {
             <img src={FacebookEmpty} alt="facebook icon" />
           </a>
           <a href="https://www.facebook.com/physiopraxis.marian/">
-          <img src={TwitterEmpty} alt="twitter icon" />
+            <img src={TwitterEmpty} alt="twitter icon" />
           </a>
           <a href="https://www.facebook.com/physiopraxis.marian/">
-          <img src={InstagramEmpty} alt="instagram icon" />
+            <img src={InstagramEmpty} alt="instagram icon" />
           </a>
         </div>
       </div>
