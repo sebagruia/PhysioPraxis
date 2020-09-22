@@ -186,7 +186,8 @@ const Navigation = ({dispatch, currentUser, leaveMessageStatus}) => {
           </div>
         </div>
       </div>
-      <LeaveAMessageForm leaveMessageStatus={leaveMessageStatus}/>
+      <LeaveAMessageForm leaveMessageStatus={leaveMessageStatus}
+/>
     </div>
   );
 };

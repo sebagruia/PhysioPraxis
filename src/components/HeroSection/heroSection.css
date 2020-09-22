@@ -22,7 +22,7 @@
   }
   
   .full-title {
-    width: 450px;
+    width: 480px;
     font-family: "Montserrat", sans-serif;
     margin-left: auto;
   }
@@ -140,7 +140,7 @@
   
   @media screen and (max-width: 768px) {
     .full-title {
-      width: 270px;
+      width: 280px;
     }
     .hero-img-title-span {
       font-size: 1.5rem !important;
@@ -164,7 +164,7 @@
       margin: -310px 0px 0 345px;
     }
     .full-title {
-      width: 350px;
+      width: 370px;
     }
     .hero-img-title-span {
       font-size: 1.9rem !important;
@@ -182,7 +182,7 @@
       margin: -240px 0px 0 345px;
     }
     .full-title {
-      width: 400px;
+      width: 420px;
     }
     .hero-img-title-span {
       font-size: 2.3rem !important;
@@ -229,8 +229,5 @@
   @media screen and (min-width: 1201px) and (max-width: 1400px) {
     .hero-img-title-container {
       margin: -70px 150px 0 0px;
-    }
-    .full-title {
-      width: 450px;
     }
   }

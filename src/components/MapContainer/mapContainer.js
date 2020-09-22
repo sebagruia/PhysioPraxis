@@ -17,7 +17,7 @@ const MapContainer = ()=>{
         <AdditionalInfoButton handleDisplay={handleDisplay} display={display} />
         <div
           className="additionalInfo"
-          style={display ? { display: "none" } : { display: "flex" }}
+          style={display ? { display: "flex" } : { display: "none" }}
         >
           <div className="weg">
             <ul>
