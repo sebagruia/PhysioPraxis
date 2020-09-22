@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import {leaveMessageStatusChange} from "../../redux/redux-actions";
 import LeaveAMessageForm from "../LeaveAMessageForm/leaveAMessageForm";
 import Hamburger from "../Hamburger/hamburger";
+import { Helmet } from "react-helmet";
 import { NavLink, useHistory } from "react-router-dom";
 import LanguageButton from "../LanguageButton/languageButton";
 import Clock from "../../assets/iconmonstr-time-2.png";
@@ -19,7 +20,7 @@ import { Link as ScrollLink } from "react-scroll";
 import UserButton from "../UserButton/userButton";
 import Logo from "../Logo/logo";
 
-const Navigation = ({dispatch, currentUser, leaveMessageStatus }) => {
+const Navigation = ({dispatch, currentUser, leaveMessageStatus}) => {
   const [active, setActivate] = useState(false);
   const [InfoTableOn, setInfoTableOn] = useState(false);
 
@@ -30,7 +31,7 @@ const Navigation = ({dispatch, currentUser, leaveMessageStatus }) => {
 
   const handleHamburgerMenu = () => {
     setActivate(!active);
-    dispatch(leaveMessageStatusChange(true))
+    dispatch(leaveMessageStatusChange(true));
   };
 
   const handleInfoTable = () => {
@@ -47,6 +48,9 @@ const Navigation = ({dispatch, currentUser, leaveMessageStatus }) => {
 
   return (
     <div className="container-fluid navigation">
+      <Helmet>
+        <html className={active ? "preventScroll" : ""}></html>
+      </Helmet>
       <Hamburger handleHamburgerMenu={handleHamburgerMenu} active={active} />
       <div className="navInfo-container container-xl" >
        <Logo />
@@ -176,18 +180,13 @@ const Navigation = ({dispatch, currentUser, leaveMessageStatus }) => {
           </ul>
 
           <div className="menu-buttons">
-            <LeaveAMessageButton
-              // handleLeaveAMessageButton={handleLeaveAMessageButton}
-            />
+            <LeaveAMessageButton/>
             <LanguageButton />
             <UserButton currentUser={currentUser} />
           </div>
         </div>
       </div>
-      <LeaveAMessageForm
-        // handleLeaveAMessageButton={handleLeaveAMessageButton}
-        leaveMessageStatus={leaveMessageStatus}
-      />
+      <LeaveAMessageForm leaveMessageStatus={leaveMessageStatus}/>
     </div>
   );
 };
@@ -195,7 +194,7 @@ const Navigation = ({dispatch, currentUser, leaveMessageStatus }) => {
 const mapStateToProps = (state) => {
   return {
     currentUser: state.userReducer.currentUser,
-    leaveMessageStatus: state.userReducer.leaveMessageStatus,
+    leaveMessageStatus: state.userReducer.leaveMessageStatus
   };
 };
 

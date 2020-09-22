@@ -17,6 +17,10 @@ body {
   visibility:hidden;
 }
 
+.preventScroll{
+  overflow:hidden;
+}
+
 
 h1,
 h2,
