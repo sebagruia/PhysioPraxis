@@ -25,4 +25,7 @@
   .message-button {
     margin-bottom: 30px;
   }
+  .message-button h6 {
+    font-size: 1.3rem;
+  }
 }

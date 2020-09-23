@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./navigation.css";
 import { connect } from "react-redux";
-import {leaveMessageStatusChange} from "../../redux/redux-actions";
+import { leaveMessageStatusChange } from "../../redux/redux-actions";
 import LeaveAMessageForm from "../LeaveAMessageForm/leaveAMessageForm";
 import Hamburger from "../Hamburger/hamburger";
 import { Helmet } from "react-helmet";
@@ -20,11 +20,9 @@ import { Link as ScrollLink } from "react-scroll";
 import UserButton from "../UserButton/userButton";
 import Logo from "../Logo/logo";
 
-const Navigation = ({dispatch, currentUser, leaveMessageStatus}) => {
+const Navigation = ({ dispatch, currentUser, leaveMessageStatus }) => {
   const [active, setActivate] = useState(false);
   const [InfoTableOn, setInfoTableOn] = useState(false);
-
-
 
   const history = useHistory();
   const { pathname } = history.location;
@@ -37,7 +35,6 @@ const Navigation = ({dispatch, currentUser, leaveMessageStatus}) => {
   const handleInfoTable = () => {
     setInfoTableOn(!InfoTableOn);
   };
-
 
   const activeClass = {
     opacity: 1,
@@ -52,8 +49,8 @@ const Navigation = ({dispatch, currentUser, leaveMessageStatus}) => {
         <html className={active ? "preventScroll" : ""}></html>
       </Helmet>
       <Hamburger handleHamburgerMenu={handleHamburgerMenu} active={active} />
-      <div className="navInfo-container container-xl" >
-       <Logo />
+      <div className="navInfo-container container-xl">
+        <Logo />
 
         <InfoTable
           handleInfoTable={handleInfoTable}
@@ -142,7 +139,7 @@ const Navigation = ({dispatch, currentUser, leaveMessageStatus}) => {
             </NavLink>
 
             <NavLink
-              to = "/services"
+              to="/services"
               activeStyle={activeClass}
               onClick={handleHamburgerMenu}
             >
@@ -180,14 +177,15 @@ const Navigation = ({dispatch, currentUser, leaveMessageStatus}) => {
           </ul>
 
           <div className="menu-buttons">
-            <LeaveAMessageButton/>
-            <LanguageButton />
-            <UserButton currentUser={currentUser} />
+            <LeaveAMessageButton />
+            <div className="language-and-user-container">
+              <LanguageButton />
+              <UserButton currentUser={currentUser} />
+            </div>
           </div>
         </div>
       </div>
-      <LeaveAMessageForm leaveMessageStatus={leaveMessageStatus}
-/>
+      <LeaveAMessageForm leaveMessageStatus={leaveMessageStatus} />
     </div>
   );
 };
@@ -195,7 +193,7 @@ const Navigation = ({dispatch, currentUser, leaveMessageStatus}) => {
 const mapStateToProps = (state) => {
   return {
     currentUser: state.userReducer.currentUser,
-    leaveMessageStatus: state.userReducer.leaveMessageStatus
+    leaveMessageStatus: state.userReducer.leaveMessageStatus,
   };
 };
 

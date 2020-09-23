@@ -6,3 +6,10 @@
 .user img {
   width: 100%;
 }
+
+@media screen and (max-width:1200px){
+  .user {
+    width: 20px;
+    height: 20px;
+  }
+}

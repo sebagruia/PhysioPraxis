@@ -24,6 +24,7 @@
     transition-delay: 0.1s;
   }
   .leave-a-message-container h5 {
+    margin-right: 14px;
     font-family: "Roboto Condensed", sans-serif;
     font-variant: all-small-caps;
     font-size: 1.5rem;
@@ -38,6 +39,9 @@
   .leave-a-message-form .form-control {
     margin-bottom: 0px;
     margin-right: 10px;
+  }
+  .leave-a-message-form.form-group{
+    margin-bottom: 0px;
   }
   .leave-a-message-form textarea {
     margin-top: 0px;
