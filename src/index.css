@@ -20,7 +20,9 @@ body {
 .preventScroll{
   overflow:hidden;
 }
-
+:focus {
+  outline: none;
+}
 
 h1,
 h2,

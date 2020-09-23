@@ -131,6 +131,28 @@
 
 
   /* Media Query */
+  @media screen and (max-width:360px){
+    .full-title {
+      width: 220px;
+    }
+    .hero-img-title {
+      font-size: 2rem;
+  }
+  .moto-text {
+    font-size: 0.7rem;
+}
+  }
+  @media screen and (min-width:361px) and (max-width:768px){
+    .full-title {
+      width: 280px;
+    }
+    .hero-img-title {
+      font-size: 2.3rem;
+    }
+    .moto-text {
+      font-size: 0.8rem;
+    }
+  }
 
   @media screen and (max-width: 576px) {
     .hero-img-title-container {
@@ -139,19 +161,13 @@
   }
   
   @media screen and (max-width: 768px) {
-    .full-title {
-      width: 280px;
-    }
+    
     .hero-img-title-span {
       font-size: 1.5rem !important;
     }
   
-    .hero-img-title {
-      font-size: 2.3rem;
-    }
-    .moto-text {
-      font-size: 0.8rem;
-    }
+    
+  
   }
   
   @media screen and (min-width: 577px) and (max-width: 768px) {

@@ -20,8 +20,13 @@
 }
 
 /* Media Query */
+@media screen and (max-width:360x){
+  .message-button h6 {
+    font-size: 1rem;
+}
+}
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width:361px) and (max-width: 1200px) {
   .message-button {
     margin-bottom: 30px;
   }

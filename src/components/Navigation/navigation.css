@@ -149,7 +149,7 @@
 }
 
 .menu-buttons {
-  width: 200px;
+  width: 210px;
   margin-left: auto;
   justify-content: space-around;
 }
@@ -160,6 +160,22 @@
 }
 
 /* Media Query */
+
+@media screen and (max-width:360px){
+  .menu a {
+    font-size: 1.5rem;
+  }
+
+.newStyles button {
+  font-size: 1rem;
+}
+}
+
+@media screen and (min-width:361px) and (max-width:1200px){
+  .menu a {
+    font-size: 2rem;
+  }
+}
 
 @media screen and (max-width: 1200px) {
   .logo {
@@ -203,11 +219,11 @@
     flex-direction: column;
     align-items: flex-end;
     margin-right: 20px;
+    margin-top: -30px;
   }
 
   .menu a {
     margin-bottom: 10px;
-    font-size: 2rem;
     font-variant: all-small-caps;
   }
   

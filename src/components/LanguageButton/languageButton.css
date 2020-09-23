@@ -19,10 +19,18 @@
 .dropdown-item {
   padding: .25rem 1.1rem;
 }
-
-@media screen and (max-width:1200px){
+/* Media Query */
+@media screen and (max-width:360px){
+  .newStyles button {
+    font-size: 1rem;
+}
+}
+@media screen and (min-width:360px) and (max-width:1200px){
   .newStyles button{
     font-size: 1.3rem;
+  }
+  .newStyles button:focus{
+    outline:none!important;
   }
   .dropdown-menu {
     font-size: 1.1rem;
