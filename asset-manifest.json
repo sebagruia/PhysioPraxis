@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/PhysioPraxis/static/css/main.2c6eecfc.chunk.css",
+    "main.css": "/PhysioPraxis/static/css/main.9e8282e5.chunk.css",
     "main.js": "/PhysioPraxis/static/js/main.b124ca97.chunk.js",
     "main.js.map": "/PhysioPraxis/static/js/main.b124ca97.chunk.js.map",
     "runtime-main.js": "/PhysioPraxis/static/js/runtime-main.3929a141.js",
@@ -31,7 +31,7 @@
     "static/js/10.2af6ceab.chunk.js": "/PhysioPraxis/static/js/10.2af6ceab.chunk.js",
     "static/js/10.2af6ceab.chunk.js.map": "/PhysioPraxis/static/js/10.2af6ceab.chunk.js.map",
     "index.html": "/PhysioPraxis/index.html",
-    "precache-manifest.52f168b13c16cff9bd09448c545850d9.js": "/PhysioPraxis/precache-manifest.52f168b13c16cff9bd09448c545850d9.js",
+    "precache-manifest.3f856c343550030ff85e457ae290905d.js": "/PhysioPraxis/precache-manifest.3f856c343550030ff85e457ae290905d.js",
     "service-worker.js": "/PhysioPraxis/service-worker.js",
     "static/css/3.b34f86bc.chunk.css.map": "/PhysioPraxis/static/css/3.b34f86bc.chunk.css.map",
     "static/css/4.b0c3df40.chunk.css.map": "/PhysioPraxis/static/css/4.b0c3df40.chunk.css.map",
@@ -40,7 +40,7 @@
     "static/css/7.3c777638.chunk.css.map": "/PhysioPraxis/static/css/7.3c777638.chunk.css.map",
     "static/css/8.5a991e06.chunk.css.map": "/PhysioPraxis/static/css/8.5a991e06.chunk.css.map",
     "static/css/9.585cd9af.chunk.css.map": "/PhysioPraxis/static/css/9.585cd9af.chunk.css.map",
-    "static/css/main.2c6eecfc.chunk.css.map": "/PhysioPraxis/static/css/main.2c6eecfc.chunk.css.map",
+    "static/css/main.9e8282e5.chunk.css.map": "/PhysioPraxis/static/css/main.9e8282e5.chunk.css.map",
     "static/js/2.f945ac45.chunk.js.LICENSE.txt": "/PhysioPraxis/static/js/2.f945ac45.chunk.js.LICENSE.txt",
     "static/media/PhysiopraxisLogoShadow.png": "/PhysioPraxis/static/media/PhysiopraxisLogoShadow.6728a7ac.png",
     "static/media/semnaturaMarian.png": "/PhysioPraxis/static/media/semnaturaMarian.beaf2b4e.png"
@@ -48,7 +48,7 @@
   "entrypoints": [
     "static/js/runtime-main.3929a141.js",
     "static/js/2.f945ac45.chunk.js",
-    "static/css/main.2c6eecfc.chunk.css",
+    "static/css/main.9e8282e5.chunk.css",
     "static/js/main.b124ca97.chunk.js"
   ]
 }
