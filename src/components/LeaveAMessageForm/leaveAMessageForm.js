@@ -19,28 +19,32 @@ class LeaveAMessageForm extends Component {
     };
   }
 
+  sendMessageWithEmailJs = () => {
+    emailjs
+    .send(
+      process.env.REACT_APP_YOUR_SERVICE_ID,
+      process.env.REACT_APP_YOUR_NEW_MESSAGE_TEMPLATE,
+      this.state,
+      process.env.REACT_APP_YOUR_USER_ID
+    )
+    .then(
+      (result) => {
+        if (result.text === "OK") {
+          this.props.dispatch(
+            sendingMessageStatusAction(this.props.bookingMessageStatus)
+          );
+        }
+        console.log("SUCCES", result.text);
+      },
+      (error) => {
+        console.log("FAILED", error.text);
+      }
+    );
+  };
+
   handleSubmit = (event) => {
     event.preventDefault();
-    emailjs
-      .send(
-        process.env.REACT_APP_YOUR_SERVICE_ID,
-        process.env.REACT_APP_YOUR_NEW_MESSAGE_TEMPLATE,
-        this.state,
-        process.env.REACT_APP_YOUR_USER_ID
-      )
-      .then(
-        (result) => {
-          if (result.text === "OK") {
-            this.props.dispatch(
-              sendingMessageStatusAction(this.props.bookingMessageStatus)
-            );
-          }
-          console.log("SUCCES", result.text);
-        },
-        (error) => {
-          console.log("FAILED", error.text);
-        }
-      );
+    this.sendMessageWithEmailJs();
     this.setState({
       email: "",
       name: "",

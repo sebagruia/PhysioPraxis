@@ -64,12 +64,21 @@ class BookingForm extends Component {
     this.setState({ [name]: event.target.value });
   };
 
+  checkDateValidity = (date)=>{
+    if(day(date) === 0){
+      return ""
+    }
+    else{
+      return date;
+    }
+  }
+
   render() {
     const { history, sendingMessageStatus } = this.props;
     const { pathname } = history.location;
-
     const { email, name, date, time, phone, message } = this.state;
-
+    console.log(day(date))
+console.log(date);
     return (
       <Form
         onSubmit={this.handleSubmit}
@@ -108,7 +117,7 @@ class BookingForm extends Component {
               placeholder="Date"
               aria-label="Date"
               min={todayDate()}
-              value={date}
+              value={this.checkDateValidity(date)}
               name="date"
               required
             />
@@ -130,7 +139,7 @@ class BookingForm extends Component {
               onChange={this.handleOnChange}
               type="time"
               min="08:00"
-              max={`${day() === 6 ? "14:00" : "20:00"}`}
+              max={`${day(date) === 6 ? "14:00" : "20:00"}`}
               placeholder="Time"
               aria-label="Time"
               aria-describedby="basic-addon1"
