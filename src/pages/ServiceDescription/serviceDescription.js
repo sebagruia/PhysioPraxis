@@ -1,7 +1,7 @@
 import React, {useEffect, useRef} from "react";
 import "./serviceDescription.css";
 import { withRouter } from "react-router-dom";
-import ArrowBackButton from "../../components/ArrowBackButton/arrowBackButton";
+import Button from "../../components/Button/button";
 
 const ServiceDescription = ({ history }) => {
   const refToServiceImg = useRef(null);
@@ -14,6 +14,10 @@ const ServiceDescription = ({ history }) => {
     });
   });
 
+  const handleOnClick = ()=>{
+    history.goBack();
+  }
+
   const { service, label, description } = history.location.state;
   return (
     <div className="serviceDescription container-fluid" >
@@ -24,7 +28,9 @@ const ServiceDescription = ({ history }) => {
         <div className="serviceDescription-description-container">
           <h1>{label}</h1>
           <p>{description}</p>
-          <ArrowBackButton />
+          <Button onClick={handleOnClick}>
+            Back
+          </Button>
         </div>
       </div>
     </div>

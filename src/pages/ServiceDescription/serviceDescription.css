@@ -47,6 +47,11 @@
   line-height: 1.8;
 }
 
+.serviceDescription-description-container .continue-reading{
+  width:60px;
+  text-align: center;
+}
+
 /* Media Query */
 
 @media screen and (max-width: 992px) {

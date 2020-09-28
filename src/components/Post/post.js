@@ -1,6 +1,7 @@
 import React from "react";
 import "./post.css";
 import { useHistory } from "react-router-dom";
+import Button from "../Button/button";
 import Clock from "../../assets/iconmonstr-time-2.png";
 import Pin from "../../assets/iconmonstr-pin.png";
 import FacebookEmpty from "../../assets/iconmonstr-facebook-empty.png";
@@ -54,13 +55,11 @@ const Post = ({ id, date, image, title, text }) => {
       </div>
       <hr className="post-end-hr"></hr>
       <div className="post-footer">
-        <div
-          onClick={pathname === "/news" ? toPostPage : goBack}
-          className="continue-reading"
-          role="button"
-        >
-          <p>{pathname === "/news" ? "Continue Reading" : "Back"}</p>
-        </div>
+
+        <Button onClick={pathname === "/news" ? toPostPage : goBack}>
+          {pathname === "/news" ? "Continue Reading" : "Back"}
+        </Button>
+        
         <div className="post-footer-socials">
           <a href="https://www.facebook.com/physiopraxis.marian/">
             <img src={FacebookEmpty} alt="facebook icon" />

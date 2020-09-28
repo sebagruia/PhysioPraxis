@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { leaveMessageStatusChange } from "../../redux/redux-actions";
 import LeaveAMessageForm from "../LeaveAMessageForm/leaveAMessageForm";
 import Hamburger from "../Hamburger/hamburger";
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider  } from "react-helmet-async";
 import { NavLink, useHistory } from "react-router-dom";
 import LanguageButton from "../LanguageButton/languageButton";
 import Clock from "../../assets/iconmonstr-time-2.png";
@@ -21,14 +21,18 @@ import UserButton from "../UserButton/userButton";
 import Logo from "../Logo/logo";
 
 const Navigation = ({ dispatch, currentUser, leaveMessageStatus }) => {
+  
   const [active, setActivate] = useState(false);
   const [InfoTableOn, setInfoTableOn] = useState(false);
+
 
   const history = useHistory();
   const { pathname } = history.location;
 
   const handleHamburgerMenu = () => {
-    setActivate(!active);
+    if(window.innerWidth < 1218){
+      setActivate(!active);
+    }
     dispatch(leaveMessageStatusChange(true));
   };
 
@@ -44,6 +48,7 @@ const Navigation = ({ dispatch, currentUser, leaveMessageStatus }) => {
   };
 
   return (
+    <HelmetProvider>
     <div className="container-fluid navigation">
       <Helmet>
         <html className={active ? "preventScroll" : ""}></html>
@@ -187,6 +192,7 @@ const Navigation = ({ dispatch, currentUser, leaveMessageStatus }) => {
       </div>
       <LeaveAMessageForm leaveMessageStatus={leaveMessageStatus} />
     </div>
+    </ HelmetProvider>
   );
 };
 

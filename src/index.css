@@ -18,7 +18,7 @@ body {
 }
 
 .preventScroll{
-  overflow:hidden;
+  overflow:hidden!important;
 }
 :focus {
   outline: none;
