@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "05826613ee9bdd5d7feb0f53b5e23bf8",
+    "revision": "96462cb1806caa146ee3656152cfb484",
     "url": "/PhysioPraxis/index.html"
   },
   {
-    "revision": "15453e21e4226d4385e2",
+    "revision": "b93bc3958b067b45d835",
     "url": "/PhysioPraxis/static/css/3.602f4d1f.chunk.css"
   },
   {
@@ -24,7 +24,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/PhysioPraxis/static/css/7.ddf5c92e.chunk.css"
   },
   {
-    "revision": "42874cdd5c3c3cec6732",
+    "revision": "6ad8243c71b5a587279d",
     "url": "/PhysioPraxis/static/css/8.99cc4a10.chunk.css"
   },
   {
@@ -32,7 +32,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/PhysioPraxis/static/css/9.757e2a5a.chunk.css"
   },
   {
-    "revision": "f1225bd77f398255d537",
+    "revision": "ea4694799a8a1d5c9d51",
     "url": "/PhysioPraxis/static/css/main.fdd07d7c.chunk.css"
   },
   {
@@ -48,8 +48,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/PhysioPraxis/static/js/2.a5c3d89c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "15453e21e4226d4385e2",
-    "url": "/PhysioPraxis/static/js/3.3ccaa91c.chunk.js"
+    "revision": "b93bc3958b067b45d835",
+    "url": "/PhysioPraxis/static/js/3.ed5e1bd4.chunk.js"
   },
   {
     "revision": "16c9bf5a5ce235aee584",
@@ -68,20 +68,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/PhysioPraxis/static/js/7.7201a2cd.chunk.js"
   },
   {
-    "revision": "42874cdd5c3c3cec6732",
-    "url": "/PhysioPraxis/static/js/8.450fc33c.chunk.js"
+    "revision": "6ad8243c71b5a587279d",
+    "url": "/PhysioPraxis/static/js/8.019cf99f.chunk.js"
   },
   {
     "revision": "2677a441e403597864d2",
     "url": "/PhysioPraxis/static/js/9.be3f2246.chunk.js"
   },
   {
-    "revision": "f1225bd77f398255d537",
-    "url": "/PhysioPraxis/static/js/main.bfac3ad3.chunk.js"
+    "revision": "ea4694799a8a1d5c9d51",
+    "url": "/PhysioPraxis/static/js/main.aa9c13ce.chunk.js"
   },
   {
-    "revision": "e78bd9febaf8d095bf9f",
-    "url": "/PhysioPraxis/static/js/runtime-main.894b277a.js"
+    "revision": "d28bb968d399b48cc527",
+    "url": "/PhysioPraxis/static/js/runtime-main.70e4cac5.js"
   },
   {
     "revision": "6728a7ac18e3ac0a4c39d73e2552398b",
