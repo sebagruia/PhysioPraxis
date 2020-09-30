@@ -8,18 +8,12 @@
 
 /* Media Query */
 
-@media screen and (max-width:360px) {
-  .user {
-    width: 15px;
-    height: 15px;
-    line-height: 0;
-  }
-}
 
-@media screen and (min-width:361px) and (max-width:1200px) {
+@media screen and (min-width:320px) and (max-width:1200px) {
   .user {
-    width: 20px;
-    height: 20px;
+    width: 17px;
+    height: 17px;
+    line-height: 0;
   }
 }
 @media screen and (min-width:1201px){
