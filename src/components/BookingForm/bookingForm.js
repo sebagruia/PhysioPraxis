@@ -64,23 +64,20 @@ class BookingForm extends Component {
     this.setState({ [name]: event.target.value });
   };
 
-  checkDateValidity = (date)=>{
-    if(day(date) === 0){
-      return ""
-    }
-    else{
+  checkDateValidity = (date) => {
+    if (day(date) === 0) {
+      return "";
+    } else {
       return date;
     }
-  }
+  };
 
   render() {
     const { history, sendingMessageStatus } = this.props;
     const { pathname } = history.location;
     const { email, name, date, time, phone, message } = this.state;
-    console.log(day(date))
-console.log(date);
     return (
-      <Form
+      <Form 
         onSubmit={this.handleSubmit}
         className={`appointment ${
           pathname === "/appointmentPage" ? "substractMarginBottom" : ""
@@ -161,6 +158,10 @@ console.log(date);
         <div className="buttonAndPopUp-container">
           <BookButton buttonName="BOOK" />
           <PopUp messageStatus={sendingMessageStatus}>Sent</PopUp>
+            <div
+              className="g-recaptcha"
+              data-sitekey="6LdypNMZAAAAAIN1Q2Eqzrz4PcXWCK5J-Ad3eT_B"
+            ></div>
         </div>
       </Form>
     );
