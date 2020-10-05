@@ -123,7 +123,7 @@ class BookingForm extends Component {
           <Form.Group className="group">
             <FormControl
               onChange={this.handleOnChange}
-              type="phone"
+              type="tel"
               placeholder="Phone"
               aria-label="Phone"
               aria-describedby="basic-addon1"

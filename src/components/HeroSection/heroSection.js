@@ -30,10 +30,9 @@ const HeroSection = ()=>{
             </div>
             <div className="boxTitle-text">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                massa diam sed est vitae eget dolor et, turpis.Lorem ipsum dolor
-                sit amet, consectetur adipiscing elit. Sed massa diam sed est
-                vitae eget dolor et, turpis
+              <strong>Meine Physiotherapie</strong> bietet seinen Kunden Flexibilität bei Terminen, 
+              die Möglichkeit englischsprachiger Sitzungen, 
+              Innovation durch Fortbildung und natürlich, physiotherapeutische Beratung.
               </p>
             </div>
           </div>
@@ -43,10 +42,8 @@ const HeroSection = ()=>{
             </div>
             <div className="boxTitle-text">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                massa diam sed est vitae eget dolor et, turpis.Lorem ipsum dolor
-                sit amet, consectetur adipiscing elit. Sed massa diam sed est
-                vitae eget dolor et, turpis
+              <strong>Meine Physiotherapie</strong> ist ein vertrauenswürdiger Partner aller
+               gesetzlichen und privaten Krankenkassen in Deutschland.
               </p>
             </div>
             <div className="boxTitle boxTitle-box2">
@@ -55,14 +52,13 @@ const HeroSection = ()=>{
           </div>
           <div className="box box3">
             <div className="boxTitle">
-              <h4>Affordable Prices</h4>
+              <h4>Central Location</h4>
             </div>
             <div className="boxTitle-text">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                massa diam sed est vitae eget dolor et, turpis.Lorem ipsum dolor
-                sit amet, consectetur adipiscing elit. Sed massa diam sed est
-                vitae eget dolor et, turpis
+              Der Standort der Praxis bietet seinen Klienten schnellen und einfachen Zugang zu verschiedenen 
+              Transportmitteln wie Auto, Bus, Straßenbahn. Außerdem stehen vor Ort 2 Parkplätze 
+              und Abstellmöglichkeiten für Fahrräder zur Verfügung. Wir sind in Ihrer Nähe!
               </p>
             </div>
           </div>

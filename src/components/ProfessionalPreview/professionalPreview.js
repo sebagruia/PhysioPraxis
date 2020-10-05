@@ -10,15 +10,9 @@ const ProfessionalPreview = () => {
           <h1>Physiotherapist Marian</h1>
           <hr />
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Senectus
-            egestas libero suscipit nec, facilisis nisl. At suspendisse et amet,
-            gravida. Erat tincidunt tempor cras suscipit quam bibendum. Tortor
-            nisl enim orci consequat scelerisque ultrices massa lectus ipsum.
-            Feugiat lacus nisi morbi sed habitant dictum at morbi. Vulputate
-            urna, quis sit accumsan. Velit integer nisi, et consequat egestas
-            feugiat feugiat massa sit. Parturient tortor, habitasse ut odio
-            proin ornare blandit mauris. Lacinia quisque vel auctor cursus
-            aliquet sem placerat consequat.
+          Ich bin Marian, Ihr Therapeut und Partner für Ihren Gesundungsprozess.
+          Mit einer Erfahrung von über 10 Jahren in der Physiotherapie biete ich höchste Qualität in der Behandlung und körperlichen Heilung jedes Patienten.
+
           </p>
           <div className="signature-container">
             <h4>Marian Popescu</h4>
