@@ -161,7 +161,6 @@ class BookingForm extends Component {
             <div
               className="g-recaptcha"
               data-sitekey="6LdypNMZAAAAAIN1Q2Eqzrz4PcXWCK5J-Ad3eT_B"
-              // data-size="20"
             ></div>
         </div>
       </Form>
