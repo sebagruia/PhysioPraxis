@@ -99,7 +99,7 @@
   }
 
   @media only screen and (min-width: 768px) {
-    .rc-anchor-light { 
-    transform:scale(0.85); 
-    -webkit-transform:scale(0.85); } 
+    .g-recaptcha .rc-anchor-light { 
+    transform:scale(0.85)!important; 
+    -webkit-transform:scale(0.85)!important; } 
     }
