@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "dacdd4ee2519e73433f3795479e6ea6e",
+    "revision": "44d49be2f7a8af00e1d05dc50ee7f821",
     "url": "/PhysioPraxis/index.html"
   },
   {
-    "revision": "4e22d947e9e9f34e033d",
-    "url": "/PhysioPraxis/static/css/3.602f4d1f.chunk.css"
+    "revision": "3747219d09b1a6424d5e",
+    "url": "/PhysioPraxis/static/css/3.470ce951.chunk.css"
   },
   {
     "revision": "16c9bf5a5ce235aee584",
@@ -24,8 +24,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/PhysioPraxis/static/css/7.ddf5c92e.chunk.css"
   },
   {
-    "revision": "9d8ff016963e3cb70ca5",
-    "url": "/PhysioPraxis/static/css/8.99cc4a10.chunk.css"
+    "revision": "dca8eae8b594ba94485c",
+    "url": "/PhysioPraxis/static/css/8.93e36f9b.chunk.css"
   },
   {
     "revision": "2677a441e403597864d2",
@@ -48,8 +48,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/PhysioPraxis/static/js/2.a5c3d89c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4e22d947e9e9f34e033d",
-    "url": "/PhysioPraxis/static/js/3.021d0161.chunk.js"
+    "revision": "3747219d09b1a6424d5e",
+    "url": "/PhysioPraxis/static/js/3.5d98a0f7.chunk.js"
   },
   {
     "revision": "16c9bf5a5ce235aee584",
@@ -68,8 +68,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/PhysioPraxis/static/js/7.7201a2cd.chunk.js"
   },
   {
-    "revision": "9d8ff016963e3cb70ca5",
-    "url": "/PhysioPraxis/static/js/8.f8b57a32.chunk.js"
+    "revision": "dca8eae8b594ba94485c",
+    "url": "/PhysioPraxis/static/js/8.b6f5290d.chunk.js"
   },
   {
     "revision": "2677a441e403597864d2",
@@ -80,8 +80,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/PhysioPraxis/static/js/main.aa9c13ce.chunk.js"
   },
   {
-    "revision": "b77d4d8e502cc9f1f513",
-    "url": "/PhysioPraxis/static/js/runtime-main.703d9e39.js"
+    "revision": "6b9ba5332b9f068e48be",
+    "url": "/PhysioPraxis/static/js/runtime-main.cc9a6320.js"
   },
   {
     "revision": "6728a7ac18e3ac0a4c39d73e2552398b",
