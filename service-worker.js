@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/PhysioPraxis/precache-manifest.19a3226f0214fcb940ae3adc50f8f6e9.js"
+  "/PhysioPraxis/precache-manifest.47d574e61e0a39d1e24308235317f1a5.js"
 );
 
 self.addEventListener('message', (event) => {

@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d998a109113e2c5fb2704f777612b07d",
+    "revision": "e81fd9f4d3730f9884c54fb454cbeab3",
     "url": "/PhysioPraxis/index.html"
   },
   {
-    "revision": "44a0c6b52be1b3bda403",
-    "url": "/PhysioPraxis/static/css/3.eb0e78e1.chunk.css"
+    "revision": "310bd9fdb153efe4ecc7",
+    "url": "/PhysioPraxis/static/css/3.c3cc862a.chunk.css"
   },
   {
     "revision": "16c9bf5a5ce235aee584",
@@ -20,11 +20,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/PhysioPraxis/static/css/6.3c7dd71e.chunk.css"
   },
   {
-    "revision": "b1f4a05e243851198ca1",
+    "revision": "3af23bc062d1c3636d8b",
     "url": "/PhysioPraxis/static/css/7.ddf5c92e.chunk.css"
   },
   {
-    "revision": "0df069ceac6b1415ce3b",
+    "revision": "7ee17d3b7e635239c9f8",
     "url": "/PhysioPraxis/static/css/8.88e34006.chunk.css"
   },
   {
@@ -48,8 +48,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/PhysioPraxis/static/js/2.a5c3d89c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "44a0c6b52be1b3bda403",
-    "url": "/PhysioPraxis/static/js/3.021d0161.chunk.js"
+    "revision": "310bd9fdb153efe4ecc7",
+    "url": "/PhysioPraxis/static/js/3.14c2e381.chunk.js"
   },
   {
     "revision": "16c9bf5a5ce235aee584",
@@ -64,12 +64,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/PhysioPraxis/static/js/6.0780713c.chunk.js"
   },
   {
-    "revision": "b1f4a05e243851198ca1",
-    "url": "/PhysioPraxis/static/js/7.7201a2cd.chunk.js"
+    "revision": "3af23bc062d1c3636d8b",
+    "url": "/PhysioPraxis/static/js/7.827512f4.chunk.js"
   },
   {
-    "revision": "0df069ceac6b1415ce3b",
-    "url": "/PhysioPraxis/static/js/8.f8b57a32.chunk.js"
+    "revision": "7ee17d3b7e635239c9f8",
+    "url": "/PhysioPraxis/static/js/8.253c068b.chunk.js"
   },
   {
     "revision": "2677a441e403597864d2",
@@ -80,8 +80,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/PhysioPraxis/static/js/main.aa9c13ce.chunk.js"
   },
   {
-    "revision": "188de1cb5cde04efd663",
-    "url": "/PhysioPraxis/static/js/runtime-main.212607f6.js"
+    "revision": "6ddd29270fc0f5b024cd",
+    "url": "/PhysioPraxis/static/js/runtime-main.54d5fbc1.js"
   },
   {
     "revision": "6728a7ac18e3ac0a4c39d73e2552398b",
