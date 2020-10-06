@@ -30,7 +30,7 @@ const HeroSection = ()=>{
             </div>
             <div className="boxTitle-text">
               <p>
-              <strong>Meine Physiotherapie</strong> bietet seinen Kunden Flexibilität bei Terminen, 
+              <strong>PhysioPraxis Marian</strong> bietet seinen Kunden Flexibilität bei Terminen, 
               die Möglichkeit englischsprachiger Sitzungen, 
               Innovation durch Fortbildung und natürlich, physiotherapeutische Beratung.
               </p>
@@ -42,10 +42,10 @@ const HeroSection = ()=>{
             </div>
             <div className="boxTitle-text">
               <p>
-              <strong>Meine Physiotherapie</strong> ist ein vertrauenswürdiger Partner aller
+              <strong>PhysioPraxis Marian</strong> ist ein vertrauenswürdiger Partner aller
                gesetzlichen und privaten Krankenkassen in Deutschland.
               </p>
-            </div>
+            </div> 
             <div className="boxTitle boxTitle-box2">
               <h4>Insurance Partner</h4>
             </div>
