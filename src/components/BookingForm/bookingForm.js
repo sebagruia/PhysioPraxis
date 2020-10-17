@@ -158,10 +158,10 @@ class BookingForm extends Component {
         <div className="buttonAndPopUp-container">
           <BookButton buttonName="BOOK" />
           <PopUp messageStatus={sendingMessageStatus}>Sent</PopUp>
-            <div
+            {/* <div
               className="g-recaptcha"
               data-sitekey="6LdypNMZAAAAAIN1Q2Eqzrz4PcXWCK5J-Ad3eT_B"
-            ></div>
+            ></div> */}
         </div>
       </Form>
     );

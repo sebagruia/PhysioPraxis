@@ -32,10 +32,15 @@
   
   .professionalPreview-text p,
   .signature-container h4 {
-    margin: 40px 0 40px 0;
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-size: 0.9rem;
+  }
+  .professionalPreview-text p:first-of-type{
+    margin-top: 40px;
+  }
+  .professionalPreview-text p:last-of-type{
+    margin: 5px 0 40px 0;
   }
   
   .professionalPreview-text hr {

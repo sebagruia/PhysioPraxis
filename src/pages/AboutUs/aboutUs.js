@@ -1,6 +1,7 @@
 import React from "react";
 import "./aboutUs.css";
-import {withRouter} from "react-router-dom";
+import { Helmet, HelmetProvider } from "react-helmet-async";
+import { withRouter } from "react-router-dom";
 import AboutUsWorkinHours from "../../components/AboutUsWorkinHours/aboutUsWorkingHours";
 import Socials from "../../components/Socials/socials";
 import BootstrapCarousel from "../../components/BootstrapCarousel/bootstrapCarousel";
@@ -10,41 +11,74 @@ import Twitter from "../../assets/iconmonstr-twitter.png";
 
 const AboutUs = () => {
   return (
-    <div className="container-fluid aboutUs">
-      <div className="header">
-     
-      </div>
-      <div className="aboutUs-presentation container">
-        <AboutUsWorkinHours />
-        <div className="aboutUs-text">
-        
-          <div className="aboutUs-text-shortPresentation">
-            <hr className="aboutUs-text-hr"></hr>
-            <h6>
-            Ich bin Marian, Ihr Therapeut und Partner für Ihren Gesundungsprozess.
-            Mit einer Erfahrung von über 10 Jahren in der Physiotherapie biete ich höchste Qualität in der Behandlung und körperlichen Heilung jedes Patienten.
-            </h6>
-            <hr className="aboutUs-text-hr"></hr>
-          </div>
-          <div className="aboutUs-text-description">
-            <div className="firstColumn">
-            Durch jeden teilnehmenden Kurs, zusammen mit anderen Aktivitäten zur persönlichen Entwicklung, 
-            bringe ich Innovation für die Patienten in jeder Therapiesitzung der Behandlung.
-            Das Ziel der PHYSIOPRAXIS MARIAN ist, die Lebensqualität für jeden Patienten zu verbessern und die Faktoren zu beseitigen, 
-            die ihm Unbehagen oder Schmerzen verursachen.
-
+    <HelmetProvider>
+      <Helmet>
+        <meta
+          name="description"
+          content="Praxis für Physiotherapie in Darmstadt bietet Krankengymnastik Manuelle Lymphdrainage KG Neuro Massage Craniomandibuläre Dysfunktionen Heiß- und Kalttherapie"
+        />
+        <title>PhysioPraxis Marian | About Us</title>
+      </Helmet>
+      <div className="container-fluid aboutUs">
+        <div className="header"></div>
+        <div className="aboutUs-presentation container">
+          <AboutUsWorkinHours />
+          <div className="aboutUs-text">
+            <div className="aboutUs-text-shortPresentation">
+              <hr className="aboutUs-text-hr"></hr>
+              <h6>
+                Ich bin Marian, Ihr Therapeut und Partner für Ihren
+                Gesundungsprozess. Mit einer Erfahrung von über 10 Jahren in der
+                Physiotherapie biete ich höchste Qualität in der Behandlung und
+                körperlichen Heilung jedes Patienten.
+              </h6>
+              <hr className="aboutUs-text-hr"></hr>
             </div>
-            <div className="secondColumn">
-            Das Ziel der PHYSIOPRAXIS MARIAN ist, die Lebensqualität für jeden Patienten zu verbessern und die Faktoren zu beseitigen, 
-            die ihm Unbehagen oder Schmerzen verursachen.
+            <div className="aboutUs-text-description">
+              <div className="firstColumn">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+                in elit vitae etiam amet, commodo, aliquam felis. Viverra
+                egestas sed convallis nec et mauris, fringilla integer augue.
+                Tempus eget netus bibendum malesuada. Maecenas ornare lorem
+                vulputate enim sed in. Ultricies ac sed magna enim, massa ac
+                quam. Maecenas accumsan, malesuada pharetra, ut tristique leo
+                blandit. Odio a interdum dolor vitae id ipsum porttitor. Eget
+                arcu ut a nisi at pellentesque sit auctor at. Fermentum pharetra
+                posuere fermentum amet ullamcorper curabitur aenean aenean
+                mauris. Et posuere magna ipsum dolor. Semper nisi at condimentum
+                cras ullamcorper elit quis sed ridiculus. Cras sagittis urna
+                venenatis, porta etiam mauris. Viverra ornare elementum
+                consequat dictumst. pendisse faucibus dolor risus, facilisis
+                duis semper.
+              </div>
+              <div className="secondColumn">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+                in elit vitae etiam amet, commodo, aliquam felis. Viverra
+                egestas sed convallis nec et mauris, fringilla integer augue.
+                Tempus eget netus bibendum malesuada. Maecenas ornare lorem
+                vulputate enim sed in. Ultricies ac sed magna enim, massa ac
+                quam. Maecenas accumsan, malesuada pharetra, ut tristique leo
+                blandit. Odio a interdum dolor vitae id ipsum porttitor. Eget
+                arcu ut a nisi at pellentesque sit auctor at. Fermentum pharetra
+                posuere fermentum amet ullamcorper curabitur aenean aenean
+                mauris. Et posuere magna ipsum dolor. Semper nisi at condimentum
+                cras ullamcorper elit quis sed ridiculus. Cras sagittis urna
+                venenatis, porta etiam mauris. Viverra ornare elementum
+                consequat dictumst. pendisse faucibus dolor risus, facilisis
+                duis semper.
+              </div>
             </div>
+            <hr className="aboutUs-text-hr"></hr>
+            <Socials
+              facebook={Facebook}
+              instagram={Instagram}
+              twitter={Twitter}
+            />
           </div>
-          <hr className="aboutUs-text-hr"></hr>
-          <Socials facebook={Facebook} instagram={Instagram} twitter={Twitter}/>
         </div>
+        <BootstrapCarousel />
       </div>
-      <BootstrapCarousel />
-    </div>
+    </HelmetProvider>
   );
 };
 
