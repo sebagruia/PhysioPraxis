@@ -25,15 +25,12 @@ const Navigation = ({ dispatch, currentUser, leaveMessageStatus }) => {
   const [active, setActivate] = useState(false);
   const [InfoTableOn, setInfoTableOn] = useState(false);
 
-
   const history = useHistory();
   const { pathname } = history.location;
 
   const handleHamburgerMenu = () => {
-    if(window.innerWidth < 1218){
       setActivate(!active);
-    }
-    dispatch(leaveMessageStatusChange(true));
+      dispatch(leaveMessageStatusChange(true));
   };
 
   const handleInfoTable = () => {
@@ -56,7 +53,6 @@ const Navigation = ({ dispatch, currentUser, leaveMessageStatus }) => {
       <Hamburger handleHamburgerMenu={handleHamburgerMenu} active={active} />
       <div className="navInfo-container container-xl">
         <Logo />
-
         <InfoTable
           handleInfoTable={handleInfoTable}
           InfoTableOn={InfoTableOn}

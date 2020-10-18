@@ -70,7 +70,7 @@ class App extends Component {
             <Route path="/news/:post_id">
               <PostPage />
             </Route>
-            <Route path="/appointmentPage">
+            <Route exact path="/appointmentPage">
               <AppointmentPage />
             </Route>
           </Suspense>
