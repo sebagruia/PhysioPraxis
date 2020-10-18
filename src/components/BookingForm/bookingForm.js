@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { todayDate, day } from "../../DATA";
 import { sendingMessageStatusAction } from "../../redux/redux-actions";
+import ReCAPTCHA from "react-google-recaptcha";
 import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import BookButton from "../../components/BookButton/bookButton";
@@ -63,6 +64,9 @@ class BookingForm extends Component {
     const name = event.target.name;
     this.setState({ [name]: event.target.value });
   };
+  handleOnChangeReCAptcha = (value) => {
+    console.log("Captcha value:", value);
+  };
 
   checkDateValidity = (date) => {
     if (day(date) === 0) {
@@ -73,11 +77,15 @@ class BookingForm extends Component {
   };
 
   render() {
-    const { history, sendingMessageStatus } = this.props;
+    const {
+      history,
+      sendingMessageStatus,
+      handleOnChangeReCAptcha,
+    } = this.props;
     const { pathname } = history.location;
     const { email, name, date, time, phone, message } = this.state;
     return (
-      <Form 
+      <Form
         onSubmit={this.handleSubmit}
         className={`appointment ${
           pathname === "/appointmentPage" ? "substractMarginBottom" : ""
@@ -158,10 +166,11 @@ class BookingForm extends Component {
         <div className="buttonAndPopUp-container">
           <BookButton buttonName="BOOK" />
           <PopUp messageStatus={sendingMessageStatus}>Sent</PopUp>
-            {/* <div
-              className="g-recaptcha"
-              data-sitekey="6LdypNMZAAAAAIN1Q2Eqzrz4PcXWCK5J-Ad3eT_B"
-            ></div> */}
+          <ReCAPTCHA
+            sitekey={`${process.env.REACT_APP_YOUR_RECAPTCHA_KEY}`}
+            onChange={handleOnChangeReCAptcha}
+            className="g-recaptcha"
+          />
         </div>
       </Form>
     );
