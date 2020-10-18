@@ -50,8 +50,8 @@ class App extends Component {
     return (
       <div className="App">
         <Navigation />
-        <Switch>
-          <Suspense fallback={<LoadingSpinner />}>
+        <Suspense fallback={<LoadingSpinner />}>
+          <Switch>
             <Route exact path="/">
               <Home />
             </Route>
@@ -73,8 +73,8 @@ class App extends Component {
             <Route exact path="/appointmentPage">
               <AppointmentPage />
             </Route>
-          </Suspense>
-        </Switch>
+          </Switch>
+        </Suspense>
         <Footer />
       </div>
     );
