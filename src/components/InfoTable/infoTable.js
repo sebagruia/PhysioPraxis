@@ -55,7 +55,7 @@ const InfoTable = ({ history, handleInfoTable, InfoTableOn }) => {
 
       <div className="infoTable-hand">
         <div className="infoTable-info">
-          <h6 className="infoTable-firstText">Follow Us</h6>
+          <h6 className="infoTable-firstText">Folgen Sie uns</h6>
           <Socials
             facebook={Facebook}
             instagram={Instagram}

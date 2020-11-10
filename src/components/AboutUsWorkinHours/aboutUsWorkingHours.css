@@ -8,7 +8,7 @@
 }
 .title-container {
   position: absolute;
-  top: 0px;
+  top: 20px;
   left: 340px;
   width: 300px;
   font-variant: all-small-caps;
@@ -16,8 +16,8 @@
   text-align: start;
   color: #fff;
 }
-.title-container h6 {
-  font-size: 1.2rem;
+.title-container h1{
+  font-size: 2rem;
 }
 .aboutUsWorkingHours-img-container {
   width: 90%;
@@ -100,10 +100,9 @@
 .aboutUsWorkingHours-contactDetails h6 {
   font-family: "Montserrat", sans-serif;
   font-variant: normal !important;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 600;
 }
-
 .aboutUsWorkingHours-hours p {
   font-weight: 300;
   font-size: 0.7rem;

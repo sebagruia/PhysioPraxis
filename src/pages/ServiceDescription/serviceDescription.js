@@ -39,7 +39,7 @@ const ServiceDescription = ({ history }) => {
           <div className="serviceDescription-description-container">
             <h1>{label}</h1>
             <p>{description}</p>
-            <Button onClick={handleOnClick}>Back</Button>
+            <Button onClick={handleOnClick}>Zurück</Button>
           </div>
         </div>
       </div>

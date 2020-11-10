@@ -57,7 +57,7 @@ const Post = ({ id, date, image, title, text }) => {
       <div className="post-footer">
 
         <Button onClick={pathname === "/news" ? toPostPage : goBack}>
-          {pathname === "/news" ? "Continue Reading" : "Back"}
+          {pathname === "/news" ? "Weiterlesen" : "Zurück"}
         </Button>
         
         <div className="post-footer-socials">

@@ -26,7 +26,7 @@ const HeroSection = ()=>{
         <div className=" container hero-description">
           <div className="box box1">
             <div className="boxTitle">
-              <h4>Professional Physiotherapist</h4>
+              <h4>Professionelle Leistungen</h4>
             </div>
             <div className="boxTitle-text">
               <p>
@@ -37,9 +37,6 @@ const HeroSection = ()=>{
             </div>
           </div>
           <div className="box box2">
-            <div className="boxTitle boxTitle-box2">
-              <h4>Insurance Partner</h4>
-            </div>
             <div className="boxTitle-text">
               <p>
               <strong>PhysioPraxis Marian</strong> ist ein vertrauenswürdiger Partner aller
@@ -47,12 +44,12 @@ const HeroSection = ()=>{
               </p>
             </div> 
             <div className="boxTitle boxTitle-box2">
-              <h4>Insurance Partner</h4>
+              <h4>Krankenkassen Partner</h4>
             </div>
           </div>
           <div className="box box3">
             <div className="boxTitle">
-              <h4>Central Location</h4>
+              <h4>Darmstadt Mitte</h4>
             </div>
             <div className="boxTitle-text">
               <p>

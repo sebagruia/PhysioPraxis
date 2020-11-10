@@ -15,6 +15,7 @@
 
 .serviceDescription-img-container {
   width: 50%;
+  padding: 0 100px 0 100px;
 }
 
 .serviceDescription-img-container img {
@@ -48,8 +49,7 @@
 }
 
 .serviceDescription-description-container .continue-reading{
-  width:60px;
-  text-align: center;
+  width:70px;
   margin-top: 20px;
 }
 
@@ -63,6 +63,7 @@
   .serviceDescription-img-container,
   .serviceDescription-description-container {
     width: 100%;
+    padding:0;
   }
 
   .serviceDescription-description-container {

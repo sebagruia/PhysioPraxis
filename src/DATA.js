@@ -33,8 +33,8 @@ export const arangedTitle = (title) => {
 export const services = {
   service1: {
     id: "service1",
-    img:
-      "https://firebasestorage.googleapis.com/v0/b/physiopraxis-51c08.appspot.com/o/services%2Fservices9.jpg?alt=media&token=f9be635e-d451-4a12-874e-bd0b02897242",
+     img:
+      "https://firebasestorage.googleapis.com/v0/b/physiopraxis-51c08.appspot.com/o/services%2Fservices5.jpg?alt=media&token=7713fb30-101b-4e25-9806-a9ba4ae5ebbc",
     label: "Manuelle Lymphdrainage",
     description: `Die manuelle Lymphdrainage ist eine spezielle Massagetechnik, die der Endstauung des Gewebes dient.
     Mit gezielten Handgriffen wird der Lymphfluss gefördert, durch Abtransport der Gewebeflüssigkeit das „Ödem“ beseitig und die überschüssige Flüssigkeit in den Körperkreislauf zurückgeführt.
@@ -43,7 +43,7 @@ export const services = {
   service2: {
     id: "service2",
     img:
-      "https://firebasestorage.googleapis.com/v0/b/physiopraxis-51c08.appspot.com/o/services%2Fservices3.jpg?alt=media&token=5b5bb880-f1cd-4935-a332-be1be9b31480",
+      "https://firebasestorage.googleapis.com/v0/b/physiopraxis-6665a.appspot.com/o/services%2Fservices3.jpg?alt=media&token=c1a04da3-7422-4fa9-a392-a976d1296414",
     label: "KPE",
     description: `Anschließen wird, um das Behandlungsergebnis zu halten, 
     ein Kompressionsverband, mit dafür geeigneten Bandagebinden angelegt.
@@ -71,7 +71,7 @@ export const services = {
   service4: {
     id: "service4",
     img:
-      "https://firebasestorage.googleapis.com/v0/b/physiopraxis-51c08.appspot.com/o/services%2Fservices5.jpg?alt=media&token=7713fb30-101b-4e25-9806-a9ba4ae5ebbc",
+    "https://firebasestorage.googleapis.com/v0/b/physiopraxis-51c08.appspot.com/o/services%2Fservices9.jpg?alt=media&token=f9be635e-d451-4a12-874e-bd0b02897242",
     label: "Atlasterapie",
     description: `Eine Behandlungspraktik im Bereich der Halswirbelsäule
     Der Atlas ist der erste Halswirbel, unmittelbar unterhalb des Schädels lokalisiert. Ähnlich wie an allen anderen Regionen der Wirbelsäule kann durch eine Blockierung verursachte Störung seiner Funktion sehr unangenehme Symptome verursachen.
@@ -81,31 +81,26 @@ export const services = {
   service5: {
     id: "service5",
     img:
-      "https://firebasestorage.googleapis.com/v0/b/physiopraxis-51c08.appspot.com/o/services%2Fcarousel1.jpg?alt=media&token=bacc94c6-9799-4aca-a611-29c169a4b7a9",
-    label: "Heißluft",
-    description: `Ist ein Gerät mit mehreren Rotlichtglühbirnen die eine intensive Wärme ausstrahlen. 
-    Man liegt/sitzt in einem Abstand von 40-90 cm unter dieser Bestrahlung. 
-    Die Wärme führt zu einer oberflächlichen Durchblutungssteigerung, 
-    die Bestrahlungszeit liegt bei 15-20 min.Durch intensives Rotlicht (ca. 42 Grad) 
-    kommt es zu einer vermehrten Hautdurchblutung. Die Muskulatur wird gelockert und die anschließende Massage angenehmer.
+      "https://firebasestorage.googleapis.com/v0/b/physiopraxis-6665a.appspot.com/o/services%2FWarmtherapie.jpg?alt=media&token=c6ef755a-89c5-4074-b38b-86349133c3c0",
+    label: "Wärmetherapie",
+    description: `Wärmetherapie wird lokal eingesetzt bei Erkrankungen des Bewegungsapparates, insbesondere bei Nackenschmerzen, chronischen Rückenschmerzen und Gelenkbeschwerden. Die positiven Wirkungen von Wärme bei bestimmten Erkrankungen sind seit Jahrhunderten bekannt. 
+    Ziele der Wärmebehandlung sind Muskelentspannung, Verbesserung der Durchblutung, Verbesserung der Dehnbarkeit des Bindegewebes und Schmerzlinderung.
     `,
   },
   service6: {
     id: "service6",
     img:
-      "https://firebasestorage.googleapis.com/v0/b/physiopraxis-51c08.appspot.com/o/services%2Fservices8.jpg?alt=media&token=2d37e872-c5f6-4157-9bb1-e520ac020bec",
-    label: "Fango",
-    description: `Die Fangopackung wird mit etwa 50 Grad Celsius aufgelegt. 
-    Die Behandlungsdauer liegt zwischen 20 und 30 Minuten. 
-    In den behandelten Körperregionen wird die Durchblutung dadurch stark erhöht. 
-    Die Fangopackungen haben eine schmerzlindernde und entzündungshemmende Wirkung.
+      "https://firebasestorage.googleapis.com/v0/b/physiopraxis-6665a.appspot.com/o/services%2FKiefergelenk%20Therapie.jpg?alt=media&token=a7f97f8b-4dae-415a-89f1-7eea0f091d88",
+    label: "Kiefergelenk Therapie",
+    description: `Symptome wie Kopfschmerz, Migräne, Schwindel, Gesichtsschmerzen, Ohrgeräusche, Knackgeräusche beim Öffnen oder schließen des Mundes, aber auch Nacken- oder Rückenschmerzen können die Ursache in einer Fehlfunktion des Kiefergelenkes haben. 
+    Durch die Kiefergelenk-Therapie können am Kiefergelenk die Gelenkfunktion und die umgebenden Strukturen wie Muskeln, Bänder und Nerven behandelt werden.
     `,
   },
   service7: {
     id: "service7",
     img:
-      "https://firebasestorage.googleapis.com/v0/b/physiopraxis-51c08.appspot.com/o/services%2Fcarousel6.jpg?alt=media&token=2bd5ae35-dcb0-4c74-a283-5f439098e067",
-    label: "Eis-Therapie",
+      "https://firebasestorage.googleapis.com/v0/b/physiopraxis-6665a.appspot.com/o/services%2FEistherapie.jpg?alt=media&token=615480ee-a757-4573-b7bc-5a7558e871db",
+    label: "Eistherapie",
     description: `Unter Eis-Therapie, auch Kryotherapie genannt, versteht man die Anwendung von Eis zu therapeutischen Zwecken. Durch verschiedenartige Anwendungsformen mit unterschiedlichen Einwirkzeiten sollen Selbstheilungsprozesse unterstützt werden.
      Anwendungsformen sind : Eisbeutel, Silikatkompressen (Kryopack), Eismassage, -abreibung, Eistauchbad, Ganzkörperkältetherapie.
     `,
@@ -113,18 +108,21 @@ export const services = {
   service8: {
     id: "service8",
     img:
-      "https://firebasestorage.googleapis.com/v0/b/physiopraxis-51c08.appspot.com/o/services%2Fservices7.jpg?alt=media&token=78f76a17-88bf-48ae-ba03-35adf943da1e",
-    label: "Medi Taping",
+      "https://firebasestorage.googleapis.com/v0/b/physiopraxis-6665a.appspot.com/o/services%2FR%C3%BCckengesundheit.jpg?alt=media&token=54bb2506-79bf-450d-818a-d9222037071d",
+    label: "Rückengesundheit",
+    description: `Durch gezielte Kräftigung und Dehnung der Muskulatur, ausgewählte Übungen zur Verbesserung der Beweglichkeit, sowie Schulung und Beratung zu rückenfreundlichem Verhalten im Alltag,
+     können Sie schnell den Trainingserfolg spüren.
+   `,
   },
 };
 // =========================================
 
 // BootstrapCarousel Images
 export const carouselImages = [
-  "https://firebasestorage.googleapis.com/v0/b/physiopraxis-51c08.appspot.com/o/carouselImages%2Fcarousel4.jpg?alt=media&token=a685c404-5210-432e-8402-c964435e22f2",
-  "https://firebasestorage.googleapis.com/v0/b/physiopraxis-51c08.appspot.com/o/carouselImages%2Fcarousel2.jpg?alt=media&token=48f61a1f-39e1-4b82-97e3-221d555ab7a4",
-  "https://firebasestorage.googleapis.com/v0/b/physiopraxis-51c08.appspot.com/o/carouselImages%2Fcarousel3.jpg?alt=media&token=0680467a-800a-4568-9fd0-0fa6d8b3993e",
-  "https://firebasestorage.googleapis.com/v0/b/physiopraxis-51c08.appspot.com/o/carouselImages%2Fcarousel5.jpg?alt=media&token=29be9c49-e611-44b5-b07b-a4d3ed8246ee",
-  "https://firebasestorage.googleapis.com/v0/b/physiopraxis-51c08.appspot.com/o/carouselImages%2Fcarousel61.jpg?alt=media&token=c8a2ccee-925f-4322-b1b6-f094efe8366d",
-  "https://firebasestorage.googleapis.com/v0/b/physiopraxis-51c08.appspot.com/o/carouselImages%2Fcarousel7.jpg?alt=media&token=c70a3bb4-a541-4408-8ca1-85426efd2bb3",
+  "https://firebasestorage.googleapis.com/v0/b/physiopraxis-6665a.appspot.com/o/carouselImages%2Fcarousel8.jpg?alt=media&token=9db4bc2f-ab36-4160-bf84-1d6281c1215f",
+  "https://firebasestorage.googleapis.com/v0/b/physiopraxis-6665a.appspot.com/o/carouselImages%2Fcarousel9.jpg?alt=media&token=df0d9091-eada-4b3c-a9e3-bf83d422c44d",
+  "https://firebasestorage.googleapis.com/v0/b/physiopraxis-6665a.appspot.com/o/carouselImages%2Fcarousel1.jpg?alt=media&token=e83d7b4d-6165-4e4f-b398-a2fe17db933a",
+  "https://firebasestorage.googleapis.com/v0/b/physiopraxis-6665a.appspot.com/o/carouselImages%2Fcarousel2.jpg?alt=media&token=ae15f892-c277-4e1e-80c9-e8ba7e7110f5",
+  "https://firebasestorage.googleapis.com/v0/b/physiopraxis-6665a.appspot.com/o/carouselImages%2Fcarousel3.jpg?alt=media&token=c74329a9-877a-4871-adb1-f723a658ac2c",
+  "https://firebasestorage.googleapis.com/v0/b/physiopraxis-6665a.appspot.com/o/carouselImages%2Fcarousel4.jpg?alt=media&token=f3277189-0953-485d-8bb6-9822ce581b15",
 ];

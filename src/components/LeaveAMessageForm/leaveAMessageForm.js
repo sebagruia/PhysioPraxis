@@ -6,7 +6,7 @@ import FormControl from "react-bootstrap/FormControl";
 import CloseThinButton from "../CloseThinButton/closeThinButton";
 import BookButton from "../../components/BookButton/bookButton";
 import PopUp from "../PopUp/popUp";
-import { sendingMessageStatusAction } from "../../redux/redux-actions";
+import { leaveMessageStatusChange, sendingMessageStatusAction } from "../../redux/redux-actions";
 import emailjs from "emailjs-com";
 
 class LeaveAMessageForm extends Component {
@@ -33,6 +33,7 @@ class LeaveAMessageForm extends Component {
           this.props.dispatch(
             sendingMessageStatusAction(this.props.bookingMessageStatus)
           );
+          this.props.dispatch(leaveMessageStatusChange(this.props.leaveMessageStatus));
         }
         console.log("SUCCES", result.text);
       },
@@ -78,14 +79,14 @@ class LeaveAMessageForm extends Component {
                 }
           }
         >
-          <h5>Your Message Here</h5>
+          <h5>Ihre Nachricht hier</h5>
           <Form.Group className="leave-a-message-form">
             <FormControl
               onChange={this.handleOnChange}
               className="message-input"
               type="text"
-              placeholder="Full Name"
-              aria-label="Full Name"
+              placeholder="Name"
+              aria-label="Name"
               name="name"
               value={name}
               required
@@ -106,7 +107,7 @@ class LeaveAMessageForm extends Component {
               as="textarea"
               rows="1"
               cols="50"
-              placeholder="your message..."
+              placeholder="Ihre Nachricht..."
               name="message"
               value={message}
               required

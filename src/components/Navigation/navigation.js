@@ -14,7 +14,7 @@ import Hamburger from "../Hamburger/hamburger";
 import LeaveAMessageButton from "../LeaveAMessageButton/leaveAMessageButton";
 import UserButton from "../UserButton/userButton";
 import Logo from "../Logo/logo";
-import LanguageButton from "../LanguageButton/languageButton";
+// import LanguageButton from "../LanguageButton/languageButton";
 import InfoTable from "../InfoTable/infoTable";
 
 import Clock from "../../assets/iconmonstr-time-2.png";
@@ -99,7 +99,7 @@ const Navigation = ({ history, dispatch, currentUser, leaveMessageStatus }) => {
               <img src={Hand} alt="hand" />
             </div>
             <div className="info">
-              <h6 className="firstText">Follow Us</h6>
+              <h6 className="firstText">Folgen Sie uns</h6>
               <div className="social-container">
                 <a href="https://www.facebook.com/physiopraxis.marian/">
                   <img src={Facebook} alt="facebook-icon" role="button" />
@@ -133,7 +133,7 @@ const Navigation = ({ history, dispatch, currentUser, leaveMessageStatus }) => {
               onClick={handleHamburgerMenu}
               activeStyle={activeClass}
             >
-              About us
+              Über uns
             </NavLink>
 
             <NavLink
@@ -150,7 +150,7 @@ const Navigation = ({ history, dispatch, currentUser, leaveMessageStatus }) => {
               activeStyle={activeClass}
               onClick={handleHamburgerMenu}
             >
-              Services
+              Leistungen
             </NavLink>
 
             <NavLink
@@ -158,7 +158,7 @@ const Navigation = ({ history, dispatch, currentUser, leaveMessageStatus }) => {
               activeStyle={activeClass}
               onClick={handleHamburgerMenu}
             >
-              News
+              Aktuelles
             </NavLink>
 
             {pathname !== "/" ? (
@@ -167,7 +167,7 @@ const Navigation = ({ history, dispatch, currentUser, leaveMessageStatus }) => {
                 onClick={handleHamburgerMenu}
                 activeStyle={activeClass}
               >
-                Appointment
+                Termin vereinbaren
               </NavLink>
             ) : (
               <ScrollLink
@@ -178,7 +178,7 @@ const Navigation = ({ history, dispatch, currentUser, leaveMessageStatus }) => {
                 duration={1000}
                 onClick={handleHamburgerMenu}
               >
-                Appointment
+                Termin vereinbaren
               </ScrollLink>
             )}
           </ul>
@@ -186,7 +186,7 @@ const Navigation = ({ history, dispatch, currentUser, leaveMessageStatus }) => {
           <div className="menu-buttons">
             <LeaveAMessageButton />
             <div className="language-and-user-container">
-              <LanguageButton />
+              {/* <LanguageButton /> */}
               <UserButton currentUser={currentUser} />
             </div>
           </div>

@@ -17,7 +17,7 @@ const AboutUs = () => {
           name="description"
           content="Praxis für Physiotherapie in Darmstadt bietet Krankengymnastik Manuelle Lymphdrainage KG Neuro Massage Craniomandibuläre Dysfunktionen Heiß- und Kalttherapie"
         />
-        <title>PhysioPraxis Marian | About Us</title>
+        <title>PhysioPraxis Marian | Über uns</title>
       </Helmet>
       <div className="container-fluid aboutUs">
         <div className="header"></div>
@@ -27,45 +27,53 @@ const AboutUs = () => {
             <div className="aboutUs-text-shortPresentation">
               <hr className="aboutUs-text-hr"></hr>
               <h6>
-                Ich bin Marian, Ihr Therapeut und Partner für Ihren
-                Gesundungsprozess. Mit einer Erfahrung von über 10 Jahren in der
-                Physiotherapie biete ich höchste Qualität in der Behandlung und
-                körperlichen Heilung jedes Patienten.
+                PHYSIOPRAXIS MARIAN, mit Marian Popescu als Praxisinhaber, 
+                bringt sich in Darmstadt ein examinierter Spezialist mit über 12-jähriger Berufserfahrung ein, 
+                die durch Studium und Praktizieren im In- und Ausland erlangt wurde.
               </h6>
               <hr className="aboutUs-text-hr"></hr>
             </div>
             <div className="aboutUs-text-description">
               <div className="firstColumn">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-                in elit vitae etiam amet, commodo, aliquam felis. Viverra
-                egestas sed convallis nec et mauris, fringilla integer augue.
-                Tempus eget netus bibendum malesuada. Maecenas ornare lorem
-                vulputate enim sed in. Ultricies ac sed magna enim, massa ac
-                quam. Maecenas accumsan, malesuada pharetra, ut tristique leo
-                blandit. Odio a interdum dolor vitae id ipsum porttitor. Eget
-                arcu ut a nisi at pellentesque sit auctor at. Fermentum pharetra
-                posuere fermentum amet ullamcorper curabitur aenean aenean
-                mauris. Et posuere magna ipsum dolor. Semper nisi at condimentum
-                cras ullamcorper elit quis sed ridiculus. Cras sagittis urna
-                venenatis, porta etiam mauris. Viverra ornare elementum
-                consequat dictumst. pendisse faucibus dolor risus, facilisis
-                duis semper.
+                <p>
+                  Die Leistungen der Praxis werden in Zusammenarbeit mit allen Krankenkassen in Deutschland 
+                  (privat und gesetzlich) aber auch für Selbstzahler erbracht. Es umfasst Krankengymnastik, 
+                  spezielle Massagetechniken, Manuelle Lymphdrainage, Behandlung von neurologischen Patienten, 
+                  postoperative physikalische Behandlungen, etc.
+                </p>
+                <p>
+                  Die Vision der Praxis ist es, durch physikalische Therapie, 
+                  einen positiven Beitrag für ein besseres Leben für seine Patienten zu leisten. 
+                </p>
+                <br></br>
+                <p>
+                  PHYSIOPRAXIS MARIAN besitzt die Mission, auf die aktuellen Herausforderungen der 
+                  heutigen Welt zu antworten, indem es einen Weg anbietet den Alltags zu verbessern, 
+                  unseren Körper gesund zu halten und ein möglichst aktives Leben zu führen. 
+                </p>
+             
               </div>
               <div className="secondColumn">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-                in elit vitae etiam amet, commodo, aliquam felis. Viverra
-                egestas sed convallis nec et mauris, fringilla integer augue.
-                Tempus eget netus bibendum malesuada. Maecenas ornare lorem
-                vulputate enim sed in. Ultricies ac sed magna enim, massa ac
-                quam. Maecenas accumsan, malesuada pharetra, ut tristique leo
-                blandit. Odio a interdum dolor vitae id ipsum porttitor. Eget
-                arcu ut a nisi at pellentesque sit auctor at. Fermentum pharetra
-                posuere fermentum amet ullamcorper curabitur aenean aenean
-                mauris. Et posuere magna ipsum dolor. Semper nisi at condimentum
-                cras ullamcorper elit quis sed ridiculus. Cras sagittis urna
-                venenatis, porta etiam mauris. Viverra ornare elementum
-                consequat dictumst. pendisse faucibus dolor risus, facilisis
-                duis semper.
+              <p>
+                  Durch kontinuierliche Verbesserung der Fähigkeiten und Kenntnisse kann 
+                  PHYSIOPRAXIS MARIAN Qualität und Innovation für alle seine Kunden und Partner bieten. 
+                </p>
+                <p>
+                  Werte von PHYSIOPRAXIS MARIAN:
+                </p>
+                <ul>
+                  <li>Einfacher Zugang zu Terminen und Flexibilität</li>
+                  <li>Partnerschaft und Vertrauen</li>
+                  <li>Innovation und Effizienz</li>  
+                  <li>Qualität und Respekt.</li>  
+                </ul>
+                <p>
+                  Das Ziel von PHYSIOPRAXIS MARIAN entspricht den Zielen der Stadt Darmstadt für die 
+                  Zukunft in Bezug auf: Digitalisierung, E-Mobilität, Kilimafreundlichkeit, Innovation in der Therapie, 
+                  um den zukünftigen Generationen einen besseren Ort zum Leben zu geben.
+                </p>
+                <br></br>
+                <p>Herzlich Willkommen!</p>
               </div>
             </div>
             <hr className="aboutUs-text-hr"></hr>

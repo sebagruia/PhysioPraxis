@@ -2,8 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100px;
-  padding: 5px;
+  padding: 5px 15px 5px 15px;
   font-weight: 500;
   background-color: #003a45;
   color: #fff;

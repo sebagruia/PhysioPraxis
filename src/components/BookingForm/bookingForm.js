@@ -92,8 +92,8 @@ class BookingForm extends Component {
         } `}
       >
         <div className="appointment-text">
-          <h1>Book Appointment</h1>
-          <h6>We are here for you</h6>
+          <h1>Termin vereinbaren</h1>
+          <h6>Wir freuen uns auf Sie</h6>
         </div>
         <FormControl
           onChange={this.handleOnChange}
@@ -109,18 +109,18 @@ class BookingForm extends Component {
             <FormControl
               onChange={this.handleOnChange}
               type="text"
-              placeholder="Your Full Name"
-              aria-label="Your Full Name"
+              placeholder="Name"
+              aria-label="Name"
               value={name}
               name="name"
               required
             />
-            <Form.Label>Date</Form.Label>
+            <Form.Label>Datum</Form.Label>
             <FormControl
               onChange={this.handleOnChange}
               type="date"
-              placeholder="Date"
-              aria-label="Date"
+              placeholder="Datum"
+              aria-label="Datum"
               min={todayDate()}
               value={this.checkDateValidity(date)}
               name="date"
@@ -132,21 +132,21 @@ class BookingForm extends Component {
             <FormControl
               onChange={this.handleOnChange}
               type="tel"
-              placeholder="Phone"
-              aria-label="Phone"
+              placeholder="Telefonnummer"
+              aria-label="Telefonnummer"
               aria-describedby="basic-addon1"
               value={phone}
               name="phone"
               required
             />
-            <Form.Label>Time</Form.Label>
+            <Form.Label>Uhrzeit</Form.Label>
             <FormControl
               onChange={this.handleOnChange}
               type="time"
               min="08:00"
               max={`${day(date) === 6 ? "14:00" : "20:00"}`}
-              placeholder="Time"
-              aria-label="Time"
+              placeholder="Uhrzeit"
+              aria-label="Uhrzeit"
               aria-describedby="basic-addon1"
               value={time}
               name="time"
@@ -159,12 +159,12 @@ class BookingForm extends Component {
           as="textarea"
           rows="4"
           cols="50"
-          placeholder="Special request..."
+          placeholder="Sonderwunsch..."
           value={message}
           name="message"
         ></Form.Control>
         <div className="buttonAndPopUp-container">
-          <BookButton buttonName="BOOK" />
+          <BookButton buttonName="Vereinbaren" />
           <PopUp messageStatus={sendingMessageStatus}>Sent</PopUp>
           <ReCAPTCHA
             sitekey={`${process.env.REACT_APP_YOUR_RECAPTCHA_KEY}`}

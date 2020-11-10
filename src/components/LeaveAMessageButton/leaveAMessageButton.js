@@ -12,7 +12,7 @@ const LeaveAMessageButton = ({dispatch,leaveMessageStatus}) => {
   };
   return (
     <div onClick={handleClick} className="message-button" role="button">
-      <h6>Leave a Message</h6>
+      <h6>Nachricht hinterlassen</h6>
     </div>
   );
 };

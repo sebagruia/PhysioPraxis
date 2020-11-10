@@ -11,13 +11,13 @@ const AppointmentPage = () => {
           name="description"
           content="Praxis für Physiotherapie in Darmstadt bietet Krankengymnastik Manuelle Lymphdrainage KG Neuro Massage Craniomandibuläre Dysfunktionen Heiß- und Kalttherapie"
         />
-        <title>PhysioPraxis Marian | Appointment</title>
+        <title>PhysioPraxis Marian | Termin vereinbaren</title>
       </Helmet>
       <div className="appointmentPage-container container">
         <BookingForm />
         <div className="appointmentPage-contactInfo">
           <div className="appointmentPage-contactInfo-text" lang="de">
-            <h1>Contact</h1>
+            <h1>Kontakt</h1>
             <div className="appointmentPage-firstText-container">
               <h6 className="appointmentPage-firstText">MONTAG - FREITAG </h6>
               <h6 className="appointmentPage-hours">08:00 - 19:00</h6>
@@ -34,7 +34,7 @@ const AppointmentPage = () => {
             </div>
 
             <div className="appointmentPage-firstText-container">
-              <h6 className="appointmentPage-firstText">TEL </h6>
+              <h6 className="appointmentPage-firstText">TEL. / WHATSAPP</h6>
               <h6 className="appointmentPage-hours">0172 3465694</h6>
             </div>
 

@@ -2,6 +2,7 @@ import React, { Component, lazy, Suspense } from "react";
 import "./App.css";
 import { connect } from "react-redux";
 import { Route, Switch } from "react-router-dom";
+import CookieConsent from "react-cookie-consent";
 import LoadingSpinner from "../components/LoadingSpinner/loadingSpinner";
 import Navigation from "../components/Navigation/navigation";
 import Footer from "../components/Footer/footer";
@@ -75,6 +76,14 @@ class App extends Component {
             </Route>
           </Switch>
         </Suspense>
+        <CookieConsent
+          style={{ backgroundColor: "rgb(0, 58, 69, 0.9)" }}
+          containerClasses="cookieConsent"
+          buttonStyle={{ backgroundColor: "#e7efe9", color:"#003a45", border:"2px solid #fff" }}
+          buttonText="Ich verstehe"
+        >
+          Diese Website verwendet Cookies, um die Benutzererfahrung zu verbessern.
+        </CookieConsent>
         <Footer />
       </div>
     );

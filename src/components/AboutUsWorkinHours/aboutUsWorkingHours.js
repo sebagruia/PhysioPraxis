@@ -7,15 +7,14 @@ const AboutUsWorkinHours = () => {
   return (
     <div className="aboutUsWorkingHours">
        <div className="title-container">
-            <h6>PhysioTherapis</h6>
-            <h1 className="header-title">Marian Popescu</h1>
+            <h1 className="header-title">PHYSIOPRAXIS MARIAN</h1>
           </div>
       <div className="aboutUsWorkingHours-img-container">
-        <img src='https://firebasestorage.googleapis.com/v0/b/physiopraxis-51c08.appspot.com/o/home%2Fdoctor1.png?alt=media&token=0ae9fe55-57e9-42ef-abc7-86bc84a8833d' alt="doctor" />
+        <img src='https://firebasestorage.googleapis.com/v0/b/physiopraxis-6665a.appspot.com/o/home%2FMarian_change_color.png?alt=media&token=e781efc4-13c1-48fd-81f4-20fe2e6825cf' alt="doctor" />
       </div>
 
       <div className="aboutUsWorkingHours-hours" lang="de">
-        <h5>Arbeitszeit</h5>
+        <h5>Öffnungszeiten</h5>
         <div className="aboutUsWorkingHours-day">
           <div className="aboutUsWorkingHours-day-text">
             <h6>Montag</h6>
@@ -61,15 +60,14 @@ const AboutUsWorkinHours = () => {
         <div className="aboutUsWorkingHours-day">
           <div className="aboutUsWorkingHours-day-text">
             <h6>Sonntag</h6>
-            <p>Closed</p>
+            <p>Geschlossen </p>
           </div>
           <hr className="aboutUsWorkingHours-hr"></hr>
         </div>
       </div>
       
       <div className="aboutUsWorkingHours-contactDetails">
-      <p className="contactMarian">Contact Marian</p>
-        <h5>contact details</h5>
+        <h5>Kontakt</h5>
         <div className="aboutUsWorkingHours-phone-details">
           <img src={Phone} alt="phone" />
           <h6>0172 3465694</h6>

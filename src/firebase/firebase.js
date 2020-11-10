@@ -4,15 +4,15 @@ import "firebase/auth";
 import "firebase/storage";
 import {formatDate} from "../DATA";
 
-const firebaseConfig = {
-  apiKey: "AIzaSyCV67yo2fn2qZfUwqZQUk9ZcT8JQ5puJw8",
-  authDomain: "physiopraxis-51c08.firebaseapp.com",
-  databaseURL: "https://physiopraxis-51c08.firebaseio.com",
-  projectId: "physiopraxis-51c08",
-  storageBucket: "physiopraxis-51c08.appspot.com",
-  messagingSenderId: "142074726160",
-  appId: "1:142074726160:web:133a5a5fa679a2d7364795",
-  measurementId: "G-3X5L6DP9DG",
+var firebaseConfig = {
+  apiKey:process.env.REACT_APP_YOUR_FIREBASE_API_KEY,
+  authDomain:process.env.REACT_APP_YOUR_FIREBASE_AUTH_DOMAIN,
+  databaseURL:process.env.REACT_APP_YOUR_FIREBASE_DATABASE_URL,
+  projectId:process.env.REACT_APP_YOUR_FIREBASE_PROJECT_ID,
+  storageBucket:process.env.REACT_APP_YOUR_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId:process.env.REACT_APP_YOUR_FIREBASE_MESSAGING_SENDER_ID,
+  appId:process.env.REACT_APP_YOUR_FIREBASE_APP_ID,
+  measurementId:process.env.REACT_APP_YOUR_FIREBASE_MEASUREMENT_ID
 };
 
 firebase.initializeApp(firebaseConfig);

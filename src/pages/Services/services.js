@@ -13,10 +13,10 @@ const Services = () => {
           name="description"
           content="Praxis für Physiotherapie in Darmstadt bietet Krankengymnastik Manuelle Lymphdrainage KG Neuro Massage Craniomandibuläre Dysfunktionen Heiß- und Kalttherapie"
         />
-        <title>PhysioPraxis Marian | Services</title>
+        <title>PhysioPraxis Marian | Leistungen</title>
       </Helmet>
       <div className="container-fluid services">
-        <PageHeader>Services</PageHeader>
+        <PageHeader>Leistungen</PageHeader>
         <div className="services-container container">
           {Object.values(services).map((service) => (
             <ColumnImageContainer

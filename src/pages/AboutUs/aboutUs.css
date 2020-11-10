@@ -1,78 +1,79 @@
-.aboutUs{
-    padding-right: 0px; 
-    padding-left: 0px; 
+.aboutUs {
+  padding-right: 0px;
+  padding-left: 0px;
 }
-.header{
-    background-color: rgb(0, 58, 69, 0.9); 
-    width:100%;
-    height:200px;
+.header {
+  background-color: rgb(0, 58, 69, 0.9);
+  width: 100%;
+  height: 200px;
 }
 
 .aboutUs-presentation {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: -90px;
-    margin-bottom: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: -90px;
+  margin-bottom: 50px;
 }
-.aboutUs-text{
-    width: 65%;
-    display: flex;
-    flex-direction: column;
-    margin-top: 50px;
-    padding-left: 30px;
+.aboutUs-text {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  padding-left: 30px;
 }
-.aboutUs-text h6{
-    opacity: 0.8;
-    font-weight: 500;
+.aboutUs-text h6 {
+  opacity: 0.8;
+  font-weight: 500;
 }
-.aboutUs-text-hr{
-    width: 100%;
-    margin: 20px 0 20px 0;
-    background-color:rgb(0, 58, 69, 0.2);  ;
+.aboutUs-text-hr {
+  width: 100%;
+  margin: 20px 0 20px 0;
+  background-color: rgb(0, 58, 69, 0.2);
 }
-.aboutUs-text-shortPresentation{
-    padding-top: 50px;
-    color:#003A45;
+.aboutUs-text-shortPresentation {
+  padding-top: 50px;
+  color: #003a45;
 }
-.aboutUs-text-description{
-    display:flex;
-    justify-content: space-between;
-    color:#003A45;
-    opacity: 0.8;
-    font-family: "Montserrat", sans-serif;
-    font-size: 0.8rem;
-    line-height: 2;
+.aboutUs-text-description {
+  display: flex;
+  justify-content: space-between;
+  color: #003a45;
+  opacity: 0.8;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  line-height: 2;
 }
 
-.firstColumn{
-    width:45%;
+.firstColumn {
+  width: 45%;
 }
-.secondColumn{
-    width:45%;
+.secondColumn {
+  width: 45%;
+}
+.secondColumn ul {
+  padding: 0px 0 0 16px;
 }
 
 /* Media Screen */
 
-@media screen and (max-width:992px){
-    .aboutUs-presentation{
-        flex-direction: column;
-        align-items: center;
-    } 
+@media screen and (max-width: 992px) {
+  .aboutUs-presentation {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .aboutUs-text{
-        width: 95%;
-        padding-left: 0px;
-        margin-top: 0px;
-    }
+  .aboutUs-text {
+    width: 95%;
+    padding-left: 0px;
+    margin-top: 0px;
+  }
 
-    .aboutUs-text-description {
-        flex-direction: column;
-    }
-    .firstColumn,
-    .secondColumn{
-        width:100%;
-        margin-bottom: 20px;
-        
-    }
-
+  .aboutUs-text-description {
+    flex-direction: column;
+  }
+  .firstColumn,
+  .secondColumn {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }

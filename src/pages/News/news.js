@@ -15,10 +15,10 @@ const News = ({ currentUser, news }) => {
           name="description"
           content="Praxis für Physiotherapie in Darmstadt bietet Krankengymnastik Manuelle Lymphdrainage KG Neuro Massage Craniomandibuläre Dysfunktionen Heiß- und Kalttherapie"
         />
-        <title>PhysioPraxis Marian | News</title>
+        <title>PhysioPraxis Marian | Aktuelles</title>
       </Helmet>
       <div className="container-fluid news">
-        <PageHeader>News</PageHeader>
+        <PageHeader>Aktuelles</PageHeader>
 
         <div className="news-container container">
           <div className="news-post-container">
@@ -35,7 +35,7 @@ const News = ({ currentUser, news }) => {
             ))}
           </div>
           <div className="recent-post-container">
-            <h2>Recent Posts</h2>
+            <h2>Beiträge</h2>
             <hr className="recent-post-hr"></hr>
             {Object.values(news).map((post) => (
               <RecentPost
