@@ -125,4 +125,7 @@ export const carouselImages = [
   "https://firebasestorage.googleapis.com/v0/b/physiopraxis-6665a.appspot.com/o/carouselImages%2Fcarousel2.jpg?alt=media&token=ae15f892-c277-4e1e-80c9-e8ba7e7110f5",
   "https://firebasestorage.googleapis.com/v0/b/physiopraxis-6665a.appspot.com/o/carouselImages%2Fcarousel3.jpg?alt=media&token=c74329a9-877a-4871-adb1-f723a658ac2c",
   "https://firebasestorage.googleapis.com/v0/b/physiopraxis-6665a.appspot.com/o/carouselImages%2Fcarousel4.jpg?alt=media&token=f3277189-0953-485d-8bb6-9822ce581b15",
+  "https://firebasestorage.googleapis.com/v0/b/physiopraxis-6665a.appspot.com/o/carouselImages%2Fcarousel10.jpg?alt=media&token=54400c70-077a-4113-bef6-bc391ca68eb4",
+  "https://firebasestorage.googleapis.com/v0/b/physiopraxis-6665a.appspot.com/o/carouselImages%2Fcarousel11.jpg?alt=media&token=e82dc7d2-197a-4a6b-89f9-91a5e14303ec",
+  "https://firebasestorage.googleapis.com/v0/b/physiopraxis-6665a.appspot.com/o/carouselImages%2Fcarousel12.jpg?alt=media&token=333f314d-c0c8-454d-b1dc-4bb9e4eea848",
 ];

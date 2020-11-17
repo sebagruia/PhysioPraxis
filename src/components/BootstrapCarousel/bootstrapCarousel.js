@@ -9,26 +9,39 @@ const BootstrapCarousel = () => {
       <Carousel.Item>
         <div className="slide-image-container">
           <div className="image-container">
-            <img className="d-block w-100" src={carouselImages[0]} alt="..." />
+            <img className="d-block w-100" src={carouselImages[0]} alt="praxis_activity" />
           </div>
           <div className="image-container">
-            <img className="d-block w-100" src={carouselImages[1]} alt="..." />
+            <img className="d-block w-100" src={carouselImages[1]} alt="praxis_activity" />
           </div>
           <div className="image-container">
-            <img className="d-block w-100" src={carouselImages[2]} alt="..." />
+            <img className="d-block w-100" src={carouselImages[2]} alt="praxis_activity" />
           </div>
         </div>
       </Carousel.Item>
       <Carousel.Item>
         <div className="slide-image-container">
           <div className="image-container">
-            <img className="d-block w-100" src={carouselImages[3]} alt="..." />
+            <img className="d-block w-100" src={carouselImages[3]} alt="praxis_activity" />
           </div>
           <div className="image-container">
-            <img className="d-block w-100" src={carouselImages[4]} alt="..." />
+            <img className="d-block w-100" src={carouselImages[4]} alt="praxis_activity" />
           </div>
           <div className="image-container">
-            <img className="d-block w-100" src={carouselImages[5]} alt="..." />
+            <img className="d-block w-100" src={carouselImages[5]} alt="praxis_activity" />
+          </div>
+        </div>
+      </Carousel.Item>
+      <Carousel.Item>
+        <div className="slide-image-container">
+          <div className="image-container">
+            <img className="d-block w-100" src={carouselImages[6]} alt="praxis_activity" />
+          </div>
+          <div className="image-container">
+            <img className="d-block w-100" src={carouselImages[7]} alt="praxis_activity" />
+          </div>
+          <div className="image-container">
+            <img className="d-block w-100" src={carouselImages[8]} alt="praxis_activity" />
           </div>
         </div>
       </Carousel.Item>

@@ -219,6 +219,9 @@
     border-right: none;
     border-left: none;
   }
+  .boxTitle-text {
+    order: 1;
+}
   .box .boxTitle-box2:nth-child(1) {
     display: flex;
   }
