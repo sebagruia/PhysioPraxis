@@ -1,10 +1,15 @@
 import React, { useEffect, useRef } from "react";
+import { connect } from "react-redux";
 import "./postPage.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Post from "../../components/Post/post";
+import LoadingSpinner from "../../components/LoadingSpinner/loadingSpinner";
 
-const PostPage = () => {
+
+import { arangedTitle } from "../../DATA";
+
+const PostPage = ({ news }) => {
   const refToPost = useRef(null);
 
   useEffect(() => {
@@ -15,11 +20,15 @@ const PostPage = () => {
     });
   });
 
-  const location = useLocation();
-  const { id, date, image, title, text } = location.state;
+  const params = useParams();
+  const postObj =
+    news.length !== 0 &&
+    news.filter((post) => arangedTitle(post.postTitle) === params.post_id);
+  const { id, createDate, postImageLink, postTitle, postText } = postObj && postObj[0];
 
   return (
     <HelmetProvider>
+      {news.length === 0 ? <LoadingSpinner /> : null}
       <Helmet>
         <meta
           name="description"
@@ -27,10 +36,22 @@ const PostPage = () => {
         />
       </Helmet>
       <div className="postPage-container container" ref={refToPost}>
-        <Post id={id} date={date} image={image} title={title} text={text} />
+        <Post
+          id={id}
+          date={createDate}
+          image={postImageLink}
+          title={postTitle}
+          text={postText}
+        />
       </div>
     </HelmetProvider>
   );
 };
 
-export default PostPage;
+const mapStateToProps = (state) => {
+  return {
+    news: state.userReducer.news,
+  };
+};
+
+export default connect(mapStateToProps)(PostPage);

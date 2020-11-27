@@ -68,7 +68,7 @@ class App extends Component {
             <Route exact path="/news">
               <News />
             </Route>
-            <Route path="/news/:post_id">
+            <Route exact path="/news/:post_id">
               <PostPage />
             </Route>
             <Route exact path="/appointmentPage">

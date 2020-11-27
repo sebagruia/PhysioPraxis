@@ -94,9 +94,9 @@
    
 }
 
-
 .post-footer-socials{
     display:flex;
+    align-items: center;
 }
 
 .post-footer-socials img{

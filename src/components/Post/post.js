@@ -7,12 +7,12 @@ import Pin from "../../assets/iconmonstr-pin.png";
 import FacebookEmpty from "../../assets/iconmonstr-facebook-empty.png";
 import TwitterEmpty from "../../assets/iconmonstr-twitter-empty.png";
 import InstagramEmpty from "../../assets/iconmonstr-instagram-empty.png";
+import { FacebookShareButton, TwitterShareButton } from "react-share";
 import { arangedTitle } from "../../DATA";
 
 const Post = ({ id, date, image, title, text }) => {
   const history = useHistory();
   const { pathname } = history.location;
-
   const toPostPage = () => {
     history.push(`/news/${arangedTitle(title)}`, {
       id,
@@ -25,6 +25,7 @@ const Post = ({ id, date, image, title, text }) => {
   const goBack = () => {
     history.goBack();
   };
+  const parsedTitle = title && arangedTitle(title);
   return (
     <div className="post-container" id={id}>
       <img
@@ -55,18 +56,27 @@ const Post = ({ id, date, image, title, text }) => {
       </div>
       <hr className="post-end-hr"></hr>
       <div className="post-footer">
-
         <Button onClick={pathname === "/news" ? toPostPage : goBack}>
           {pathname === "/news" ? "Weiterlesen" : "Zurück"}
         </Button>
-        
+
         <div className="post-footer-socials">
-          <a href="https://www.facebook.com/physiopraxis.marian/">
+          <FacebookShareButton
+            url={`${process.env.PUBLIC_URL}news/${parsedTitle}`}
+          >
             <img src={FacebookEmpty} alt="facebook icon" />
-          </a>
-          <a href="https://www.facebook.com/physiopraxis.marian/">
+          </FacebookShareButton>
+          {/* <a href="https://www.facebook.com/physiopraxis.marian/">
+            <img src={FacebookEmpty} alt="facebook icon" />
+          </a> */}
+          <TwitterShareButton
+            url={`${process.env.PUBLIC_URL}news/${parsedTitle}`}
+          >
             <img src={TwitterEmpty} alt="twitter icon" />
-          </a>
+          </TwitterShareButton>
+          {/* <a href="https://www.facebook.com/physiopraxis.marian/">
+            <img src={TwitterEmpty} alt="twitter icon" />
+          </a> */}
           <a href="https://www.facebook.com/physiopraxis.marian/">
             <img src={InstagramEmpty} alt="instagram icon" />
           </a>

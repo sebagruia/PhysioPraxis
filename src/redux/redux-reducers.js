@@ -9,7 +9,7 @@ import {
 const initialState = {
   currentUser: null,
   testimonials: {},
-  news: {},
+  news:[],
   leaveMessageStatus:false,
   sendingMessageStatus:false
 };
