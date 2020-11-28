@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/pages/PostPage/postPage.css"],"names":[],"mappings":"AAAA,oBACI,iBAAkB,CAClB,gBACJ","file":"10.efd38c07.chunk.css","sourcesContent":[".postPage-container{\r\n    padding-right: 10%;\r\n    padding-left: 10%;\r\n}"]}
