@@ -11,11 +11,11 @@ const News = ({ currentUser, news }) => {
   return (
     <HelmetProvider>
       <Helmet>
+        <title>PhysioPraxis Marian | Aktuelles</title>
         <meta
           name="description"
-          content="Praxis für Physiotherapie in Darmstadt bietet Krankengymnastik Manuelle Lymphdrainage KG Neuro Massage Craniomandibuläre Dysfunktionen Heiß- und Kalttherapie"
+          content="Praxis für Physiotherapie in Darmstadt bietet Krankengymnastik Manuelle Lymphdrainage KG Neuro Massage Craniomandibuläre Dysfunktionen Heiß- und Kalttherapie."
         />
-        <title>PhysioPraxis Marian | Aktuelles</title>
       </Helmet>
       <div className="container-fluid news">
         <PageHeader>Aktuelles</PageHeader>
@@ -30,7 +30,7 @@ const News = ({ currentUser, news }) => {
                 date={post.createDate}
                 image={post.postImageLink}
                 title={post.postTitle}
-                text={post.postText}
+                text={`${post.postText.slice(0,100)}...`}
               />
             ))}
           </div>
@@ -44,7 +44,7 @@ const News = ({ currentUser, news }) => {
                 date={post.createDate}
                 image={post.postImageLink}
                 title={post.postTitle}
-                text={post.postText}
+                text={`${post.postText.slice(0,100)}...`}
               />
             ))}
           </div>

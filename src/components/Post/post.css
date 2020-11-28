@@ -99,6 +99,10 @@
     align-items: center;
 }
 
+.post-footer-socials button{
+  outline:none;
+}
+
 .post-footer-socials img{
     width:25px;
     height:25px;

@@ -10,11 +10,11 @@ const Home = () => {
   return (
     <HelmetProvider>
       <Helmet>
+        <title>PhysioPraxis Marian | Home</title>
         <meta
           name="description"
-          content="Praxis für Physiotherapie in Darmstadt bietet Krankengymnastik Manuelle Lymphdrainage KG Neuro Massage Craniomandibuläre Dysfunktionen Heiß- und Kalttherapie"
+          content="Ich bin Marian, Ihr Therapeut und Partner für Ihren Gesundungsprozess. Mit einer Erfahrung von über 12 Jahren in der Physiotherapie, biete ich höchste Qualität in der Behandlung und körperlichen Heilung jedes Patienten."
         />
-        <title>PhysioPraxis Marian | Home</title>
       </Helmet>
       <HeroSection />
       <ProfessionalPreview />

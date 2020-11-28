@@ -9,11 +9,11 @@ const Services = () => {
   return (
     <HelmetProvider>
       <Helmet>
+        <title>PhysioPraxis Marian | Leistungen</title>
         <meta
           name="description"
-          content="Praxis für Physiotherapie in Darmstadt bietet Krankengymnastik Manuelle Lymphdrainage KG Neuro Massage Craniomandibuläre Dysfunktionen Heiß- und Kalttherapie"
+          content="Praxis für Physiotherapie in Darmstadt bietet Krankengymnastik Manuelle Lymphdrainage KG Neuro Massage Craniomandibuläre Dysfunktionen Heiß- und Kalttherapie."
         />
-        <title>PhysioPraxis Marian | Leistungen</title>
       </Helmet>
       <div className="container-fluid services">
         <PageHeader>Leistungen</PageHeader>

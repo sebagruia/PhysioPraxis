@@ -13,6 +13,7 @@ import { arangedTitle } from "../../DATA";
 const Post = ({ id, date, image, title, text }) => {
   const history = useHistory();
   const { pathname } = history.location;
+  
   const toPostPage = () => {
     history.push(`/news/${arangedTitle(title)}`, {
       id,
@@ -26,6 +27,7 @@ const Post = ({ id, date, image, title, text }) => {
     history.goBack();
   };
   const parsedTitle = title && arangedTitle(title);
+
   return (
     <div className="post-container" id={id}>
       <img
@@ -62,21 +64,15 @@ const Post = ({ id, date, image, title, text }) => {
 
         <div className="post-footer-socials">
           <FacebookShareButton
-            url={`${process.env.PUBLIC_URL}news/${parsedTitle}`}
+            url={`${process.env.REACT_APP_PUBLIC_URL}/news/${parsedTitle}`}
           >
             <img src={FacebookEmpty} alt="facebook icon" />
           </FacebookShareButton>
-          {/* <a href="https://www.facebook.com/physiopraxis.marian/">
-            <img src={FacebookEmpty} alt="facebook icon" />
-          </a> */}
           <TwitterShareButton
-            url={`${process.env.PUBLIC_URL}news/${parsedTitle}`}
+            url={`${process.env.REACT_APP_PUBLIC_URL}/news/${parsedTitle}`}
           >
             <img src={TwitterEmpty} alt="twitter icon" />
           </TwitterShareButton>
-          {/* <a href="https://www.facebook.com/physiopraxis.marian/">
-            <img src={TwitterEmpty} alt="twitter icon" />
-          </a> */}
           <a href="https://www.facebook.com/physiopraxis.marian/">
             <img src={InstagramEmpty} alt="instagram icon" />
           </a>

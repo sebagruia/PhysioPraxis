@@ -20,7 +20,9 @@
 .postForm textarea {
   margin-top: 0px;
 }
-
+.postForm .post-group input:first-child{
+  margin-bottom: 20px;
+}
 .post-title-input {
   width: 100%;
 }
