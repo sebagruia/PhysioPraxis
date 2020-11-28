@@ -27,7 +27,6 @@ const Post = ({ id, date, image, title, text }) => {
     history.goBack();
   };
   const parsedTitle = title && arangedTitle(title);
-
   return (
     <div className="post-container" id={id}>
       <img
@@ -65,6 +64,7 @@ const Post = ({ id, date, image, title, text }) => {
         <div className="post-footer-socials">
           <FacebookShareButton
             url={`${process.env.REACT_APP_PUBLIC_URL}/news/${parsedTitle}`}
+            quote={`${text && text.split(0,50)}`}
           >
             <img src={FacebookEmpty} alt="facebook icon" />
           </FacebookShareButton>
