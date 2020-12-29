@@ -11,6 +11,7 @@ import {
   getTestimonials,
   getNews,
 } from "../redux/redux-actions";
+import ErrorBoundary from "../components/ErrorBoundary/errorBoundary";
 import { auth, createUserProfileDocument } from "../firebase/firebase";
 
 const Home = lazy(() => import("../pages/Home/home"));
@@ -51,38 +52,46 @@ class App extends Component {
     return (
       <div className="App">
         <Navigation />
-        <Suspense fallback={<LoadingSpinner />}>
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/aboutUs">
-              <AboutUs />
-            </Route>
-            <Route exact path="/services">
-              <Services />
-            </Route>
-            <Route path="/services/serviceDescription">
-              <ServiceDescription />
-            </Route>
-            <Route exact path="/news">
-              <News />
-            </Route>
-            <Route exact path="/news/:post_id">
-              <PostPage />
-            </Route>
-            <Route exact path="/appointmentPage">
-              <AppointmentPage />
-            </Route>
-          </Switch>
-        </Suspense>
+        <ErrorBoundary>
+          <Suspense fallback={<LoadingSpinner />}>
+            <Switch>
+              <Route exact path="/">
+                <Home />
+              </Route>
+              <Route path="/aboutUs">
+                <AboutUs />
+              </Route>
+              <Route exact path="/services">
+                <Services />
+              </Route>
+              <Route path="/services/serviceDescription">
+                <ServiceDescription />
+              </Route>
+              <Route exact path="/news">
+                <News />
+              </Route>
+              <Route exact path="/news/:post_id">
+                <PostPage />
+              </Route>
+              <Route exact path="/appointmentPage">
+                <AppointmentPage />
+              </Route>
+            </Switch>
+          </Suspense>
+        </ErrorBoundary>
+
         <CookieConsent
           style={{ backgroundColor: "rgb(0, 58, 69, 0.9)" }}
           containerClasses="cookieConsent"
-          buttonStyle={{ backgroundColor: "#e7efe9", color:"#003a45", border:"2px solid #fff" }}
+          buttonStyle={{
+            backgroundColor: "#e7efe9",
+            color: "#003a45",
+            border: "2px solid #fff",
+          }}
           buttonText="Ich verstehe"
         >
-          Diese Website verwendet Cookies, um die Benutzererfahrung zu verbessern.
+          Diese Website verwendet Cookies, um die Benutzererfahrung zu
+          verbessern.
         </CookieConsent>
         <Footer />
       </div>
