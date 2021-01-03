@@ -58,7 +58,7 @@
     .widen {
       height: 100vh;
       top:0px;
-      z-index: 10;
+      z-index: 999;
     }
     .leave-a-message .buttonAndPopUp-container{
       align-self: flex-start;
