@@ -11,7 +11,7 @@ const initialState = {
   testimonials: {},
   news:[],
   leaveMessageStatus:false,
-  sendingMessageStatus:false
+  sendingMessageStatus:false,
 };
 
 export const userReducer = (state = initialState, action) => {

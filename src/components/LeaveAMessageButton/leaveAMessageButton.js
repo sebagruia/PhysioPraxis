@@ -8,7 +8,7 @@ import {leaveMessageStatusChange} from "../../redux/redux-actions";
 const LeaveAMessageButton = ({dispatch,leaveMessageStatus}) => {
 
   const handleClick = () => {
-    dispatch(leaveMessageStatusChange(leaveMessageStatus))
+    dispatch(leaveMessageStatusChange(!leaveMessageStatus))
   };
   return (
     <div onClick={handleClick} className="message-button" role="button">

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./navigation.css";
 
 import { connect } from "react-redux";
-import { leaveMessageStatusChange } from "../../redux/redux-actions";
 
 import {withRouter , NavLink } from "react-router-dom";
 import { Helmet, HelmetProvider  } from "react-helmet-async";
@@ -25,8 +24,8 @@ import Facebook from "../../assets/iconmonstr-facebook.png";
 import Instagram from "../../assets/iconmonstr-instagram.png";
 import Twitter from "../../assets/iconmonstr-twitter.png";
 
-const Navigation = ({ history, dispatch, currentUser, leaveMessageStatus }) => {
-  
+const Navigation = ({ history,currentUser, leaveMessageStatus }) => {
+
   const [active, setActivate] = useState(false);
   const [InfoTableOn, setInfoTableOn] = useState(false);
 
@@ -35,7 +34,6 @@ const Navigation = ({ history, dispatch, currentUser, leaveMessageStatus }) => {
   const handleHamburgerMenu = () => {
     if(window.innerWidth < 1218){
       setActivate(!active);
-      dispatch(leaveMessageStatusChange(true));
     }
   };
 

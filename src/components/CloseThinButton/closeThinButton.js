@@ -7,7 +7,7 @@ import CloseThin from "../../assets/iconmonstr-x-thin.png";
 const CloseThinButton = ({dispatch, leaveMessageStatus}) => {
 
   const handleClick = () => {
-    dispatch(leaveMessageStatusChange(leaveMessageStatus))
+    dispatch(leaveMessageStatusChange(!leaveMessageStatus))
   };
 
   return (

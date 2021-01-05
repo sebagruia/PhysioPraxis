@@ -49,7 +49,7 @@ export const getNews = () => async (dispatch) => {
 export const leaveMessageStatusChange = (value)=>{
   return{
     type:LEAVE_MESSAGE_STATUS,
-    payload:!value
+    payload:value
 
   }
 }
@@ -57,7 +57,7 @@ export const leaveMessageStatusChange = (value)=>{
 export const sendingMessageStatusAction = (status)=>{
   return{
     type:SENDING_MESSAGE_STATUS,
-    payload:!status
+    payload:status
   }
 }
 

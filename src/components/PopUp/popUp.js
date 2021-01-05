@@ -7,7 +7,7 @@ const PopUp = ({ dispatch, children, messageStatus }) => {
 
   if (messageStatus) {
     setTimeout(
-      () => dispatch(sendingMessageStatusAction(messageStatus)),
+      () => dispatch(sendingMessageStatusAction(false)),
       2000
     );
   }

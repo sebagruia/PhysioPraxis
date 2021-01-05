@@ -14,6 +14,7 @@ import emailjs from "emailjs-com";
 class BookingForm extends Component {
   constructor() {
     super();
+    this.recaptchaRef = React.createRef();
     this.state = {
       email: "",
       name: "",
@@ -21,22 +22,23 @@ class BookingForm extends Component {
       time: "",
       phone: "",
       message: "",
+      "g-recaptcha-response":""
     };
   }
-
+  
   sendMessageWithEmailJs = () => {
     emailjs
       .send(
         process.env.REACT_APP_YOUR_SERVICE_ID,
         process.env.REACT_APP_YOUR_TEMPLATE_ID,
         this.state,
-        process.env.REACT_APP_YOUR_USER_ID
+        process.env.REACT_APP_YOUR_USER_ID,
       )
       .then(
         (result) => {
           if (result.text === "OK") {
             this.props.dispatch(
-              sendingMessageStatusAction(this.props.bookingMessageStatus)
+              sendingMessageStatusAction(!this.props.sendingMessageStatus)
             );
             console.log("SUCCES", result.text);
           }
@@ -50,6 +52,7 @@ class BookingForm extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     this.sendMessageWithEmailJs();
+    this.recaptchaRef.current.reset();
     this.setState({
       email: "",
       name: "",
@@ -65,7 +68,8 @@ class BookingForm extends Component {
     this.setState({ [name]: event.target.value });
   };
   handleOnChangeReCAptcha = (value) => {
-    console.log("Captcha value:", value);
+    console.log("g-recaptcha-response: Generated");
+    this.setState({ "g-recaptcha-response": value});
   };
 
   checkDateValidity = (date) => {
@@ -77,13 +81,10 @@ class BookingForm extends Component {
   };
 
   render() {
-    const {
-      history,
-      sendingMessageStatus,
-      handleOnChangeReCAptcha,
-    } = this.props;
+    const {history,sendingMessageStatus} = this.props;
     const { pathname } = history.location;
     const { email, name, date, time, phone, message } = this.state;
+    
     return (
       <Form
         onSubmit={this.handleSubmit}
@@ -167,8 +168,9 @@ class BookingForm extends Component {
           <BookButton buttonName="Vereinbaren" />
           <PopUp messageStatus={sendingMessageStatus}>Sent</PopUp>
           <ReCAPTCHA
+            ref={this.recaptchaRef}
             sitekey={`${process.env.REACT_APP_YOUR_RECAPTCHA_KEY}`}
-            onChange={handleOnChangeReCAptcha}
+            onChange={this.handleOnChangeReCAptcha}
             className="g-recaptcha"
           />
         </div>

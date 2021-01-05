@@ -5,8 +5,7 @@ import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import CloseThinButton from "../CloseThinButton/closeThinButton";
 import BookButton from "../../components/BookButton/bookButton";
-import PopUp from "../PopUp/popUp";
-import { leaveMessageStatusChange, sendingMessageStatusAction } from "../../redux/redux-actions";
+import {leaveMessageStatusChange} from "../../redux/redux-actions";
 import emailjs from "emailjs-com";
 
 class LeaveAMessageForm extends Component {
@@ -30,10 +29,7 @@ class LeaveAMessageForm extends Component {
     .then(
       (result) => {
         if (result.text === "OK") {
-          this.props.dispatch(
-            sendingMessageStatusAction(this.props.bookingMessageStatus)
-          );
-          this.props.dispatch(leaveMessageStatusChange(this.props.leaveMessageStatus));
+          this.props.dispatch(leaveMessageStatusChange(false));
         }
         console.log("SUCCES", result.text);
       },
@@ -59,7 +55,7 @@ class LeaveAMessageForm extends Component {
   };
 
   render() {
-    const { leaveMessageStatus, sendingMessageStatus } = this.props;
+    const { leaveMessageStatus} = this.props;
     const { name, email, message } = this.state;
     return (
       <div
@@ -115,7 +111,6 @@ class LeaveAMessageForm extends Component {
           </Form.Group>
           <div className="buttonAndPopUp-container">
             <BookButton buttonName="SEND" />
-            <PopUp messageStatus={sendingMessageStatus}>Sent</PopUp>
           </div>
         </Form>
       </div>
@@ -126,7 +121,6 @@ class LeaveAMessageForm extends Component {
 const mapStateToProps = (state) => {
   return {
     leaveMessageStatus: state.userReducer.leaveMessageStatus,
-    sendingMessageStatus: state.userReducer.sendingMessageStatus,
   };
 };
 
