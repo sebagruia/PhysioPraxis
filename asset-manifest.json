@@ -3,9 +3,9 @@
     "static/css/0.288bf6aa.chunk.css": "/PhysioPraxis/static/css/0.288bf6aa.chunk.css",
     "static/js/0.5130e04f.chunk.js": "/PhysioPraxis/static/js/0.5130e04f.chunk.js",
     "static/js/0.5130e04f.chunk.js.map": "/PhysioPraxis/static/js/0.5130e04f.chunk.js.map",
-    "main.css": "/PhysioPraxis/static/css/main.1b73e101.chunk.css",
-    "main.js": "/PhysioPraxis/static/js/main.2b7dfc8c.chunk.js",
-    "main.js.map": "/PhysioPraxis/static/js/main.2b7dfc8c.chunk.js.map",
+    "main.css": "/PhysioPraxis/static/css/main.4f0aa5bd.chunk.css",
+    "main.js": "/PhysioPraxis/static/js/main.8e8b7e0c.chunk.js",
+    "main.js.map": "/PhysioPraxis/static/js/main.8e8b7e0c.chunk.js.map",
     "runtime-main.js": "/PhysioPraxis/static/js/runtime-main.3e24661b.js",
     "runtime-main.js.map": "/PhysioPraxis/static/js/runtime-main.3e24661b.js.map",
     "static/js/3.88d54f98.chunk.js": "/PhysioPraxis/static/js/3.88d54f98.chunk.js",
@@ -42,7 +42,7 @@
     "static/css/7.fa942d8a.chunk.css.map": "/PhysioPraxis/static/css/7.fa942d8a.chunk.css.map",
     "static/css/8.1e036302.chunk.css.map": "/PhysioPraxis/static/css/8.1e036302.chunk.css.map",
     "static/css/9.69e93722.chunk.css.map": "/PhysioPraxis/static/css/9.69e93722.chunk.css.map",
-    "static/css/main.1b73e101.chunk.css.map": "/PhysioPraxis/static/css/main.1b73e101.chunk.css.map",
+    "static/css/main.4f0aa5bd.chunk.css.map": "/PhysioPraxis/static/css/main.4f0aa5bd.chunk.css.map",
     "static/js/3.88d54f98.chunk.js.LICENSE.txt": "/PhysioPraxis/static/js/3.88d54f98.chunk.js.LICENSE.txt",
     "static/media/PhysiopraxisLogoShadow.8b6037b2.png": "/PhysioPraxis/static/media/PhysiopraxisLogoShadow.8b6037b2.png",
     "static/media/errorBoundry.css": "/PhysioPraxis/static/media/error_img.ac5a2835.png",
@@ -51,7 +51,7 @@
   "entrypoints": [
     "static/js/runtime-main.3e24661b.js",
     "static/js/3.88d54f98.chunk.js",
-    "static/css/main.1b73e101.chunk.css",
-    "static/js/main.2b7dfc8c.chunk.js"
+    "static/css/main.4f0aa5bd.chunk.css",
+    "static/js/main.8e8b7e0c.chunk.js"
   ]
 }
