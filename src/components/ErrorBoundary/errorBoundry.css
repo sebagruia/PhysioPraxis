@@ -9,7 +9,7 @@
 
 .errorImageContainer {
   display: inline-block;
-  background-image: url("../../assets/errorImg.png");
+  background-image: url("../../assets/error_img.png");
   background-size: cover;
   background-position: center;
   width: 40vh;
