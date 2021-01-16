@@ -1,9 +1,11 @@
 import { firestore } from "../firebase/firebase";
+import {client} from "../utils/contentful";
 export const SET_CURRENT_USER = "SET_CURRENT_USER";
 export const GET_TESTIMONIALS = "GET_TESTIMONIALS";
 export const GET_NEWS = "GET_NEWS";
 export const LEAVE_MESSAGE_STATUS = "LEAVE_MESSAGE_STATUS";
 export const SENDING_MESSAGE_STATUS = "SENDING_MESSAGE_STATUS";
+export const GET_HOME_PAGE_INFO = "GET_HOME_PAGE_INFO";
 
 export const setCurrentUser = (user) => {
   return {
@@ -46,21 +48,27 @@ export const getNews = () => async (dispatch) => {
   }
 };
 
-export const leaveMessageStatusChange = (value)=>{
-  return{
-    type:LEAVE_MESSAGE_STATUS,
-    payload:value
+export const leaveMessageStatusChange = (value) => {
+  return {
+    type: LEAVE_MESSAGE_STATUS,
+    payload: value,
+  };
+};
 
+export const sendingMessageStatusAction = (status) => {
+  return {
+    type: SENDING_MESSAGE_STATUS,
+    payload: status,
+  };
+};
+export const getingHomePageInfo = () => async (dispatch) => {
+  try {
+    const homeContent = await client.getEntry("6qEtbqFKX5CXcj6jPTg4VR");
+    dispatch({
+      type: GET_HOME_PAGE_INFO,
+      payload: homeContent,
+    }) 
+  } catch (error) {
+    console.log(`Error getting homeContent ${error.message}`);
   }
-}
-
-export const sendingMessageStatusAction = (status)=>{
-  return{
-    type:SENDING_MESSAGE_STATUS,
-    payload:status
-  }
-}
-
-
-
-
+};

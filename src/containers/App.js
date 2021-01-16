@@ -10,6 +10,7 @@ import {
   setCurrentUser,
   getTestimonials,
   getNews,
+  getingHomePageInfo
 } from "../redux/redux-actions";
 import ErrorBoundary from "../components/ErrorBoundary/errorBoundary";
 import { auth, createUserProfileDocument } from "../firebase/firebase";
@@ -43,6 +44,7 @@ class App extends Component {
     });
     this.props.getTestimonials();
     this.props.getNews();
+    this.props.getHomeContent()
   }
 
   componentWillUnmount() {
@@ -110,6 +112,7 @@ const mapDispatchToProps = (dispatch) => {
     setCurrentUser: (user) => dispatch(setCurrentUser(user)),
     getTestimonials: () => dispatch(getTestimonials()),
     getNews: () => dispatch(getNews()),
+    getHomeContent:()=>dispatch(getingHomePageInfo())
   };
 };
 
