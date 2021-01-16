@@ -1,6 +1,6 @@
 import React from "react";
 import "./appointmentContainer.css";
-import { connect } from "react-redux";
+// import { connect } from "react-redux";
 import BookingForm from "../../components/BookingForm/bookingForm";
 import AddTestimonialAndPostButton from "../../components/AddTestimonialAndPostButton/addTestimonialAndPostButton";
 import Testimonial from "../../components/Testimonial/testimonial";
@@ -20,12 +20,12 @@ const AppointmentContainer = ({ currentUser, testimonials }) => {
             <AddTestimonialAndPostButton currentUser={currentUser} />
           </div>
           <div className="testimonials-container">
-            {Object.values(testimonials).map((testimonial) => (
+            {testimonials && testimonials.map((testimonial) => (
               <Testimonial
-                key={testimonial.id}
-                text={testimonial.message}
-                image={testimonial.selectionAvatar}
-                name={testimonial.name}
+                key={testimonial.sys.id}
+                text={testimonial.fields.content}
+                image={testimonial.fields.avatarImage.fields.file.url}
+                name={testimonial.fields.name}
               />
             ))}
           </div>
@@ -35,11 +35,12 @@ const AppointmentContainer = ({ currentUser, testimonials }) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    currentUser: state.userReducer.currentUser,
-    testimonials: state.userReducer.testimonials,
-  };
-};
+// const mapStateToProps = (state) => {
+//   return {
+//     currentUser: state.userReducer.currentUser,
+//     testimonials: state.userReducer.testimonials,
+//   };
+// };
 
-export default connect(mapStateToProps)(AppointmentContainer);
+// export default connect(mapStateToProps)(AppointmentContainer);
+export default AppointmentContainer;

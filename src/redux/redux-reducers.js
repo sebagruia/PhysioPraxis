@@ -4,7 +4,8 @@ import {
   GET_NEWS,
   LEAVE_MESSAGE_STATUS,
   SENDING_MESSAGE_STATUS,
-  GET_HOME_PAGE_INFO
+  GET_HOME_PAGE_INFO,
+  GET_HOME_PAGE_TESTIMONIAL
 } from "./redux-actions";
 
 const initialState = {
@@ -13,7 +14,8 @@ const initialState = {
   news:[],
   leaveMessageStatus:false,
   sendingMessageStatus:false,
-  homeContent:""
+  homeContent:{},
+  testimonialsHome:[]
 };
 
 export const userReducer = (state = initialState, action) => {
@@ -47,6 +49,11 @@ export const userReducer = (state = initialState, action) => {
       return {
         ...state,
         homeContent: action.payload,
+      };
+    case GET_HOME_PAGE_TESTIMONIAL:
+      return {
+        ...state,
+        testimonialsHome: action.payload,
       };
     default:
       return state;

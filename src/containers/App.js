@@ -10,7 +10,8 @@ import {
   setCurrentUser,
   getTestimonials,
   getNews,
-  getingHomePageInfo
+  getingHomePageInfo,
+  getHomePageTestimonials
 } from "../redux/redux-actions";
 import ErrorBoundary from "../components/ErrorBoundary/errorBoundary";
 import { auth, createUserProfileDocument } from "../firebase/firebase";
@@ -44,7 +45,8 @@ class App extends Component {
     });
     this.props.getTestimonials();
     this.props.getNews();
-    this.props.getHomeContent()
+    this.props.getHomeContent();
+    this.props.getTestimonialsHome();
   }
 
   componentWillUnmount() {
@@ -101,19 +103,15 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    currentUser: state.userReducer.currentUser,
-  };
-};
 
 const mapDispatchToProps = (dispatch) => {
   return {
     setCurrentUser: (user) => dispatch(setCurrentUser(user)),
     getTestimonials: () => dispatch(getTestimonials()),
     getNews: () => dispatch(getNews()),
-    getHomeContent:()=>dispatch(getingHomePageInfo())
+    getHomeContent:()=>dispatch(getingHomePageInfo()),
+    getTestimonialsHome:()=>dispatch(getHomePageTestimonials()),
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(null, mapDispatchToProps)(App);

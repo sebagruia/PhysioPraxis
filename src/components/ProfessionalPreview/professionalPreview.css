@@ -17,6 +17,9 @@
     padding: 30px 0 30px 30px;
     font-weight: 700;
   }
+  .professional_paragraph{
+    padding-bottom: 10px;
+  }
   .professionalPreview-text h1 {
     font-family: "Montserrat";
     font-size: 1.5rem;

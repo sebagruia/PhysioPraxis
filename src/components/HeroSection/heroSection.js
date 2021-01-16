@@ -2,14 +2,14 @@ import React from "react";
 import "./heroSection.css";
 
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
-import { BLOCKS, INLINES } from "@contentful/rich-text-types";
+import {BLOCKS} from "@contentful/rich-text-types";
 
 const HeroSection = ({ homePageContent }) => {
   const{descriptionBox1, descriptionBox2, descriptionBox3} = homePageContent;
   const RICHTEXT_OPTIONS = {
     renderNode: {
       [BLOCKS.PARAGRAPH]: (node, next) =>
-        `<p class="contentful_paragraph">${next(node.content)}</p>`,
+        `<p class="description_paragraph">${next(node.content)}</p>`,
     },
   };
   return (
