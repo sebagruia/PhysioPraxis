@@ -1,23 +1,22 @@
 import React from "react";
 import "./testimonial.css";
-import Quote from "../../assets/iconmonstr-quote.png";
 
-const Testimonial = ({text, image, name})=>{
+const Testimonial = ({testimonial})=>{
     return(
         <div className="testimonial">
         <div className="quote">
-          <img src={Quote} alt="quote" />
+          <img src={testimonial.quoteIcon.fields.file.url} alt="quote" />
         </div>
         <div className="quote-text">
           <p>
-            {text}
+            {testimonial.content}
           </p>
         </div>
         <div className="avatar">
           <div className="avatar-face">
-            <img src={image} alt="a man" />
+            <img src={testimonial.avatarImage.fields.file.url} alt="a man" />
           </div>
-          <h6>{name}</h6>
+          <h6>{testimonial.name}</h6>
         </div>
       </div>
     );

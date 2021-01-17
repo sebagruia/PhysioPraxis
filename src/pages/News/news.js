@@ -5,7 +5,6 @@ import { connect } from "react-redux";
 import Post from "../../components/Post/post";
 import RecentPost from "../../components/RecentPost/recentPost";
 import PageHeader from "../../components/PageHeader/pageHeader";
-import AddTestimonialAndPostButton from "../../components/AddTestimonialAndPostButton/addTestimonialAndPostButton";
 
 const News = ({ currentUser, news }) => {
   return (
@@ -22,7 +21,6 @@ const News = ({ currentUser, news }) => {
 
         <div className="news-container container">
           <div className="news-post-container">
-            <AddTestimonialAndPostButton currentUser={currentUser} />
             {Object.values(news).map((post) => (
               <Post
                 key={post.id}

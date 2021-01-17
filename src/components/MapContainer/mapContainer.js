@@ -4,7 +4,7 @@ import MapLocation from "../../components/MapLocation/mapLocation";
 import AdditionalInfoButton from "../../components/AdditionalInfoButton/additionalInfoButton";
 
 
-const MapContainer = ()=>{
+const MapContainer = ({homePageContent})=>{
     const [display, setDisplay] = useState(false);
 
     const handleDisplay = () => {
@@ -13,7 +13,7 @@ const MapContainer = ()=>{
   
     return(
         <div className="container-fluid map">
-        <MapLocation />
+        <MapLocation homePageContent={homePageContent}/>
         <AdditionalInfoButton handleDisplay={handleDisplay} display={display} />
         <div
           className="additionalInfo"

@@ -7,14 +7,10 @@ import LoadingSpinner from "../components/LoadingSpinner/loadingSpinner";
 import Navigation from "../components/Navigation/navigation";
 import Footer from "../components/Footer/footer";
 import {
-  setCurrentUser,
-  getTestimonials,
-  getNews,
   getingHomePageInfo,
-  getHomePageTestimonials
+  getHomePageTestimonials,
 } from "../redux/redux-actions";
 import ErrorBoundary from "../components/ErrorBoundary/errorBoundary";
-import { auth, createUserProfileDocument } from "../firebase/firebase";
 
 const Home = lazy(() => import("../pages/Home/home"));
 const AboutUs = lazy(() => import("../pages/AboutUs/aboutUs"));
@@ -29,30 +25,13 @@ const News = lazy(() => import("../pages/News/news"));
 const PostPage = lazy(() => import("../pages/PostPage/postPage"));
 
 class App extends Component {
-  unsubscribeFromAuth = null;
-
   componentDidMount() {
-    this.unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
-      if (userAuth) {
-        const userRef = await createUserProfileDocument(userAuth);
-        const snapShot = await userRef.get();
-        if (snapShot.exists) {
-          this.props.setCurrentUser(snapShot.data());
-        }
-      } else {
-        this.props.setCurrentUser(userAuth);
-      }
-    });
-    this.props.getTestimonials();
-    this.props.getNews();
     this.props.getHomeContent();
     this.props.getTestimonialsHome();
   }
 
-  componentWillUnmount() {
-    this.unsubscribeFromAuth();
-  }
   render() {
+    const{homeContent} = this.props;
     return (
       <div className="App">
         <Navigation />
@@ -97,21 +76,22 @@ class App extends Component {
           Diese Website verwendet Cookies, um die Benutzererfahrung zu
           verbessern.
         </CookieConsent>
-        <Footer />
+        <Footer homeContent={homeContent.fields}/>
       </div>
     );
   }
 }
 
-
+const mapStateToProps = (state) => {
+  return {
+    homeContent:state.userReducer.homeContent,
+  };
+};
 const mapDispatchToProps = (dispatch) => {
   return {
-    setCurrentUser: (user) => dispatch(setCurrentUser(user)),
-    getTestimonials: () => dispatch(getTestimonials()),
-    getNews: () => dispatch(getNews()),
-    getHomeContent:()=>dispatch(getingHomePageInfo()),
-    getTestimonialsHome:()=>dispatch(getHomePageTestimonials()),
+    getHomeContent: () => dispatch(getingHomePageInfo()),
+    getTestimonialsHome: () => dispatch(getHomePageTestimonials()),
   };
 };
 
-export default connect(null, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);

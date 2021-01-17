@@ -22,10 +22,10 @@ const Home = ({ homeContent, testimonialsHome }) => {
           content="Ich bin Marian, Ihr Therapeut und Partner für Ihren Gesundungsprozess. Mit einer Erfahrung von über 12 Jahren in der Physiotherapie, biete ich höchste Qualität in der Behandlung und körperlichen Heilung jedes Patienten."
         />
       </Helmet>
-      <HeroSection homePageContent={homePageContent && homePageContent } />
-      <ProfessionalPreview homePageContent={homePageContent && homePageContent} />
-      <AppointmentContainer testimonials={testimonials && testimonials} />
-      <MapContainer />
+      <HeroSection homePageContent={homePageContent} />
+      <ProfessionalPreview homePageContent={homePageContent} />
+      <AppointmentContainer testimonials={testimonials} />
+      <MapContainer homePageContent={homePageContent}/>
     </HelmetProvider>
   );
 };

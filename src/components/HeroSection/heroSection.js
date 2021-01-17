@@ -2,10 +2,9 @@ import React from "react";
 import "./heroSection.css";
 
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
-import {BLOCKS} from "@contentful/rich-text-types";
+import { BLOCKS } from "@contentful/rich-text-types";
 
 const HeroSection = ({ homePageContent }) => {
-  const{descriptionBox1, descriptionBox2, descriptionBox3} = homePageContent;
   const RICHTEXT_OPTIONS = {
     renderNode: {
       [BLOCKS.PARAGRAPH]: (node, next) =>
@@ -39,14 +38,26 @@ const HeroSection = ({ homePageContent }) => {
             <h4>Professionelle Leistungen</h4>
           </div>
           <div className="boxTitle-text">
-            <div dangerouslySetInnerHTML={{__html:documentToHtmlString(descriptionBox1, RICHTEXT_OPTIONS)}}>
-            </div>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: documentToHtmlString(
+                  homePageContent && homePageContent.descriptionBox1,
+                  RICHTEXT_OPTIONS
+                ),
+              }}
+            ></div>
           </div>
         </div>
         <div className="box box2">
           <div className="boxTitle-text">
-          <div dangerouslySetInnerHTML={{__html:documentToHtmlString(descriptionBox2, RICHTEXT_OPTIONS)}}>
-            </div>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: documentToHtmlString(
+                  homePageContent && homePageContent.descriptionBox2,
+                  RICHTEXT_OPTIONS
+                ),
+              }}
+            ></div>
           </div>
           <div className="boxTitle boxTitle-box2">
             <h4>Krankenkassen Partner</h4>
@@ -57,8 +68,14 @@ const HeroSection = ({ homePageContent }) => {
             <h4>Darmstadt Mitte</h4>
           </div>
           <div className="boxTitle-text">
-          <div dangerouslySetInnerHTML={{__html:documentToHtmlString(descriptionBox3, RICHTEXT_OPTIONS)}}>
-            </div>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: documentToHtmlString(
+                  homePageContent && homePageContent.descriptionBox3,
+                  RICHTEXT_OPTIONS
+                ),
+              }}
+            ></div>
           </div>
         </div>
       </div>

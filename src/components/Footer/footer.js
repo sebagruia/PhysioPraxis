@@ -9,7 +9,7 @@ import Phone from "../../assets/iconmonstr-phone.png";
 import Mail from "../../assets/iconmonstr-email.png";
 import Logo from "../Logo/logo";
 
-const Footer = () => {
+const Footer = ({homeContent}) => {
   return (
     <div className="container-fluid footer">
       <div className=" container footer-container">
@@ -19,11 +19,11 @@ const Footer = () => {
         <div className="contactDetails">
           <div className="phone-details">
             <img src={Phone} alt="phone" />
-            <h6>0172 3465694</h6>
+            <h6>{homeContent && homeContent.footerPhoneNumber}</h6>
           </div>
           <div className="email-details">
             <img src={Mail} alt="email" />
-            <h6>physiopraxis.marian@gmail.com</h6>
+            <h6>{homeContent && homeContent.footerEmail}</h6>
           </div>
         </div>
         <div className="footer-details">

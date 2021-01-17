@@ -11,7 +11,6 @@ import { Link as ScrollLink } from "react-scroll";
 import LeaveAMessageForm from "../LeaveAMessageForm/leaveAMessageForm";
 import Hamburger from "../Hamburger/hamburger";
 import LeaveAMessageButton from "../LeaveAMessageButton/leaveAMessageButton";
-import UserButton from "../UserButton/userButton";
 import Logo from "../Logo/logo";
 // import LanguageButton from "../LanguageButton/languageButton";
 import InfoTable from "../InfoTable/infoTable";
@@ -24,7 +23,7 @@ import Facebook from "../../assets/iconmonstr-facebook.png";
 import Instagram from "../../assets/iconmonstr-instagram.png";
 import Twitter from "../../assets/iconmonstr-twitter.png";
 
-const Navigation = ({ history,currentUser, leaveMessageStatus }) => {
+const Navigation = ({ history, leaveMessageStatus, menu }) => {
 
   const [active, setActivate] = useState(false);
   const [InfoTableOn, setInfoTableOn] = useState(false);
@@ -185,7 +184,6 @@ const Navigation = ({ history,currentUser, leaveMessageStatus }) => {
             <LeaveAMessageButton />
             <div className="language-and-user-container">
               {/* <LanguageButton /> */}
-              <UserButton currentUser={currentUser} />
             </div>
           </div>
         </div>
@@ -198,7 +196,6 @@ const Navigation = ({ history,currentUser, leaveMessageStatus }) => {
 
 const mapStateToProps = (state) => {
   return {
-    currentUser: state.userReducer.currentUser,
     leaveMessageStatus: state.userReducer.leaveMessageStatus,
   };
 };
