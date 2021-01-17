@@ -8,9 +8,6 @@ import AppointmentContainer from "../../components/AppointmentContainer/appointm
 import MapContainer from "../../components/MapContainer/mapContainer";
 
 const Home = ({ homeContent, testimonialsHome }) => {
-  console.log(homeContent);
-  console.log(testimonialsHome);
-
   const homePageContent = homeContent.fields;
   const testimonials = testimonialsHome.items;
   return (
