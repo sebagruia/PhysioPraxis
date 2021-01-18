@@ -1,9 +1,7 @@
-import {client} from "../utils/contentful";
 export const LEAVE_MESSAGE_STATUS = "LEAVE_MESSAGE_STATUS";
 export const SENDING_MESSAGE_STATUS = "SENDING_MESSAGE_STATUS";
 export const GET_HOME_PAGE_INFO = "GET_HOME_PAGE_INFO";
 export const GET_HOME_PAGE_TESTIMONIAL = "GET_HOME_PAGE_TESTIMONIAL";
-
 
 
 export const leaveMessageStatusChange = (value) => {
@@ -12,7 +10,7 @@ export const leaveMessageStatusChange = (value) => {
     payload: value,
   };
 };
-
+  
 export const sendingMessageStatusAction = (status) => {
   return {
     type: SENDING_MESSAGE_STATUS,
@@ -21,7 +19,8 @@ export const sendingMessageStatusAction = (status) => {
 };
 export const getingHomePageInfo = () => async (dispatch) => {
   try {
-    const homeContent = await client.getEntry("6qEtbqFKX5CXcj6jPTg4VR");
+    const data = await fetch("/contentful/homeContent");
+    const homeContent = await data.json();
      dispatch({
       type: GET_HOME_PAGE_INFO,
       payload: homeContent,
@@ -30,9 +29,12 @@ export const getingHomePageInfo = () => async (dispatch) => {
     console.log(`Error getting homeContent ${error.message}`);
   }
 };
+
 export const getHomePageTestimonials = () => async (dispatch) => {
   try {
-    const testimonialsHome = await client.getEntries({content_type:'testimonial'});
+    const data = await fetch("/contentful/testimonialsHome");
+    const testimonialsHome = await data.json();
+    console.log(testimonialsHome);
     dispatch({
       type: GET_HOME_PAGE_TESTIMONIAL,
       payload: testimonialsHome,

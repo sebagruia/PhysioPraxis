@@ -3,6 +3,7 @@
   "homepage": "https://sebagruia.github.io/PhysioPraxis/",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:5000",
   "dependencies": {
     "@contentful/rich-text-html-renderer": "^14.1.2",
     "@testing-library/jest-dom": "^4.2.4",
@@ -10,7 +11,10 @@
     "@testing-library/user-event": "^7.2.1",
     "bootstrap": "^4.5.0",
     "contentful": "^8.1.7",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "emailjs-com": "^2.6.4",
+    "express": "^4.17.1",
     "gh-pages": "^3.1.0",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.3",
@@ -35,7 +39,10 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "sitemap": "babel-node src/sitemap/generator.js"
+    "sitemap": "babel-node src/sitemap/generator.js",
+    "nodemon":"nodemon server.js",
+    "runserver": "node server.js",
+    "dev": "concurrently --kill-others-on-fail \"npm run runserver\" \"npm start\""
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -56,6 +63,8 @@
     "@babel/core": "^7.12.1",
     "@babel/node": "^7.12.1",
     "@babel/preset-env": "^7.12.1",
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.7",
     "react-router-sitemap": "^1.2.0"
   }
 }
