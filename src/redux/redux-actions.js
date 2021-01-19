@@ -19,7 +19,7 @@ export const sendingMessageStatusAction = (status) => {
 };
 export const getingHomePageInfo = () => async (dispatch) => {
   try {
-    const data = await fetch("/contentful/homeContent");
+    const data = await fetch(`${process.env.PUBLIC_URL}/contentful/homeContent`);
     const homeContent = await data.json();
      dispatch({
       type: GET_HOME_PAGE_INFO,
@@ -32,7 +32,7 @@ export const getingHomePageInfo = () => async (dispatch) => {
 
 export const getHomePageTestimonials = () => async (dispatch) => {
   try {
-    const data = await fetch("/contentful/testimonialsHome");
+    const data = await fetch(`${process.env.PUBLIC_URL}/contentful/testimonialsHome`);
     const testimonialsHome = await data.json();
     console.log(testimonialsHome);
     dispatch({
