@@ -11,6 +11,10 @@ const port = process.env.PORT || 5000;
 
 app.use(cors());
 
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "build")));
+}
+
 app.get("/contentful/homeContent", async (req, res) => {
   const client = contentful.createClient({
     // This is the space ID. A space is like a project folder in Contentful terms
