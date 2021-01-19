@@ -38,7 +38,7 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "sitemap": "babel-node src/sitemap/generator.js",
+    "sitemap": "babel-node src/sitemap/generator.js"
   },
   "eslintConfig": {
     "extends": "react-app"
