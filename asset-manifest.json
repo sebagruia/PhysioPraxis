@@ -4,12 +4,12 @@
     "static/js/0.26f7f9bc.chunk.js": "/PhysioPraxis/static/js/0.26f7f9bc.chunk.js",
     "static/js/0.26f7f9bc.chunk.js.map": "/PhysioPraxis/static/js/0.26f7f9bc.chunk.js.map",
     "main.css": "/PhysioPraxis/static/css/main.ada83a1f.chunk.css",
-    "main.js": "/PhysioPraxis/static/js/main.854fc0ae.chunk.js",
-    "main.js.map": "/PhysioPraxis/static/js/main.854fc0ae.chunk.js.map",
+    "main.js": "/PhysioPraxis/static/js/main.d0e063b5.chunk.js",
+    "main.js.map": "/PhysioPraxis/static/js/main.d0e063b5.chunk.js.map",
     "runtime-main.js": "/PhysioPraxis/static/js/runtime-main.04314089.js",
     "runtime-main.js.map": "/PhysioPraxis/static/js/runtime-main.04314089.js.map",
-    "static/js/3.113d6b6f.chunk.js": "/PhysioPraxis/static/js/3.113d6b6f.chunk.js",
-    "static/js/3.113d6b6f.chunk.js.map": "/PhysioPraxis/static/js/3.113d6b6f.chunk.js.map",
+    "static/js/3.33019a7c.chunk.js": "/PhysioPraxis/static/js/3.33019a7c.chunk.js",
+    "static/js/3.33019a7c.chunk.js.map": "/PhysioPraxis/static/js/3.33019a7c.chunk.js.map",
     "static/css/4.b7d8b33e.chunk.css": "/PhysioPraxis/static/css/4.b7d8b33e.chunk.css",
     "static/js/4.b25c3901.chunk.js": "/PhysioPraxis/static/js/4.b25c3901.chunk.js",
     "static/js/4.b25c3901.chunk.js.map": "/PhysioPraxis/static/js/4.b25c3901.chunk.js.map",
@@ -46,14 +46,14 @@
     "static/css/9.b4542a25.chunk.css.map": "/PhysioPraxis/static/css/9.b4542a25.chunk.css.map",
     "static/css/main.ada83a1f.chunk.css.map": "/PhysioPraxis/static/css/main.ada83a1f.chunk.css.map",
     "static/js/11.252e0092.chunk.js.LICENSE.txt": "/PhysioPraxis/static/js/11.252e0092.chunk.js.LICENSE.txt",
-    "static/js/3.113d6b6f.chunk.js.LICENSE.txt": "/PhysioPraxis/static/js/3.113d6b6f.chunk.js.LICENSE.txt",
+    "static/js/3.33019a7c.chunk.js.LICENSE.txt": "/PhysioPraxis/static/js/3.33019a7c.chunk.js.LICENSE.txt",
     "static/media/PhysiopraxisLogoShadow.8b6037b2.png": "/PhysioPraxis/static/media/PhysiopraxisLogoShadow.8b6037b2.png",
     "static/media/errorBoundry.css": "/PhysioPraxis/static/media/error_img.ac5a2835.png"
   },
   "entrypoints": [
     "static/js/runtime-main.04314089.js",
-    "static/js/3.113d6b6f.chunk.js",
+    "static/js/3.33019a7c.chunk.js",
     "static/css/main.ada83a1f.chunk.css",
-    "static/js/main.854fc0ae.chunk.js"
+    "static/js/main.d0e063b5.chunk.js"
   ]
 }
