@@ -3,10 +3,10 @@ export const SENDING_MESSAGE_STATUS = "SENDING_MESSAGE_STATUS";
 export const GET_HOME_PAGE_INFO = "GET_HOME_PAGE_INFO";
 export const GET_HOME_PAGE_TESTIMONIAL = "GET_HOME_PAGE_TESTIMONIAL";
 
-// const port =
-//   process.env.NODE_ENV === "production"
-//     ? process.env.REACT_APP_DOMAIN_URL
-//     : "http://localhost:5000";
+const path =
+  process.env.NODE_ENV === "production"
+    ? process.env.REACT_APP_DOMAIN_URL
+    : "http://localhost:5000";
 
 export const leaveMessageStatusChange = (value) => {
   return {
@@ -23,7 +23,7 @@ export const sendingMessageStatusAction = (status) => {
 };
 export const getingHomePageInfo = () => async (dispatch) => {
   try {
-    const data = await fetch(`/contentful/homeContent`);
+    const data = await fetch(`${path}/contentful/homeContent`);
     const homeContent = await data.json();
     dispatch({
       type: GET_HOME_PAGE_INFO,
@@ -36,7 +36,7 @@ export const getingHomePageInfo = () => async (dispatch) => {
 
 export const getHomePageTestimonials = () => async (dispatch) => {
   try {
-    const data = await fetch(`/contentful/testimonialsHome`);
+    const data = await fetch(`${path}/contentful/testimonialsHome`);
     const testimonialsHome = await data.json();
     console.log(testimonialsHome);
     dispatch({
