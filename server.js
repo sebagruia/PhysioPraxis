@@ -12,8 +12,11 @@ const port = process.env.PORT || 5000;
 
 app.use(cors());
 
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static(path.join(__dirname, "build")));
+// }
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "build")));
+  app.use(express.static("build"));
 }
 
 app.get("/contentful/homeContent", async (req, res) => {
@@ -39,7 +42,7 @@ app.get("/contentful/testimonialsHome", async (req, res) => {
   res.send(testimonialsHome);
 });
 
-app.get("/*", (req, res) => {
+app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
