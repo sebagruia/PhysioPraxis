@@ -85,7 +85,7 @@ const AboutUs = ({ aboutUs }) => {
               />
             </div>
           </div>
-          <BootstrapCarousel />
+          <BootstrapCarousel aboutUs={aboutUs}/>
         </div>
       ) : (
         <LoadingSpinner />

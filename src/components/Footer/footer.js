@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Fragment} from "react";
 import "./footer.css";
 
 import { connect } from "react-redux";
@@ -15,7 +15,7 @@ import LoadingSpinner from "../../components/LoadingSpinner/loadingSpinner";
 
 const Footer = ({ homeContent, aboutUs }) => {
   return (
-    <>
+    <Fragment>
     {
       homeContent && aboutUs ?
       <div className="container-fluid footer">
@@ -26,11 +26,11 @@ const Footer = ({ homeContent, aboutUs }) => {
         <div className="contactDetails">
           <div className="phone-details">
             <img src={Phone} alt="phone" />
-            <h6>{homeContent.footerPhoneNumber}</h6>
+            <h6>{homeContent.fields.footerPhoneNumber}</h6>
           </div>
           <div className="email-details">
             <img src={Mail} alt="email" />
-            <h6>{homeContent.footerEmail}</h6>
+            <h6>{homeContent.fields.footerEmail}</h6>
           </div>
         </div>
         <div className="footer-details">
@@ -61,7 +61,7 @@ const Footer = ({ homeContent, aboutUs }) => {
     :<LoadingSpinner />
     }
      
-    </>
+    </Fragment>
   );
 };
 
