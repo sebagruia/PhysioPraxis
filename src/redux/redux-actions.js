@@ -2,7 +2,8 @@
 export const LEAVE_MESSAGE_STATUS = "LEAVE_MESSAGE_STATUS";
 export const SENDING_MESSAGE_STATUS = "SENDING_MESSAGE_STATUS";
 export const GET_HOME_PAGE_INFO = "GET_HOME_PAGE_INFO";
-export const GET_HOME_PAGE_TESTIMONIAL = "GET_HOME_PAGE_TESTIMONIAL";
+export const GET_TESTIMONIAL = "GET_TESTIMONIAL";
+export const GET_ABOUT_US_PAGE = "GET_ABOUT_US_PAGE";
 
 const path = process.env.NODE_ENV !== "production" ? "http://localhost:5000" : process.env.REACT_APP_SERVER_LINK;
 
@@ -32,16 +33,28 @@ export const getingHomePageInfo = () => async (dispatch) => {
   }
 };
 
-export const getHomePageTestimonials = () => async (dispatch) => {
+export const getTestimonials = () => async (dispatch) => {
   try {
-    const data = await fetch(`${path}/contentful/testimonialsHome`);
-    const testimonialsHome = await data.json();
-    console.log(testimonialsHome);
+    const data = await fetch(`${path}/contentful/testimonials`);
+    const testimonials = await data.json();
     dispatch({
-      type: GET_HOME_PAGE_TESTIMONIAL,
-      payload: testimonialsHome,
+      type: GET_TESTIMONIAL,
+      payload: testimonials,
     });
   } catch (error) {
     console.log(`Error getting testimonialsHome ${error.message}`);
+  }
+};
+
+export const getAboutUsPage = () => async (dispatch) => {
+  try {
+    const data = await fetch(`${path}/contentful/aboutUs`);
+    const aboutUs = await data.json();
+    dispatch({
+      type: GET_ABOUT_US_PAGE,
+      payload: aboutUs,
+    });
+  } catch (error) {
+    console.log(`Error getting aboutUs ${error.message}`);
   }
 };

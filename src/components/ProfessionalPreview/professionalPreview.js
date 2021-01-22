@@ -1,10 +1,10 @@
-import React, { Fragment } from "react";
+import React from "react";
 import "./professionalPreview.css";
 
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
 
-const ProfessionalPreview = ({ homePageContent }) => {
+const ProfessionalPreview = ({ homeContent }) => {
 
   const RICHTEXT_OPTIONS = {
     renderNode: {
@@ -14,32 +14,27 @@ const ProfessionalPreview = ({ homePageContent }) => {
   };
 
   return (
-    <Fragment>
-      {
-        homePageContent&&
+
         <div className="container-fluid professionalPreview-container">
         <div className="container professionalPreview-section">
           <div className="professionalPreview-text">
-            <h1>{homePageContent.professionalPreview.fields.title}</h1>
+            <h1>{homeContent.fields.professionalPreview.fields.title}</h1>
             <hr />
             <div
               dangerouslySetInnerHTML={{
-                __html: documentToHtmlString(homePageContent.professionalPreview.fields.content, RICHTEXT_OPTIONS),
+                __html: documentToHtmlString(homeContent.fields.professionalPreview.fields.content, RICHTEXT_OPTIONS),
               }}
             ></div>
             <div className="signature-container">
-              <h4>{homePageContent.professionalPreview.fields.name}</h4>
-              <img src={homePageContent.professionalPreview.fields.signature.fields.file.url} alt="signature" />
+              <h4>{homeContent.fields.professionalPreview.fields.name}</h4>
+              <img src={homeContent.fields.professionalPreview.fields.signature.fields.file.url} alt="signature" />
             </div>
           </div>
           <div className="professionalPreview-img">
-            <img src={homePageContent.professionalPreview.fields.imageEmployee.fields.file.url} alt="the doctor" />
+            <img src={homeContent.fields.professionalPreview.fields.imageEmployee.fields.file.url} alt="the doctor" />
           </div>
         </div>
       </div>
-      }
-      
-    </Fragment>
   );
 };
 export default ProfessionalPreview;

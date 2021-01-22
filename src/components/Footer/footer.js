@@ -1,5 +1,8 @@
 import React from "react";
 import "./footer.css";
+
+import { connect } from "react-redux";
+
 import Facebook from "../../assets/iconmonstr-facebook-white.png";
 import Instagram from "../../assets/iconmonstr-instagram-white.png";
 import Twitter from "../../assets/iconmonstr-twitter-white.png";
@@ -8,10 +11,14 @@ import Socials from "../../components/Socials/socials";
 import Phone from "../../assets/iconmonstr-phone.png";
 import Mail from "../../assets/iconmonstr-email.png";
 import Logo from "../Logo/logo";
+import LoadingSpinner from "../../components/LoadingSpinner/loadingSpinner";
 
-const Footer = ({homeContent}) => {
+const Footer = ({ homeContent, aboutUs }) => {
   return (
-    <div className="container-fluid footer">
+    <>
+    {
+      homeContent && aboutUs ?
+      <div className="container-fluid footer">
       <div className=" container footer-container">
         <div className="logo-footer">
           <Logo />
@@ -19,11 +26,11 @@ const Footer = ({homeContent}) => {
         <div className="contactDetails">
           <div className="phone-details">
             <img src={Phone} alt="phone" />
-            <h6>{homeContent && homeContent.footerPhoneNumber}</h6>
+            <h6>{homeContent.footerPhoneNumber}</h6>
           </div>
           <div className="email-details">
             <img src={Mail} alt="email" />
-            <h6>{homeContent && homeContent.footerEmail}</h6>
+            <h6>{homeContent.footerEmail}</h6>
           </div>
         </div>
         <div className="footer-details">
@@ -35,6 +42,7 @@ const Footer = ({homeContent}) => {
               facebook={Facebook}
               instagram={Instagram}
               twitter={Twitter}
+              aboutUs={aboutUs}
             />
           </div>
           <div className="poweredBy">
@@ -50,7 +58,18 @@ const Footer = ({homeContent}) => {
         </div>
       </div>
     </div>
+    :<LoadingSpinner />
+    }
+     
+    </>
   );
 };
 
-export default Footer;
+const mapStateToProps = (state) => {
+  return {
+    aboutUs: state.userReducer.aboutUs,
+    homeContent: state.userReducer.homeContent,
+  };
+};
+
+export default connect(mapStateToProps)(Footer);

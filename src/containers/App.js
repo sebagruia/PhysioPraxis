@@ -1,16 +1,20 @@
 import React, { Component, lazy, Suspense } from "react";
 import "./App.css";
+
 import { connect } from "react-redux";
+
 import { Route, Switch } from "react-router-dom";
 import CookieConsent from "react-cookie-consent";
 import LoadingSpinner from "../components/LoadingSpinner/loadingSpinner";
 import Navigation from "../components/Navigation/navigation";
 import Footer from "../components/Footer/footer";
+import ErrorBoundary from "../components/ErrorBoundary/errorBoundary";
+
 import {
   getingHomePageInfo,
-  getHomePageTestimonials,
+  getTestimonials,
+  getAboutUsPage,
 } from "../redux/redux-actions";
-import ErrorBoundary from "../components/ErrorBoundary/errorBoundary";
 
 const Home = lazy(() => import("../pages/Home/home"));
 const AboutUs = lazy(() => import("../pages/AboutUs/aboutUs"));
@@ -27,11 +31,11 @@ const PostPage = lazy(() => import("../pages/PostPage/postPage"));
 class App extends Component {
   componentDidMount() {
     this.props.getHomeContent();
-    this.props.getTestimonialsHome();
+    this.props.getTestimonials();
+    this.props.getAboutUs();
   }
 
   render() {
-    const{homeContent} = this.props;
     return (
       <div className="App">
         <Navigation />
@@ -76,22 +80,18 @@ class App extends Component {
           Diese Website verwendet Cookies, um die Benutzererfahrung zu
           verbessern.
         </CookieConsent>
-        <Footer homeContent={homeContent.fields}/>
+        <Footer />
       </div>
     );
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    homeContent:state.userReducer.homeContent,
-  };
-};
 const mapDispatchToProps = (dispatch) => {
   return {
     getHomeContent: () => dispatch(getingHomePageInfo()),
-    getTestimonialsHome: () => dispatch(getHomePageTestimonials()),
+    getTestimonials: () => dispatch(getTestimonials()),
+    getAboutUs: () => dispatch(getAboutUsPage()),
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(null, mapDispatchToProps)(App);

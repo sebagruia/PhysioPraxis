@@ -1,11 +1,11 @@
 import React from "react";
 import "./mapLocation.css";
 
-const MapLocation = ({ homePageContent }) => {
-  const source = homePageContent&&homePageContent.mapUrl.url;
+
+const MapLocation = ({ homeContent }) => {
+  const source = homeContent.fields.mapUrl.url;
   return (
     <div>
-      {homePageContent && (
         <iframe
           src={source}
           title="PhysioPraxis Marian"
@@ -17,7 +17,6 @@ const MapLocation = ({ homePageContent }) => {
           aria-hidden="false"
           tabIndex="0"
         />
-      )}
     </div>
   );
 };

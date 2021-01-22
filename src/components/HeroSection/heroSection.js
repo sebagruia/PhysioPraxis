@@ -4,7 +4,7 @@ import "./heroSection.css";
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
 
-const HeroSection = ({ homePageContent }) => {
+const HeroSection = ({ homeContent }) => {
   const RICHTEXT_OPTIONS = {
     renderNode: {
       [BLOCKS.PARAGRAPH]: (node, next) =>
@@ -41,7 +41,7 @@ const HeroSection = ({ homePageContent }) => {
             <div
               dangerouslySetInnerHTML={{
                 __html: documentToHtmlString(
-                  homePageContent && homePageContent.descriptionBox1,
+                  homeContent.fields.descriptionBox1,
                   RICHTEXT_OPTIONS
                 ),
               }}
@@ -53,7 +53,7 @@ const HeroSection = ({ homePageContent }) => {
             <div
               dangerouslySetInnerHTML={{
                 __html: documentToHtmlString(
-                  homePageContent && homePageContent.descriptionBox2,
+                  homeContent.fields.descriptionBox2,
                   RICHTEXT_OPTIONS
                 ),
               }}
@@ -71,7 +71,7 @@ const HeroSection = ({ homePageContent }) => {
             <div
               dangerouslySetInnerHTML={{
                 __html: documentToHtmlString(
-                  homePageContent && homePageContent.descriptionBox3,
+                  homeContent.fields.descriptionBox3,
                   RICHTEXT_OPTIONS
                 ),
               }}

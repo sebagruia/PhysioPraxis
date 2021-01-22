@@ -1,12 +1,11 @@
-import React, { Fragment } from "react";
+import React from "react";
 import "./appointmentContainer.css";
+
 import BookingForm from "../../components/BookingForm/bookingForm";
 import Testimonial from "../../components/Testimonial/testimonial";
 
 const AppointmentContainer = ({ testimonials }) => {
   return (
-    <Fragment>
-      {testimonials && (
         <div
           className="container-fluid appointment-container"
           id="scroll-to-appointment"
@@ -19,8 +18,8 @@ const AppointmentContainer = ({ testimonials }) => {
                 <h1 className="testimonials-title">Testimonials</h1>
               </div>
               <div className="testimonials-container">
-                {testimonials &&
-                  testimonials.map((testimonial) => (
+                {
+                  testimonials.items.map((testimonial) => (
                     <Testimonial
                       key={testimonial.sys.id}
                       testimonial={testimonial.fields}
@@ -30,8 +29,6 @@ const AppointmentContainer = ({ testimonials }) => {
             </div>
           </div>
         </div>
-      )}
-    </Fragment>
   );
 };
 

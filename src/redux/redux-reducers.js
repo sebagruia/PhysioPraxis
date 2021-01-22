@@ -2,15 +2,17 @@ import {
   LEAVE_MESSAGE_STATUS,
   SENDING_MESSAGE_STATUS,
   GET_HOME_PAGE_INFO,
-  GET_HOME_PAGE_TESTIMONIAL
+  GET_TESTIMONIAL,
+  GET_ABOUT_US_PAGE
 } from "./redux-actions";
 
 const initialState = {
   news:[],
   leaveMessageStatus:false,
   sendingMessageStatus:false,
-  homeContent:{},
-  testimonialsHome:{}
+  homeContent:null,
+  testimonials:null,
+  aboutUs:null
 };
 
 export const userReducer = (state = initialState, action) => {
@@ -30,10 +32,15 @@ export const userReducer = (state = initialState, action) => {
         ...state,
         homeContent: action.payload,
       };
-    case GET_HOME_PAGE_TESTIMONIAL:
+    case GET_TESTIMONIAL:
       return {
         ...state,
-        testimonialsHome: action.payload,
+        testimonials: action.payload,
+      };
+    case GET_ABOUT_US_PAGE:
+      return {
+        ...state,
+        aboutUs: action.payload,
       };
     default:
       return state;
