@@ -42,7 +42,7 @@ export const getTestimonials = () => async (dispatch) => {
       payload: testimonials,
     });
   } catch (error) {
-    console.log(`Error getting testimonialsHome ${error.message}`);
+    console.log(`Error getting testimonials ${error.message}`);
   }
 };
 
