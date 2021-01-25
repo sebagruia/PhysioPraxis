@@ -28,4 +28,6 @@ export const arangedTitle = (title) => {
   return titleWithoutSpaces.join("");
 };
 
+export const latestArticles = (array)=> array.filter((item,index)=>index<5)
+
 

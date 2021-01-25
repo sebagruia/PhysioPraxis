@@ -23,54 +23,19 @@ const Post = ({ post }) => {
   const { sys, fields } = post;
 
   const toPostPage = () => {
-    history.push(`/news/${arangedTitle(fields.title)}`, {
-      id: sys.id,
-      date: fields.date,
-      image: fields.image.fields.file.url,
-      title: fields.title,
-      text: fields.content,
-    });
+    history.push(`/news/${arangedTitle(fields.title)}`);
   };
-  const goBack = () => {
-    history.goBack();
-  };
+ 
   const parsedTitle = arangedTitle(fields.title);
 
-  const RICHTEXT_OPTIONS = {
-    renderNode: {
-      [INLINES.HYPERLINK]: (node, next) =>
-        `<a class="post_link" href=${
-          node.data.uri
-        } target="_blank">${next(node.content)}</a>`,
-      [BLOCKS.EMBEDDED_ASSET]: (node) =>
-        `<img class="post_contentful_img" src="${node.data.target.fields.file.url}"/>`,
-      [BLOCKS.HEADING_1]: (node, next) =>
-        `<h1 class="post_h1">${next(node.content)}</h1>`,
-      [BLOCKS.HEADING_2]: (node, next) =>
-        `<h2 class="post_h2">${next(node.content)}</h2>`,
-      [BLOCKS.HEADING_3]: (node, next) =>
-        `<h3 class="post_h3">${next(node.content)}</h3>`,
-      [BLOCKS.PARAGRAPH]: (node, next) =>
-        `<p class="post_paragraph">${next(node.content)}</p>`,
-      [BLOCKS.UL_LIST]: (node, next) =>
-        `<ul class="post_ul">${next(node.content)}</ul>`,
-      [BLOCKS.OL_LIST]: (node, next) =>
-        `<ul class="post_ol">${next(node.content)}</ul>`,
-      [BLOCKS.LIST_ITEM]: (node, next) =>
-        `<li class="post_li">${next(node.content)}</li>`,
-      [BLOCKS.QUOTE]: (node, next) =>
-        `<blockquote class="post_blockquote">${next(
-          node.content
-        )}</blockquote>`,
-    },
-  };
+
 
   return (
     <div className="post-container" id={sys.id}>
       <img
         src={fields.image.fields.file.url}
         alt="post"
-        onClick={pathname === "/news" ? toPostPage : null}
+        onClick={toPostPage}
       />
       <div className="post-date">
         <div className="post-date-clock">
@@ -82,7 +47,7 @@ const Post = ({ post }) => {
       <div
         className="post-title"
         role="button"
-        onClick={pathname === "/news" ? toPostPage : null}
+        onClick={toPostPage}
       >
         <img src={Pin} alt="pin" />
         <h1>{fields.title}</h1>
@@ -91,16 +56,12 @@ const Post = ({ post }) => {
         className="post-description"
         style={pathname === "/news" ? { height: "100px" } : { height: "auto" }}
       >
-        <div
-          dangerouslySetInnerHTML={{
-            __html: documentToHtmlString(fields.content, RICHTEXT_OPTIONS),
-          }}
-        ></div>
+        <div><p>{fields.shortDescription}</p></div>
       </div>
       <hr className="post-end-hr"></hr>
       <div className="post-footer">
-        <Button onClick={pathname === "/news" ? toPostPage : goBack}>
-          {pathname === "/news" ? "Weiterlesen" : "Zurück"}
+        <Button onClick={toPostPage}>
+          Weiterlesen
         </Button>
 
         <div className="post-footer-socials">

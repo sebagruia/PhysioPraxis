@@ -7,6 +7,8 @@ import RecentPost from "../../components/RecentPost/recentPost";
 import PageHeader from "../../components/PageHeader/pageHeader";
 import LoadingSpinner from "../../components/LoadingSpinner/loadingSpinner";
 
+import {latestArticles} from "../../DATA";
+
 const News = ({ posts }) => {
   return (
     <HelmetProvider>
@@ -27,9 +29,9 @@ const News = ({ posts }) => {
               ))}
             </div>
             <div className="recent-post-container">
-              <h2>Beiträge</h2>
+              <h2>Neueste Beiträge</h2>
               <hr className="recent-post-hr"></hr>
-              {posts.items.map((post) => (
+              {latestArticles(posts.items).map((post) => (
                 <RecentPost key={post.sys.id} post={post} />
               ))}
             </div>
