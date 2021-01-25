@@ -27,6 +27,7 @@ const AboutUs = ({ aboutUs }) => {
         `<li class="aboutUs_paragraph_list">${next(node.content)}</li>`,
     },
   };
+  
   return (
     <HelmetProvider>
       <Helmet>

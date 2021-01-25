@@ -3,16 +3,19 @@ import {
   SENDING_MESSAGE_STATUS,
   GET_HOME_PAGE_INFO,
   GET_TESTIMONIAL,
-  GET_ABOUT_US_PAGE
+  GET_ABOUT_US_PAGE,
+  GET_SERVICES,
+  GET_POSTS
 } from "./redux-actions";
 
 const initialState = {
-  news:[],
   leaveMessageStatus:false,
   sendingMessageStatus:false,
   homeContent:null,
   testimonials:null,
-  aboutUs:null
+  aboutUs:null,
+  services:null,
+  posts:null
 };
 
 export const userReducer = (state = initialState, action) => {
@@ -41,6 +44,16 @@ export const userReducer = (state = initialState, action) => {
       return {
         ...state,
         aboutUs: action.payload,
+      };
+    case GET_SERVICES:
+      return {
+        ...state,
+        services: action.payload,
+      };
+    case GET_POSTS:
+      return {
+        ...state,
+        posts: action.payload,
       };
     default:
       return state;

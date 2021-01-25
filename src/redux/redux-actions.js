@@ -4,6 +4,8 @@ export const SENDING_MESSAGE_STATUS = "SENDING_MESSAGE_STATUS";
 export const GET_HOME_PAGE_INFO = "GET_HOME_PAGE_INFO";
 export const GET_TESTIMONIAL = "GET_TESTIMONIAL";
 export const GET_ABOUT_US_PAGE = "GET_ABOUT_US_PAGE";
+export const GET_SERVICES = "GET_SERVICES";
+export const GET_POSTS = "GET_POSTS";
 
 const path = process.env.NODE_ENV !== "production" ? "http://localhost:5000" : process.env.REACT_APP_SERVER_LINK;
 
@@ -20,6 +22,7 @@ export const sendingMessageStatusAction = (status) => {
     payload: status,
   };
 };
+
 export const getingHomePageInfo = () => async (dispatch) => {
   try {
     const data = await fetch(`${path}/contentful/homeContent`);
@@ -56,5 +59,31 @@ export const getAboutUsPage = () => async (dispatch) => {
     });
   } catch (error) {
     console.log(`Error getting aboutUs ${error.message}`);
+  }
+};
+
+export const getServices = () => async (dispatch) => {
+  try {
+    const data = await fetch(`${path}/contentful/services`);
+    const services = await data.json();
+    dispatch({
+      type: GET_SERVICES,
+      payload: services,
+    });
+  } catch (error) {
+    console.log(`Error getting services ${error.message}`);
+  }
+};
+
+export const getPosts = () => async (dispatch) => {
+  try {
+    const data = await fetch(`${path}/contentful/posts`);
+    const posts = await data.json();
+    dispatch({
+      type: GET_POSTS,
+      payload: posts,
+    });
+  } catch (error) {
+    console.log(`Error getting posts ${error.message}`);
   }
 };

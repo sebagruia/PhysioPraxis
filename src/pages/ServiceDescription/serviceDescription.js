@@ -1,5 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import "./serviceDescription.css";
+
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import { BLOCKS } from "@contentful/rich-text-types";
+
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { withRouter } from "react-router-dom";
 import Button from "../../components/Button/button";
@@ -19,7 +23,20 @@ const ServiceDescription = ({ history }) => {
     history.goBack();
   };
 
-  const { service, label, description } = history.location.state;
+  const { service } = history.location.state;
+  const image = service.fields.image.fields.file.url;
+  const title = service.fields.title;
+  const description = service.fields.serviceDescription;
+
+  const RICHTEXT_OPTIONS = {
+    renderNode: {
+      [BLOCKS.PARAGRAPH]: (node, next) =>
+        `<p class="serviceDescription_paragraph">${next(node.content)}</p>`,
+      [BLOCKS.LIST_ITEM]: (node, next) =>
+        `<li class="aboutUs_paragraph_list">${next(node.content)}</li>`,
+    },
+  };
+
   return (
     <HelmetProvider>
       <Helmet>
@@ -34,11 +51,11 @@ const ServiceDescription = ({ history }) => {
             className="serviceDescription-img-container"
             ref={refToServiceImg}
           >
-            <img src={service} alt="services" />
+            <img src={image} alt="services" />
           </div>
           <div className="serviceDescription-description-container">
-            <h1>{label}</h1>
-            <p>{description}</p>
+            <h1>{title}</h1>
+            <div dangerouslySetInnerHTML={{__html:documentToHtmlString(description, RICHTEXT_OPTIONS)}}></div>
             <Button onClick={handleOnClick}>Zurück</Button>
           </div>
         </div>

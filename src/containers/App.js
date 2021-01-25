@@ -14,6 +14,8 @@ import {
   getingHomePageInfo,
   getTestimonials,
   getAboutUsPage,
+  getServices,
+  getPosts
 } from "../redux/redux-actions";
 
 const Home = lazy(() => import("../pages/Home/home"));
@@ -33,6 +35,8 @@ class App extends Component {
     this.props.getHomeContent();
     this.props.getTestimonials();
     this.props.getAboutUs();
+    this.props.getServices();
+    this.props.getPosts();
   }
 
   render() {
@@ -91,6 +95,8 @@ const mapDispatchToProps = (dispatch) => {
     getHomeContent: () => dispatch(getingHomePageInfo()),
     getTestimonials: () => dispatch(getTestimonials()),
     getAboutUs: () => dispatch(getAboutUsPage()),
+    getServices: () => dispatch(getServices()),
+    getPosts: () => dispatch(getPosts()),
   };
 };
 

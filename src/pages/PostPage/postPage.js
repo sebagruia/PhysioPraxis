@@ -1,12 +1,15 @@
 import React, { useEffect, useRef } from "react";
-import { connect } from "react-redux";
 import "./postPage.css";
+
+import { connect } from "react-redux";
+
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { useParams } from "react-router-dom";
 import Post from "../../components/Post/post";
 import { arangedTitle } from "../../DATA";
 
-const PostPage = ({ news }) => {
+const PostPage = ({ posts }) => {
+  
   const refToPost = useRef(null);
 
   useEffect(() => {
@@ -19,10 +22,9 @@ const PostPage = ({ news }) => {
 
   const params = useParams();
   const postObj =
-    news.length !== 0 &&
-    news.filter((post) => arangedTitle(post.postTitle) === params.post_id);
-  const { id, createDate, postImageLink, postTitle, postText } =
-    postObj && postObj[0];
+    posts &&
+    posts.items.filter((post) => arangedTitle(post.fields.title) === params.post_id);
+    console.log(postObj);
 
   const parsedTitle = postTitle && arangedTitle(postTitle);
   return (
@@ -53,13 +55,7 @@ const PostPage = ({ news }) => {
         />
       </Helmet>
       <div className="postPage-container container" ref={refToPost}>
-        <Post
-          id={id}
-          date={createDate}
-          image={postImageLink}
-          title={postTitle}
-          text={postText}
-        />
+        <Post post={postObj[0]}/>
       </div>
     </HelmetProvider>
   );
@@ -67,7 +63,7 @@ const PostPage = ({ news }) => {
 
 const mapStateToProps = (state) => {
   return {
-    news: state.userReducer.news,
+    posts: state.userReducer.posts,
   };
 };
 
