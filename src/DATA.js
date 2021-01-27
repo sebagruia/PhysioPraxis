@@ -1,3 +1,8 @@
+export const path =
+  process.env.NODE_ENV !== "production"
+    ? "http://localhost:5000"
+    : process.env.REACT_APP_SERVER_LINK;
+
 // Formating Date
 export const formatDate = (date) => {
   const now = new Date(date);

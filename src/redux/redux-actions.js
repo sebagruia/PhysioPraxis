@@ -1,4 +1,3 @@
-
 export const LEAVE_MESSAGE_STATUS = "LEAVE_MESSAGE_STATUS";
 export const SENDING_MESSAGE_STATUS = "SENDING_MESSAGE_STATUS";
 export const GET_HOME_PAGE_INFO = "GET_HOME_PAGE_INFO";
@@ -87,3 +86,6 @@ export const getPosts = () => async (dispatch) => {
     console.log(`Error getting posts ${error.message}`);
   }
 };
+
+
+

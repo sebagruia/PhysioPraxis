@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 import {arangedTitle, formatDate} from "../../DATA";
 
 const RecentPost = ({post}) => {
-
+  
     const history = useHistory();
   
     const toPostPage = () => {
