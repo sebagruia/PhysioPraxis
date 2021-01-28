@@ -53,7 +53,7 @@ class BookingForm extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    this.props.sendMessageWithEmailJs(this.state);
+    this.sendMessageWithEmailJs(this.state);
     this.recaptchaRef.current.reset();
     this.setState({
       email: "",
