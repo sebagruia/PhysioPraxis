@@ -4,7 +4,7 @@ import "./bookingForm.css";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import emailjs from "emailjs-com";
-import { todayDate, day, path } from "../../DATA";
+import { todayDate, day } from "../../DATA";
 import { sendingMessageStatusAction } from "../../redux/redux-actions";
 
 import ReCAPTCHA from "react-google-recaptcha";
