@@ -3,13 +3,13 @@
     "static/js/0.da3304bd.chunk.js": "/PhysioPraxis/static/js/0.da3304bd.chunk.js",
     "static/js/0.da3304bd.chunk.js.map": "/PhysioPraxis/static/js/0.da3304bd.chunk.js.map",
     "static/css/1.6dfa884d.chunk.css": "/PhysioPraxis/static/css/1.6dfa884d.chunk.css",
-    "static/js/1.70410a5c.chunk.js": "/PhysioPraxis/static/js/1.70410a5c.chunk.js",
-    "static/js/1.70410a5c.chunk.js.map": "/PhysioPraxis/static/js/1.70410a5c.chunk.js.map",
+    "static/js/1.3d33e268.chunk.js": "/PhysioPraxis/static/js/1.3d33e268.chunk.js",
+    "static/js/1.3d33e268.chunk.js.map": "/PhysioPraxis/static/js/1.3d33e268.chunk.js.map",
     "main.css": "/PhysioPraxis/static/css/main.ada83a1f.chunk.css",
     "main.js": "/PhysioPraxis/static/js/main.d55c457c.chunk.js",
     "main.js.map": "/PhysioPraxis/static/js/main.d55c457c.chunk.js.map",
-    "runtime-main.js": "/PhysioPraxis/static/js/runtime-main.abfce9fa.js",
-    "runtime-main.js.map": "/PhysioPraxis/static/js/runtime-main.abfce9fa.js.map",
+    "runtime-main.js": "/PhysioPraxis/static/js/runtime-main.a7ef675e.js",
+    "runtime-main.js.map": "/PhysioPraxis/static/js/runtime-main.a7ef675e.js.map",
     "static/js/4.3a183c86.chunk.js": "/PhysioPraxis/static/js/4.3a183c86.chunk.js",
     "static/js/4.3a183c86.chunk.js.map": "/PhysioPraxis/static/js/4.3a183c86.chunk.js.map",
     "static/css/5.74450abe.chunk.css": "/PhysioPraxis/static/css/5.74450abe.chunk.css",
@@ -51,7 +51,7 @@
     "static/media/errorBoundry.css": "/PhysioPraxis/static/media/error_img.ac5a2835.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.abfce9fa.js",
+    "static/js/runtime-main.a7ef675e.js",
     "static/js/4.3a183c86.chunk.js",
     "static/css/main.ada83a1f.chunk.css",
     "static/js/main.d55c457c.chunk.js"
