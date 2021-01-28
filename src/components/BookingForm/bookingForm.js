@@ -3,6 +3,7 @@ import "./bookingForm.css";
 
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
+import emailjs from "emailjs-com";
 import { todayDate, day, path } from "../../DATA";
 import { sendingMessageStatusAction } from "../../redux/redux-actions";
 
@@ -11,7 +12,6 @@ import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import BookButton from "../../components/BookButton/bookButton";
 import PopUp from "../PopUp/popUp";
-
 
 class BookingForm extends Component {
   constructor() {
@@ -28,27 +28,32 @@ class BookingForm extends Component {
     };
   }
 
-  sendMessageWithEmailJs = async (data) => {
-    const response = await fetch(`${path}/booking`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
-    if (response.status === 200) {
-      this.props.dispatch(
-        sendingMessageStatusAction(!this.props.sendingMessageStatus)
+  sendMessageWithEmailJs = () => {
+    emailjs
+      .send(
+        process.env.REACT_APP_YOUR_SERVICE_ID,
+        process.env.REACT_APP_YOUR_TEMPLATE_ID,
+        this.state,
+        process.env.REACT_APP_YOUR_USER_ID
+      )
+      .then(
+        (result) => {
+          if (result.text === "OK") {
+            this.props.dispatch(
+              sendingMessageStatusAction(!this.props.sendingMessageStatus)
+            );
+            console.log("SUCCES", result.text);
+          }
+        },
+        (error) => {
+          console.log("FAILED", error.text);
+        }
       );
-      console.log("Booking sent successfully");
-    } else {
-      console.log("Failed to send Booking");
-    }
   };
 
   handleSubmit = (event) => {
     event.preventDefault();
-    this.sendMessageWithEmailJs(this.state);
+    this.props.sendMessageWithEmailJs(this.state);
     this.recaptchaRef.current.reset();
     this.setState({
       email: "",

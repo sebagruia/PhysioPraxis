@@ -1,3 +1,4 @@
+import { path } from "../DATA";
 export const LEAVE_MESSAGE_STATUS = "LEAVE_MESSAGE_STATUS";
 export const SENDING_MESSAGE_STATUS = "SENDING_MESSAGE_STATUS";
 export const GET_HOME_PAGE_INFO = "GET_HOME_PAGE_INFO";
@@ -6,7 +7,6 @@ export const GET_ABOUT_US_PAGE = "GET_ABOUT_US_PAGE";
 export const GET_SERVICES = "GET_SERVICES";
 export const GET_POSTS = "GET_POSTS";
 
-const path = process.env.NODE_ENV !== "production" ? "http://localhost:5000" : process.env.REACT_APP_SERVER_LINK;
 
 export const leaveMessageStatusChange = (value) => {
   return {
@@ -86,6 +86,7 @@ export const getPosts = () => async (dispatch) => {
     console.log(`Error getting posts ${error.message}`);
   }
 };
+
 
 
 
