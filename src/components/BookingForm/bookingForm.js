@@ -1,15 +1,17 @@
 import React, { Component } from "react";
 import "./bookingForm.css";
+
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
+import emailjs from "emailjs-com";
 import { todayDate, day } from "../../DATA";
 import { sendingMessageStatusAction } from "../../redux/redux-actions";
+
 import ReCAPTCHA from "react-google-recaptcha";
 import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import BookButton from "../../components/BookButton/bookButton";
 import PopUp from "../PopUp/popUp";
-import emailjs from "emailjs-com";
 
 class BookingForm extends Component {
   constructor() {
@@ -22,17 +24,17 @@ class BookingForm extends Component {
       time: "",
       phone: "",
       message: "",
-      "g-recaptcha-response":""
+      "g-recaptcha-response": "",
     };
   }
-  
+
   sendMessageWithEmailJs = () => {
     emailjs
       .send(
         process.env.REACT_APP_YOUR_SERVICE_ID,
         process.env.REACT_APP_YOUR_TEMPLATE_ID,
         this.state,
-        process.env.REACT_APP_YOUR_USER_ID,
+        process.env.REACT_APP_YOUR_USER_ID
       )
       .then(
         (result) => {
@@ -51,7 +53,7 @@ class BookingForm extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    this.sendMessageWithEmailJs();
+    this.sendMessageWithEmailJs(this.state);
     this.recaptchaRef.current.reset();
     this.setState({
       email: "",
@@ -69,7 +71,7 @@ class BookingForm extends Component {
   };
   handleOnChangeReCAptcha = (value) => {
     console.log("g-recaptcha-response: Generated");
-    this.setState({ "g-recaptcha-response": value});
+    this.setState({ "g-recaptcha-response": value });
   };
 
   checkDateValidity = (date) => {
@@ -81,10 +83,10 @@ class BookingForm extends Component {
   };
 
   render() {
-    const {history,sendingMessageStatus} = this.props;
+    const { history, sendingMessageStatus } = this.props;
     const { pathname } = history.location;
     const { email, name, date, time, phone, message } = this.state;
-    
+
     return (
       <Form
         onSubmit={this.handleSubmit}
@@ -178,6 +180,7 @@ class BookingForm extends Component {
     );
   }
 }
+
 const mapStateToProps = (state) => {
   return {
     sendingMessageStatus: state.userReducer.sendingMessageStatus,

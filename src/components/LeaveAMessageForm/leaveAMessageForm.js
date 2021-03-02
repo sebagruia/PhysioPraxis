@@ -1,12 +1,15 @@
 import React, { Component } from "react";
 import "./leaveAMessageForm.css";
 import { connect } from "react-redux";
+
+import { path } from "../../DATA";
+import {leaveMessageStatusChange} from "../../redux/redux-actions";
+
 import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import CloseThinButton from "../CloseThinButton/closeThinButton";
 import BookButton from "../../components/BookButton/bookButton";
-import {leaveMessageStatusChange} from "../../redux/redux-actions";
-import emailjs from "emailjs-com";
+
 
 class LeaveAMessageForm extends Component {
   constructor() {
@@ -18,30 +21,48 @@ class LeaveAMessageForm extends Component {
     };
   }
 
-  sendMessageWithEmailJs = () => {
-    emailjs
-    .send(
-      process.env.REACT_APP_YOUR_SERVICE_ID,
-      process.env.REACT_APP_YOUR_NEW_MESSAGE_TEMPLATE,
-      this.state,
-      process.env.REACT_APP_YOUR_USER_ID
-    )
-    .then(
-      (result) => {
-        if (result.text === "OK") {
-          this.props.dispatch(leaveMessageStatusChange(false));
-        }
-        console.log("SUCCES", result.text);
+  // sendMessageWithEmailJs = () => {
+  //   emailjs
+  //   .send(
+  //     process.env.REACT_APP_YOUR_SERVICE_ID,
+  //     process.env.REACT_APP_YOUR_NEW_MESSAGE_TEMPLATE,
+  //     this.state,
+  //     process.env.REACT_APP_YOUR_USER_ID
+  //   )
+  //   .then(
+  //     (result) => {
+  //       if (result.text === "OK") {
+  //         this.props.dispatch(leaveMessageStatusChange(false));
+  //       }
+  //       console.log("SUCCES", result.text);
+  //     },
+  //     (error) => {
+  //       console.log("FAILED", error.text);
+  //     }
+  //   );
+  // };
+
+  sendMessageWithEmailJs = async (data) => {
+    const response = await fetch(`${path}/booking`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
       },
-      (error) => {
-        console.log("FAILED", error.text);
-      }
-    );
+      body: JSON.stringify(data),
+    });
+    if (response.status === 200) {
+      this.props.dispatch(
+        this.props.dispatch(leaveMessageStatusChange(false))
+      );
+      console.log("Booking sent successfully");
+    } else {
+      console.log("Failed to send Booking");
+    }
   };
 
   handleSubmit = (event) => {
     event.preventDefault();
-    this.sendMessageWithEmailJs();
+    this.sendMessageWithEmailJs(this.state);
     this.setState({
       email: "",
       name: "",

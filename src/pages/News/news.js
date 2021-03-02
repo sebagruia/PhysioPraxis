@@ -5,9 +5,11 @@ import { connect } from "react-redux";
 import Post from "../../components/Post/post";
 import RecentPost from "../../components/RecentPost/recentPost";
 import PageHeader from "../../components/PageHeader/pageHeader";
-import AddTestimonialAndPostButton from "../../components/AddTestimonialAndPostButton/addTestimonialAndPostButton";
+import LoadingSpinner from "../../components/LoadingSpinner/loadingSpinner";
 
-const News = ({ currentUser, news }) => {
+import {latestArticles} from "../../DATA";
+
+const News = ({ posts }) => {
   return (
     <HelmetProvider>
       <Helmet>
@@ -19,36 +21,24 @@ const News = ({ currentUser, news }) => {
       </Helmet>
       <div className="container-fluid news">
         <PageHeader>Aktuelles</PageHeader>
-
-        <div className="news-container container">
-          <div className="news-post-container">
-            <AddTestimonialAndPostButton currentUser={currentUser} />
-            {Object.values(news).map((post) => (
-              <Post
-                key={post.id}
-                id={post.id}
-                date={post.createDate}
-                image={post.postImageLink}
-                title={post.postTitle}
-                text={`${post.postText.slice(0,100)}...`}
-              />
-            ))}
+        {posts ? (
+          <div className="news-container container">
+            <div className="news-post-container">
+              {posts.items.map((post) => (
+                <Post key={post.sys.id} post={post} />
+              ))}
+            </div>
+            <div className="recent-post-container">
+              <h2>Neueste Beiträge</h2>
+              <hr className="recent-post-hr"></hr>
+              {latestArticles(posts.items).map((post) => (
+                <RecentPost key={post.sys.id} post={post} />
+              ))}
+            </div>
           </div>
-          <div className="recent-post-container">
-            <h2>Beiträge</h2>
-            <hr className="recent-post-hr"></hr>
-            {Object.values(news).map((post) => (
-              <RecentPost
-                key={post.id}
-                id={post.id}
-                date={post.createDate}
-                image={post.postImageLink}
-                title={post.postTitle}
-                text={`${post.postText.slice(0,100)}...`}
-              />
-            ))}
-          </div>
-        </div>
+        ) : (
+          <LoadingSpinner />
+        )}
       </div>
     </HelmetProvider>
   );
@@ -56,8 +46,7 @@ const News = ({ currentUser, news }) => {
 
 const mapStateToProps = (state) => {
   return {
-    currentUser: state.userReducer.currentUser,
-    news: state.userReducer.news,
+    posts: state.userReducer.posts,
   };
 };
 

@@ -21,6 +21,12 @@
   margin-top: 50px;
   padding-left: 30px;
 }
+.aboutUs_paragraph{
+  padding-bottom:10px;
+}
+.aboutUs_paragraph_list p{
+  padding-bottom:0;
+}
 .aboutUs-text h6 {
   opacity: 0.8;
   font-weight: 500;

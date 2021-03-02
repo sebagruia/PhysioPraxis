@@ -4,7 +4,6 @@ import "./hamburger.css";
 const Hamburger = ({ handleHamburgerMenu, active }) => {
   return (
     <Fragment>
-      
       <button
         onClick={handleHamburgerMenu}
         className={`hamburger hamburger--vortex ${active ? "is-active" : ""}`}

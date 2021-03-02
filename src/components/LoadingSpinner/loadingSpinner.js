@@ -1,7 +1,7 @@
 import React from "react";
 import "./loadingSpinner.css";
 
-const loadingSpinner = () => {
+const LoadingSpinner = () => {
   return (
     <div className="loadingSpinner_container">
       <div className="loadingSpinner">
@@ -19,4 +19,4 @@ const loadingSpinner = () => {
   );
 };
 
-export default loadingSpinner;
+export default LoadingSpinner;

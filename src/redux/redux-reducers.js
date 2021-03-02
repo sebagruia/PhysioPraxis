@@ -1,36 +1,25 @@
 import {
-  SET_CURRENT_USER,
-  GET_TESTIMONIALS,
-  GET_NEWS,
   LEAVE_MESSAGE_STATUS,
   SENDING_MESSAGE_STATUS,
+  GET_HOME_PAGE_INFO,
+  GET_TESTIMONIAL,
+  GET_ABOUT_US_PAGE,
+  GET_SERVICES,
+  GET_POSTS
 } from "./redux-actions";
 
 const initialState = {
-  currentUser: null,
-  testimonials: {},
-  news:[],
   leaveMessageStatus:false,
   sendingMessageStatus:false,
+  homeContent:null,
+  testimonials:null,
+  aboutUs:null,
+  services:null,
+  posts:null
 };
 
 export const userReducer = (state = initialState, action) => {
   switch (action.type) {
-    case SET_CURRENT_USER:
-      return {
-        ...state,
-        currentUser: action.payload,
-      };
-    case GET_TESTIMONIALS:
-      return {
-        ...state,
-        testimonials: action.payload,
-      };
-    case GET_NEWS:
-      return {
-        ...state,
-        news: action.payload,
-      };
     case LEAVE_MESSAGE_STATUS:
       return {
         ...state,
@@ -40,6 +29,31 @@ export const userReducer = (state = initialState, action) => {
       return {
         ...state,
         sendingMessageStatus: action.payload,
+      };
+    case GET_HOME_PAGE_INFO:
+      return {
+        ...state,
+        homeContent: action.payload,
+      };
+    case GET_TESTIMONIAL:
+      return {
+        ...state,
+        testimonials: action.payload,
+      };
+    case GET_ABOUT_US_PAGE:
+      return {
+        ...state,
+        aboutUs: action.payload,
+      };
+    case GET_SERVICES:
+      return {
+        ...state,
+        services: action.payload,
+      };
+    case GET_POSTS:
+      return {
+        ...state,
+        posts: action.payload,
       };
     default:
       return state;

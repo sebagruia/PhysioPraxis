@@ -1,20 +1,23 @@
 import React from "react";
 import "./socials.css";
 
-
-const Socials = ({facebook,instagram,twitter }) => {
+const Socials = ({ facebook, instagram, twitter, aboutUs }) => {
   return (
-    <div className="infoTable-social-container">
-      <a href="https://www.facebook.com/physiopraxis.marian/">
-        <img src={facebook} alt="facebook-icon" role="button" />
-      </a>
-      <a href="https://www.facebook.com/physiopraxis.marian/">
-        <img src={instagram} alt="facebook-icon" role="button" />
-      </a>
-      <a href="https://www.facebook.com/physiopraxis.marian/">
-        <img src={twitter} alt="facebook-icon" role="button" />
-      </a>
-    </div>
+    <>
+      {aboutUs ? (
+        <div className="infoTable-social-container">
+          <a href={aboutUs.fields.socialsLinks.facebook}>
+            <img src={facebook} alt="facebook-icon" role="button" />
+          </a>
+          <a href={aboutUs.fields.socialsLinks.instagram}>
+            <img src={instagram} alt="facebook-icon" role="button" />
+          </a>
+          <a href={aboutUs.fields.socialsLinks.twitter}>
+            <img src={twitter} alt="facebook-icon" role="button" />
+          </a>
+        </div>
+      ) : null}
+    </>
   );
 };
 

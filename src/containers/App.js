@@ -1,18 +1,22 @@
 import React, { Component, lazy, Suspense } from "react";
 import "./App.css";
+
 import { connect } from "react-redux";
+
 import { Route, Switch } from "react-router-dom";
 import CookieConsent from "react-cookie-consent";
 import LoadingSpinner from "../components/LoadingSpinner/loadingSpinner";
 import Navigation from "../components/Navigation/navigation";
 import Footer from "../components/Footer/footer";
-import {
-  setCurrentUser,
-  getTestimonials,
-  getNews,
-} from "../redux/redux-actions";
 import ErrorBoundary from "../components/ErrorBoundary/errorBoundary";
-import { auth, createUserProfileDocument } from "../firebase/firebase";
+
+import {
+  getingHomePageInfo,
+  getTestimonials,
+  getAboutUsPage,
+  getServices,
+  getPosts
+} from "../redux/redux-actions";
 
 const Home = lazy(() => import("../pages/Home/home"));
 const AboutUs = lazy(() => import("../pages/AboutUs/aboutUs"));
@@ -27,27 +31,14 @@ const News = lazy(() => import("../pages/News/news"));
 const PostPage = lazy(() => import("../pages/PostPage/postPage"));
 
 class App extends Component {
-  unsubscribeFromAuth = null;
-
   componentDidMount() {
-    this.unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
-      if (userAuth) {
-        const userRef = await createUserProfileDocument(userAuth);
-        const snapShot = await userRef.get();
-        if (snapShot.exists) {
-          this.props.setCurrentUser(snapShot.data());
-        }
-      } else {
-        this.props.setCurrentUser(userAuth);
-      }
-    });
+    this.props.getHomeContent();
     this.props.getTestimonials();
-    this.props.getNews();
+    this.props.getAboutUs();
+    this.props.getServices();
+    this.props.getPosts();
   }
 
-  componentWillUnmount() {
-    this.unsubscribeFromAuth();
-  }
   render() {
     return (
       <div className="App">
@@ -99,18 +90,14 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    currentUser: state.userReducer.currentUser,
-  };
-};
-
 const mapDispatchToProps = (dispatch) => {
   return {
-    setCurrentUser: (user) => dispatch(setCurrentUser(user)),
+    getHomeContent: () => dispatch(getingHomePageInfo()),
     getTestimonials: () => dispatch(getTestimonials()),
-    getNews: () => dispatch(getNews()),
+    getAboutUs: () => dispatch(getAboutUsPage()),
+    getServices: () => dispatch(getServices()),
+    getPosts: () => dispatch(getPosts()),
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(null, mapDispatchToProps)(App);
